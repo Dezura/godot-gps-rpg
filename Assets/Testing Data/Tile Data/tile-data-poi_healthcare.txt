@@ -1,0 +1,27 @@
+Hi!!!!! poi_healthcare
+
+
+
+=====================
+class: pharmacy
+name: Shoppers Drug Mart
+
+ID: 5570705186
+====== Geometry
+[1, 2087, 2659, ]
+
+=====================
+class: pharmacy
+name: Rexall
+
+ID: 143434335649
+====== Geometry
+[1, -103, 3909, ]
+
+=====================
+class: dentist
+name: Family Dentist
+
+ID: 155333261281
+====== Geometry
+[1, -12, 3942, ]

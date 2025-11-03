@@ -1,0 +1,124 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg3hylang5fxn"]
+
+[ext_resource type="Script" uid="uid://bp666esqsoouq" path="res://Source/Misc/geolocation_test.gd" id="1_fvba2"]
+[ext_resource type="Script" uid="uid://bvf620k3ofjhm" path="res://Source/Scripts/android_gps_wrapper.gd" id="2_bj1l2"]
+
+[node name="Main" type="Control" node_paths=PackedStringArray("log_label", "geolocation_status_label", "android_gps")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fvba2")
+log_label = NodePath("LogLabel")
+geolocation_status_label = NodePath("GeolocationStatusLabel")
+android_gps = NodePath("AndroidGPS")
+
+[node name="AndroidGPS" type="Node" parent="."]
+script = ExtResource("2_bj1l2")
+
+[node name="PingButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -128.0
+offset_right = -288.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ping"
+
+[node name="PermissionButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 296.0
+offset_top = -128.0
+offset_right = -24.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Permission"
+
+[node name="StartListeningButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -56.0
+offset_right = -288.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Listening"
+
+[node name="StopListeningButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 296.0
+offset_top = -56.0
+offset_right = -24.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Stop Listening"
+
+[node name="HasPermissionButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 24.0
+offset_right = -288.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Has Permission?"
+
+[node name="LogLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.5
+offset_right = 216.5
+offset_bottom = 248.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Hello"
+autowrap_mode = 1
+
+[node name="GeolocationStatusLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -216.5
+offset_top = -112.0
+offset_right = 216.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Hello"
+autowrap_mode = 1
+
+[connection signal="pressed" from="PingButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="PermissionButton" to="." method="_on_permission_button_pressed"]
+[connection signal="pressed" from="StartListeningButton" to="." method="_on_start_listening_button_pressed"]
+[connection signal="pressed" from="StopListeningButton" to="." method="_on_stop_listening_button_pressed"]
+[connection signal="pressed" from="HasPermissionButton" to="." method="_on_has_permission_button_pressed"]

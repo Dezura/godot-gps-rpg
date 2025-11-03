@@ -1,0 +1,55 @@
+Hi!!!!! water_name
+
+
+
+=====================
+class: lake
+intermittent: 0
+name: Hill Park Recreation Centre
+name:latin: Hill Park Recreation Centre
+name_de: Hill Park Recreation Centre
+name_en: Hill Park Recreation Centre
+name_int: Hill Park Recreation Centre
+
+ID: 979336911
+====== Geometry
+[1, 5491, 361, ]
+
+=====================
+class: lake
+intermittent: 0
+name: Inch Park Outdoor Pool
+name:latin: Inch Park Outdoor Pool
+name_de: Inch Park Outdoor Pool
+name_en: Inch Park Outdoor Pool
+name_int: Inch Park Outdoor Pool
+
+ID: 1550980701
+====== Geometry
+[1, 6053, -2018, ]
+
+=====================
+class: lake
+intermittent: 0
+name: Splash Pad
+name:latin: Splash Pad
+name_de: Splash Pad
+name_en: Splash Pad
+name_int: Splash Pad
+
+ID: 2598569471
+====== Geometry
+[1, -2847, 36, ]
+
+=====================
+class: lake
+intermittent: 0
+name: Walker Swimming Pool
+name:latin: Walker Swimming Pool
+name_de: Walker Swimming Pool
+name_en: Walker Swimming Pool
+name_int: Walker Swimming Pool
+
+ID: 2643596591
+====== Geometry
+[1, 1286, 5162, ]

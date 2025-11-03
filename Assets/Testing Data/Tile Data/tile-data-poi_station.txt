@@ -1,0 +1,468 @@
+Hi!!!!! poi_station
+
+
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 63219236225
+====== Geometry
+[1, 604, 778, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 63219236417
+====== Geometry
+[1, 527, 774, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+ref: 2181
+subclass: bus_stop
+
+ID: 86408086561
+====== Geometry
+[1, 4587, 301, ]
+
+=====================
+agg_stop: true
+class: bus
+name: UPPER GAGE at LINC NORTH
+network: Hamilton Street Railway
+ref: 2196
+subclass: bus_stop
+
+ID: 86408086593
+====== Geometry
+[1, 4542, 620, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86408086625
+====== Geometry
+[1, 4218, 1509, ]
+
+=====================
+agg_stop: true
+class: bus
+name: UPPER GAGE at LINC SOUTH
+network: Hamilton Street Railway
+ref: 2195
+subclass: bus_stop
+
+ID: 86408086689
+====== Geometry
+[1, 4255, 1540, ]
+
+=====================
+agg_stop: true
+class: bus
+name: UPPER GAGE at LOCONDER
+network: Hamilton Street Railway
+ref: 2195
+subclass: bus_stop
+
+ID: 86408086721
+====== Geometry
+[1, 4127, 1957, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86408086753
+====== Geometry
+[1, 4026, 2111, ]
+
+=====================
+agg_stop: true
+class: bus
+name: UPPER GAGE at QUAIL
+network: Hamilton Street Railway
+ref: 2195
+subclass: bus_stop
+
+ID: 86408086785
+====== Geometry
+[1, 3977, 2425, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86408086817
+====== Geometry
+[1, 3904, 2485, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86408086849
+====== Geometry
+[1, 3779, 2874, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86408086881
+====== Geometry
+[1, 3845, 2995, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86408086945
+====== Geometry
+[1, 3655, 2989, ]
+
+=====================
+agg_stop: true
+class: bus
+name: UPPER GAGE at STONE CHURCH
+network: Hamilton Street Railway
+ref: 2194
+subclass: bus_stop
+
+ID: 86408086977
+====== Geometry
+[1, 3761, 3102, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86408087009
+====== Geometry
+[1, 3651, 3334, ]
+
+=====================
+agg_stop: true
+class: bus
+name: UPPER GAGE at ANNA CAPRI
+network: Hamilton Street Railway
+ref: 2194
+subclass: bus_stop
+
+ID: 86408087041
+====== Geometry
+[1, 3648, 3452, ]
+
+=====================
+agg_stop: true
+class: bus
+name: At 1475 UPPER GAGE
+network: Hamilton Street Railway
+ref: 2194
+subclass: bus_stop
+
+ID: 86408087073
+====== Geometry
+[1, 3568, 3720, ]
+
+=====================
+agg_stop: true
+class: bus
+name: UPPER GAGE at ROYALVISTA
+network: Hamilton Street Railway
+ref: 2193
+subclass: bus_stop
+
+ID: 86408087105
+====== Geometry
+[1, 3471, 4044, ]
+
+=====================
+agg_stop: true
+class: bus
+name: UPPER GAGE at GOLDENGATE
+network: Hamilton Street Railway
+ref: 2193
+subclass: bus_stop
+
+ID: 86408087137
+====== Geometry
+[1, 3347, 4466, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86408087169
+====== Geometry
+[1, 3272, 4605, ]
+
+=====================
+agg_stop: true
+class: bus
+name: Rymal opposite Arrowhead
+network: Hamilton Street Railway
+ref: 1521
+subclass: bus_stop
+
+ID: 86408087457
+====== Geometry
+[1, 750, 4374, ]
+
+=====================
+agg_stop: true
+class: bus
+name: Rymal at Arrowhead
+network: Hamilton Street Railway
+ref: 1518
+subclass: bus_stop
+
+ID: 86408087489
+====== Geometry
+[1, 596, 4369, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86408087521
+====== Geometry
+[1, 410, 4259, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86408087681
+====== Geometry
+[1, -401, 3980, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86408087713
+====== Geometry
+[1, -483, 3909, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799320897
+====== Geometry
+[1, 2899, -338, ]
+
+=====================
+agg_stop: true
+class: bus
+name: Limeridge Road East
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799320993
+====== Geometry
+[1, 2705, 241, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321057
+====== Geometry
+[1, 2538, 923, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321089
+====== Geometry
+[1, 2470, 982, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321121
+====== Geometry
+[1, 2417, 1285, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321153
+====== Geometry
+[1, 2225, 1734, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321249
+====== Geometry
+[1, 2217, 1913, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321313
+====== Geometry
+[1, 2033, 2350, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321441
+====== Geometry
+[1, 2097, 2425, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321537
+====== Geometry
+[1, 2025, 2487, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321633
+====== Geometry
+[1, 1955, 2421, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321697
+====== Geometry
+[1, 1892, 2751, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321761
+====== Geometry
+[1, 1844, 3009, ]
+
+=====================
+class: bus
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321793
+====== Geometry
+[1, 1770, 3149, ]
+
+=====================
+agg_stop: true
+class: bus
+name: Acadia Drive
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321825
+====== Geometry
+[1, 1614, 3604, ]
+
+=====================
+class: bus
+name: Acadia Drive
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 86799321857
+====== Geometry
+[1, 1611, 3702, ]
+
+=====================
+class: bus
+name: Limeridge Road East
+network: Hamilton Street Railway
+subclass: bus_stop
+
+ID: 101682062817
+====== Geometry
+[1, 2767, 225, ]
+
+=====================
+agg_stop: true
+class: bus
+name: Rymal at Rymal Square Plaza
+network: Hamilton Street Railway
+ref: 1519
+subclass: bus_stop
+
+ID: 312883933441
+====== Geometry
+[1, 51, 4147, ]
+
+=====================
+agg_stop: true
+class: bus
+name: Rymal at Upper Sherman
+network: Hamilton Street Railway
+ref: 1523
+subclass: bus_stop
+
+ID: 312883933473
+====== Geometry
+[1, 1377, 4597, ]
+
+=====================
+agg_stop: true
+class: bus
+name: STONE CHURCH at NORMAJEAN
+network: Hamilton Street Railway
+ref: 2190
+subclass: bus_stop
+
+ID: 322751391265
+====== Geometry
+[1, 2838, 2707, ]
+
+=====================
+class: bus
+name: Rymal at Upper Sherman
+network: Hamilton Street Railway
+ref: 1520
+subclass: bus_stop
+
+ID: 421865475521
+====== Geometry
+[1, 1237, 4597, ]

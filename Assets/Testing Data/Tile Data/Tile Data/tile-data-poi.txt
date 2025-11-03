@@ -1,0 +1,5599 @@
+Hi!!!!! poi
+
+
+
+=====================
+class: park
+name: Captain Cornelius Park
+name:latin: Captain Cornelius Park
+name_de: Captain Cornelius Park
+name_en: Captain Cornelius Park
+name_int: Captain Cornelius Park
+rank: 2
+subclass: park
+
+ID: 239465651
+====== Geometry
+[1, -278, 1237, ]
+
+=====================
+class: grocery
+name: No Frills
+name:latin: No Frills
+name_de: No Frills
+name_en: No Frills
+name_int: No Frills
+rank: 4
+subclass: supermarket
+
+ID: 272493671
+====== Geometry
+[1, 1888, -130, ]
+
+=====================
+class: school
+name: Westmount Secondary School
+name:latin: Westmount Secondary School
+name_de: Westmount Secondary School
+name_en: Westmount Secondary School
+name_int: Westmount Secondary School
+rank: 1
+subclass: school
+
+ID: 285001561
+====== Geometry
+[1, -423, 603, ]
+
+=====================
+class: town_hall
+name: Hamilton Italian Centre - SDI Hamilton
+name:latin: Hamilton Italian Centre - SDI Hamilton
+name_de: Hamilton Italian Centre - SDI Hamilton
+name_en: Hamilton Italian Centre - SDI Hamilton
+name_int: Hamilton Italian Centre - SDI Hamilton
+rank: 1
+subclass: community_centre
+
+ID: 285077431
+====== Geometry
+[1, 3669, 5117, ]
+
+=====================
+class: school
+name: Pauline Johnson Public School
+name:latin: Pauline Johnson Public School
+name_de: Pauline Johnson Public School
+name_en: Pauline Johnson Public School
+name_int: Pauline Johnson Public School
+rank: 1
+subclass: school
+
+ID: 315152831
+====== Geometry
+[1, 4176, 2453, ]
+
+=====================
+class: school
+name: Ridgemount Junior Public School
+name:latin: Ridgemount Junior Public School
+name_de: Ridgemount Junior Public School
+name_en: Ridgemount Junior Public School
+name_int: Ridgemount Junior Public School
+rank: 1
+subclass: school
+
+ID: 342603751
+====== Geometry
+[1, 2465, 1052, ]
+
+=====================
+class: school
+name: St. Michael Catholic Elementary School
+name:latin: St. Michael Catholic Elementary School
+name_de: St. Michael Catholic Elementary School
+name_en: St. Michael Catholic Elementary School
+name_int: St. Michael Catholic Elementary School
+rank: 1
+subclass: school
+
+ID: 342603781
+====== Geometry
+[1, 3369, 1273, ]
+
+=====================
+class: park
+name: Bruleville Park
+name:latin: Bruleville Park
+name_de: Bruleville Park
+name_en: Bruleville Park
+name_int: Bruleville Park
+rank: 2
+subclass: park
+
+ID: 979336241
+====== Geometry
+[1, 4570, 2259, ]
+
+=====================
+class: pharmacy
+name: Shoppers Drug Mart
+name:latin: Shoppers Drug Mart
+name_de: Shoppers Drug Mart
+name_en: Shoppers Drug Mart
+name_int: Shoppers Drug Mart
+rank: 2
+subclass: pharmacy
+
+ID: 979337441
+====== Geometry
+[1, 3919, 940, ]
+
+=====================
+class: place_of_worship
+name: Lyndeen Park United Church
+name:latin: Lyndeen Park United Church
+name_de: Lyndeen Park United Church
+name_en: Lyndeen Park United Church
+name_int: Lyndeen Park United Church
+rank: 1
+subclass: christian
+
+ID: 979338501
+====== Geometry
+[1, 5006, 445, ]
+
+=====================
+class: shop
+name: National Sports
+name:latin: National Sports
+name_de: National Sports
+name_en: National Sports
+name_int: National Sports
+rank: 3
+subclass: sports
+
+ID: 980593601
+====== Geometry
+[1, 4882, 2765, ]
+
+=====================
+class: cemetery
+name: Anshe Sholom Cemetery
+name:latin: Anshe Sholom Cemetery
+name_de: Anshe Sholom Cemetery
+name_en: Anshe Sholom Cemetery
+name_int: Anshe Sholom Cemetery
+rank: 1
+subclass: cemetery
+
+ID: 980597141
+====== Geometry
+[1, 4779, 3363, ]
+
+=====================
+class: park
+name: Bruleville Nature Park
+name:latin: Bruleville Nature Park
+name_de: Bruleville Nature Park
+name_en: Bruleville Nature Park
+name_int: Bruleville Nature Park
+rank: 1
+subclass: park
+
+ID: 980597421
+====== Geometry
+[1, 4077, 2986, ]
+
+=====================
+class: car
+name: Johnston Chrysler Dodge Jeep Ram
+name:latin: Johnston Chrysler Dodge Jeep Ram
+name_de: Johnston Chrysler Dodge Jeep Ram
+name_en: Johnston Chrysler Dodge Jeep Ram
+name_int: Johnston Chrysler Dodge Jeep Ram
+rank: 10
+subclass: car
+
+ID: 980648231
+====== Geometry
+[1, 532, 4465, ]
+
+=====================
+class: cemetery
+name: Barton Stone United Church Cemetery
+name:latin: Barton Stone United Church Cemetery
+name_de: Barton Stone United Church Cemetery
+name_en: Barton Stone United Church Cemetery
+name_int: Barton Stone United Church Cemetery
+rank: 3
+subclass: cemetery
+
+ID: 980650901
+====== Geometry
+[1, 502, 4747, ]
+
+=====================
+class: restaurant
+name: Turtle Jack's
+name:latin: Turtle Jack's
+name_de: Turtle Jack's
+name_en: Turtle Jack's
+name_int: Turtle Jack's
+rank: 8
+subclass: restaurant
+
+ID: 980651661
+====== Geometry
+[1, 946, 3164, ]
+
+=====================
+class: restaurant
+name: The Keg
+name:latin: The Keg
+name_de: The Keg
+name_en: The Keg
+name_int: The Keg
+rank: 9
+subclass: restaurant
+
+ID: 980654971
+====== Geometry
+[1, 985, 3072, ]
+
+=====================
+class: place_of_worship
+rank: 2
+subclass: christian
+
+ID: 980656401
+====== Geometry
+[1, 2685, 4911, ]
+
+=====================
+class: cemetery
+name: Ohev Zedeck Cemetery
+name:latin: Ohev Zedeck Cemetery
+name_de: Ohev Zedeck Cemetery
+name_en: Ohev Zedeck Cemetery
+name_int: Ohev Zedeck Cemetery
+rank: 3
+subclass: cemetery
+
+ID: 980656461
+====== Geometry
+[1, 862, 3488, ]
+
+=====================
+class: place_of_worship
+rank: 3
+
+ID: 980665401
+====== Geometry
+[1, 2892, 4646, ]
+
+=====================
+class: park
+name: Richwill Park
+name:latin: Richwill Park
+name_de: Richwill Park
+name_en: Richwill Park
+name_int: Richwill Park
+rank: 2
+subclass: park
+
+ID: 980675461
+====== Geometry
+[1, 1759, -383, ]
+
+=====================
+class: park
+rank: 5
+subclass: park
+
+ID: 980677401
+====== Geometry
+[1, 206, -490, ]
+
+=====================
+class: park
+name: Norwood Park
+name:latin: Norwood Park
+name_de: Norwood Park
+name_en: Norwood Park
+name_int: Norwood Park
+rank: 2
+subclass: park
+
+ID: 980677521
+====== Geometry
+[1, 2846, 53, ]
+
+=====================
+class: pitch
+rank: 5
+subclass: tennis
+
+ID: 1481651271
+====== Geometry
+[1, 5119, 4251, ]
+
+=====================
+class: parking
+rank: 6
+subclass: parking
+
+ID: 1481651281
+====== Geometry
+[1, 5008, 4415, ]
+
+=====================
+class: shop
+name: Turkstra Lumber
+name:latin: Turkstra Lumber
+name_de: Turkstra Lumber
+name_en: Turkstra Lumber
+name_int: Turkstra Lumber
+rank: 2
+subclass: doityourself
+
+ID: 1583088451
+====== Geometry
+[1, 3364, 1747, ]
+
+=====================
+class: shop
+name: Petro-Canada
+name:latin: Petro-Canada
+name_de: Petro-Canada
+name_en: Petro-Canada
+name_int: Petro-Canada
+rank: 5
+subclass: convenience
+
+ID: 1833865961
+====== Geometry
+[1, 1695, 861, ]
+
+=====================
+class: fast_food
+name: A&W
+name:latin: A&W
+name_de: A&W
+name_en: A&W
+name_int: A&W
+rank: 7
+subclass: fast_food
+
+ID: 1833866001
+====== Geometry
+[1, 1804, 1159, ]
+
+=====================
+class: car
+name: Upper James Toyota
+name:latin: Upper James Toyota
+name_de: Upper James Toyota
+name_en: Upper James Toyota
+name_int: Upper James Toyota
+rank: 9
+subclass: car
+
+ID: 1833866021
+====== Geometry
+[1, 1668, 1754, ]
+
+=====================
+class: fuel
+rank: 2
+subclass: fuel
+
+ID: 1833866041
+====== Geometry
+[1, 3141, 2917, ]
+
+=====================
+class: shop
+name: Circle K
+name:latin: Circle K
+name_de: Circle K
+name_en: Circle K
+name_int: Circle K
+rank: 6
+subclass: convenience
+
+ID: 1833866071
+====== Geometry
+[1, 1872, 932, ]
+
+=====================
+class: restaurant
+name: August 8
+name:latin: August 8
+name_de: August 8
+name_en: August 8
+name_int: August 8
+rank: 6
+subclass: restaurant
+
+ID: 1833866081
+====== Geometry
+[1, 1284, 2168, ]
+
+=====================
+class: lodging
+name: Courtyard
+name:latin: Courtyard
+name_de: Courtyard
+name_en: Courtyard
+name_int: Courtyard
+rank: 10
+subclass: hotel
+
+ID: 1833866101
+====== Geometry
+[1, 689, 3467, ]
+
+=====================
+class: place_of_worship
+name: Barton Stone United Church
+name:latin: Barton Stone United Church
+name_de: Barton Stone United Church
+name_en: Barton Stone United Church
+name_int: Barton Stone United Church
+rank: 11
+subclass: christian
+
+ID: 1833872961
+====== Geometry
+[1, 543, 4664, ]
+
+=====================
+class: car
+name: Hamilton Volkswagen
+name:latin: Hamilton Volkswagen
+name_de: Hamilton Volkswagen
+name_en: Hamilton Volkswagen
+name_int: Hamilton Volkswagen
+rank: 4
+subclass: car
+
+ID: 1833872971
+====== Geometry
+[1, 1116, 3639, ]
+
+=====================
+class: place_of_worship
+rank: 27
+
+ID: 1833872991
+====== Geometry
+[1, 388, 4631, ]
+
+=====================
+class: fast_food
+name: Harvey's
+name:latin: Harvey's
+name_de: Harvey's
+name_en: Harvey's
+name_int: Harvey's
+rank: 8
+subclass: fast_food
+
+ID: 1833873011
+====== Geometry
+[1, 879, 4277, ]
+
+=====================
+class: alcohol_shop
+name: The Beer Store
+name:latin: The Beer Store
+name_de: The Beer Store
+name_en: The Beer Store
+name_int: The Beer Store
+rank: 12
+subclass: alcohol
+
+ID: 1833873041
+====== Geometry
+[1, 412, 5011, ]
+
+=====================
+class: cafe
+name: Tim Hortons
+name:latin: Tim Hortons
+name_de: Tim Hortons
+name_en: Tim Hortons
+name_int: Tim Hortons
+rank: 13
+subclass: cafe
+
+ID: 1833873051
+====== Geometry
+[1, 735, 4566, ]
+
+=====================
+class: restaurant
+name: Swiss Chalet
+name:latin: Swiss Chalet
+name_de: Swiss Chalet
+name_en: Swiss Chalet
+name_int: Swiss Chalet
+rank: 14
+subclass: restaurant
+
+ID: 1833873071
+====== Geometry
+[1, 864, 4342, ]
+
+=====================
+class: restaurant
+name: The Works
+name:latin: The Works
+name_de: The Works
+name_en: The Works
+name_int: The Works
+rank: 15
+subclass: restaurant
+
+ID: 1833881931
+====== Geometry
+[1, 600, 5101, ]
+
+=====================
+class: restaurant
+name: East Side Mario's
+name:latin: East Side Mario's
+name_de: East Side Mario's
+name_en: East Side Mario's
+name_int: East Side Mario's
+rank: 16
+subclass: restaurant
+
+ID: 1833881951
+====== Geometry
+[1, 629, 5044, ]
+
+=====================
+class: car
+name: John Bear Chevrolet Buick GMC
+name:latin: John Bear Chevrolet Buick GMC
+name_de: John Bear Chevrolet Buick GMC
+name_en: John Bear Chevrolet Buick GMC
+name_int: John Bear Chevrolet Buick GMC
+rank: 11
+subclass: car
+
+ID: 1833891921
+====== Geometry
+[1, 821, 3278, ]
+
+=====================
+class: car
+name: Mohawk Ford
+name:latin: Mohawk Ford
+name_de: Mohawk Ford
+name_en: Mohawk Ford
+name_int: Mohawk Ford
+rank: 10
+subclass: car
+
+ID: 1834119151
+====== Geometry
+[1, 1615, 1090, ]
+
+=====================
+class: shop
+name: Stag Shop
+name:latin: Stag Shop
+name_de: Stag Shop
+name_en: Stag Shop
+name_int: Stag Shop
+rank: 2
+subclass: erotic
+
+ID: 1834119201
+====== Geometry
+[1, 1516, 1448, ]
+
+=====================
+class: shop
+name: Designer Furniture Gallery
+name:latin: Designer Furniture Gallery
+name_de: Designer Furniture Gallery
+name_en: Designer Furniture Gallery
+name_int: Designer Furniture Gallery
+rank: 3
+subclass: furniture
+
+ID: 1834119221
+====== Geometry
+[1, 1739, 1480, ]
+
+=====================
+class: car
+name: PartSource
+name:latin: PartSource
+name_de: PartSource
+name_en: PartSource
+name_int: PartSource
+rank: 11
+subclass: car_parts
+
+ID: 1834119231
+====== Geometry
+[1, 1697, 1572, ]
+
+=====================
+class: car
+name: Beech Motor Works
+name:latin: Beech Motor Works
+name_de: Beech Motor Works
+name_en: Beech Motor Works
+name_int: Beech Motor Works
+rank: 12
+subclass: car
+
+ID: 1834119261
+====== Geometry
+[1, 1507, 1523, ]
+
+=====================
+class: car
+name: Active Green + Ross
+name:latin: Active Green + Ross
+name_de: Active Green + Ross
+name_en: Active Green + Ross
+name_int: Active Green + Ross
+rank: 13
+subclass: car_repair
+
+ID: 1834119321
+====== Geometry
+[1, 1753, 1308, ]
+
+=====================
+class: parking
+rank: 2
+subclass: parking
+
+ID: 1840728121
+====== Geometry
+[1, -945, 3031, ]
+
+=====================
+class: school
+name: James MacDonald Public School
+name:latin: James MacDonald Public School
+name_de: James MacDonald Public School
+name_en: James MacDonald Public School
+name_int: James MacDonald Public School
+rank: 1
+subclass: school
+
+ID: 1840734241
+====== Geometry
+[1, -894, 2882, ]
+
+=====================
+class: playground
+rank: 3
+subclass: playground
+
+ID: 1840734841
+====== Geometry
+[1, -1019, 2499, ]
+
+=====================
+class: pitch
+rank: 4
+subclass: baseball
+
+ID: 1840734961
+====== Geometry
+[1, -1012, 2610, ]
+
+=====================
+class: playground
+rank: 23
+subclass: playground
+
+ID: 1840757641
+====== Geometry
+[1, 2944, 48, ]
+
+=====================
+class: school
+name: Norwood Park Elementary School
+name:latin: Norwood Park Elementary School
+name_de: Norwood Park Elementary School
+name_en: Norwood Park Elementary School
+name_int: Norwood Park Elementary School
+rank: 1
+subclass: school
+
+ID: 1840761761
+====== Geometry
+[1, 2934, -223, ]
+
+=====================
+class: brownfield
+name: Former Mountain High School
+name:latin: Former Mountain High School
+name_de: Former Mountain High School
+name_en: Former Mountain High School
+name_int: Former Mountain High School
+rank: 20
+subclass: brownfield
+
+ID: 1840762621
+====== Geometry
+[1, 1334, 718, ]
+
+=====================
+class: fast_food
+name: Wendy's
+name:latin: Wendy's
+name_de: Wendy's
+name_en: Wendy's
+name_int: Wendy's
+rank: 12
+subclass: fast_food
+
+ID: 1840763961
+====== Geometry
+[1, 1968, 590, ]
+
+=====================
+class: parking
+rank: 9
+subclass: parking
+
+ID: 1846934031
+====== Geometry
+[1, 3528, 741, ]
+
+=====================
+class: parking
+name: Lyndeen Park United Church parking
+name:latin: Lyndeen Park United Church parking
+name_de: Lyndeen Park United Church parking
+name_en: Lyndeen Park United Church parking
+name_int: Lyndeen Park United Church parking
+rank: 2
+subclass: parking
+
+ID: 1853340301
+====== Geometry
+[1, 4993, 478, ]
+
+=====================
+class: playground
+rank: 17
+subclass: playground
+
+ID: 1853349831
+====== Geometry
+[1, 1822, -427, ]
+
+=====================
+class: playground
+rank: 18
+subclass: playground
+
+ID: 1853349841
+====== Geometry
+[1, 1815, -370, ]
+
+=====================
+class: playground
+rank: 1
+subclass: playground
+
+ID: 1868126361
+====== Geometry
+[1, 71, 1430, ]
+
+=====================
+class: pitch
+rank: 5
+subclass: soccer
+
+ID: 1984057481
+====== Geometry
+[1, -409, 1291, ]
+
+=====================
+class: pitch
+rank: 6
+subclass: soccer
+
+ID: 1984057491
+====== Geometry
+[1, -600, 1227, ]
+
+=====================
+class: playground
+rank: 7
+subclass: playground
+
+ID: 2047601801
+====== Geometry
+[1, 4559, 2264, ]
+
+=====================
+class: playground
+rank: 8
+subclass: playground
+
+ID: 2047601911
+====== Geometry
+[1, 4523, 2216, ]
+
+=====================
+class: parking
+rank: 2
+subclass: parking
+
+ID: 2047602011
+====== Geometry
+[1, 1164, 5105, ]
+
+=====================
+class: library
+name: Hamilton Public Library - Terryberry Branch
+name:latin: Hamilton Public Library - Terryberry Branch
+name_de: Hamilton Public Library - Terryberry Branch
+name_en: Hamilton Public Library - Terryberry Branch
+name_int: Hamilton Public Library - Terryberry Branch
+rank: 3
+subclass: library
+
+ID: 2143212470
+====== Geometry
+[1, 1091, -291, ]
+
+=====================
+class: playground
+rank: 43
+subclass: playground
+
+ID: 2514604841
+====== Geometry
+[1, 1089, 428, ]
+
+=====================
+class: park
+rank: 42
+subclass: park
+
+ID: 2514604851
+====== Geometry
+[1, 1089, 432, ]
+
+=====================
+class: school
+name: Annunciation of Our Lord Catholic Elementary School
+name:latin: Annunciation of Our Lord Catholic Elementary School
+name_de: Annunciation of Our Lord Catholic Elementary School
+name_en: Annunciation of Our Lord Catholic Elementary School
+name_int: Annunciation of Our Lord Catholic Elementary School
+rank: 1
+subclass: school
+
+ID: 2563935351
+====== Geometry
+[1, -592, 1521, ]
+
+=====================
+class: school
+name: Westwood Junior Public School
+name:latin: Westwood Junior Public School
+name_de: Westwood Junior Public School
+name_en: Westwood Junior Public School
+name_int: Westwood Junior Public School
+rank: 2
+subclass: school
+
+ID: 2563935361
+====== Geometry
+[1, -114, 328, ]
+
+=====================
+class: parking
+rank: 7
+subclass: parking
+
+ID: 2563936011
+====== Geometry
+[1, -517, 1657, ]
+
+=====================
+class: school
+name: Calvin Christian School
+name:latin: Calvin Christian School
+name_de: Calvin Christian School
+name_en: Calvin Christian School
+name_int: Calvin Christian School
+rank: 4
+subclass: school
+
+ID: 2589941601
+====== Geometry
+[1, 1139, 381, ]
+
+=====================
+class: pitch
+rank: 44
+subclass: soccer
+
+ID: 2589941611
+====== Geometry
+[1, 1256, 274, ]
+
+=====================
+class: office
+name: Hamilton-Wentworth District School Board Head Office
+name:latin: Hamilton-Wentworth District School Board Head Office
+name_de: Hamilton-Wentworth District School Board Head Office
+name_en: Hamilton-Wentworth District School Board Head Office
+name_int: Hamilton-Wentworth District School Board Head Office
+rank: 1
+subclass: educational_institution
+
+ID: 2629647281
+====== Geometry
+[1, 5017, 2047, ]
+
+=====================
+class: place_of_worship
+name: St. Michael's Hungarian Greek-Catholic Church Hall
+name:latin: St. Michael's Hungarian Greek-Catholic Church Hall
+name_de: St. Michael's Hungarian Greek-Catholic Church Hall
+name_en: St. Michael's Hungarian Greek-Catholic Church Hall
+name_int: St. Michael's Hungarian Greek-Catholic Church Hall
+rank: 21
+subclass: christian
+
+ID: 2634997701
+====== Geometry
+[1, 1107, 239, ]
+
+=====================
+class: playground
+rank: 45
+subclass: playground
+
+ID: 2634997711
+====== Geometry
+[1, 1076, 311, ]
+
+=====================
+class: playground
+rank: 46
+subclass: playground
+
+ID: 2634997721
+====== Geometry
+[1, 1116, 321, ]
+
+=====================
+class: playground
+rank: 47
+subclass: playground
+
+ID: 2634997731
+====== Geometry
+[1, 1097, 315, ]
+
+=====================
+class: parking
+rank: 48
+subclass: parking
+
+ID: 2635000741
+====== Geometry
+[1, 1223, 46, ]
+
+=====================
+class: parking
+rank: 49
+subclass: parking
+
+ID: 2635000751
+====== Geometry
+[1, 1189, 204, ]
+
+=====================
+class: parking
+rank: 3
+subclass: parking
+
+ID: 2635196441
+====== Geometry
+[1, 3210, 3569, ]
+
+=====================
+class: parking
+rank: 4
+subclass: parking
+
+ID: 2635196451
+====== Geometry
+[1, 3302, 3468, ]
+
+=====================
+class: playground
+name: Jerome Park
+name:latin: Jerome Park
+name_de: Jerome Park
+name_en: Jerome Park
+name_int: Jerome Park
+rank: 1
+subclass: playground
+
+ID: 2635202411
+====== Geometry
+[1, 2537, 3823, ]
+
+=====================
+class: parking
+rank: 3
+subclass: parking
+
+ID: 2635203191
+====== Geometry
+[1, 2624, 3576, ]
+
+=====================
+class: parking
+rank: 4
+subclass: parking
+
+ID: 2635203201
+====== Geometry
+[1, 2663, 3466, ]
+
+=====================
+class: parking
+rank: 5
+subclass: parking
+
+ID: 2635203211
+====== Geometry
+[1, 2634, 3383, ]
+
+=====================
+class: parking
+rank: 6
+subclass: parking
+
+ID: 2635203221
+====== Geometry
+[1, 2671, 3365, ]
+
+=====================
+class: parking
+rank: 7
+subclass: parking
+
+ID: 2635203921
+====== Geometry
+[1, 2752, 3684, ]
+
+=====================
+class: parking
+rank: 8
+subclass: parking
+
+ID: 2635203931
+====== Geometry
+[1, 2799, 3546, ]
+
+=====================
+class: parking
+rank: 4
+subclass: parking
+
+ID: 2635205351
+====== Geometry
+[1, 3055, 4623, ]
+
+=====================
+class: parking
+rank: 7
+subclass: parking
+
+ID: 2635205941
+====== Geometry
+[1, 4441, 5058, ]
+
+=====================
+class: parking
+rank: 8
+subclass: parking
+
+ID: 2635205951
+====== Geometry
+[1, 4614, 4821, ]
+
+=====================
+class: parking
+rank: 5
+subclass: parking
+
+ID: 2635205971
+====== Geometry
+[1, 3170, 3422, ]
+
+=====================
+class: pitch
+rank: 9
+subclass: basketball
+
+ID: 2635207141
+====== Geometry
+[1, 2487, 3857, ]
+
+=====================
+class: playground
+rank: 10
+subclass: playground
+
+ID: 2635207151
+====== Geometry
+[1, 2522, 3884, ]
+
+=====================
+class: playground
+rank: 11
+subclass: playground
+
+ID: 2635207161
+====== Geometry
+[1, 2560, 3872, ]
+
+=====================
+class: shop
+name: H. Williams Jewellery
+name:latin: H. Williams Jewellery
+name_de: H. Williams Jewellery
+name_en: H. Williams Jewellery
+name_int: H. Williams Jewellery
+rank: 4
+subclass: jewelry
+
+ID: 2635366331
+====== Geometry
+[1, 1468, 1640, ]
+
+=====================
+class: cafe
+name: Tim Hortons
+name:latin: Tim Hortons
+name_de: Tim Hortons
+name_en: Tim Hortons
+name_int: Tim Hortons
+rank: 3
+subclass: cafe
+
+ID: 2660189791
+====== Geometry
+[1, 3967, 669, ]
+
+=====================
+class: parking
+rank: 10
+subclass: parking
+
+ID: 2660189821
+====== Geometry
+[1, 3983, 883, ]
+
+=====================
+class: parking
+rank: 11
+subclass: parking
+
+ID: 2660189881
+====== Geometry
+[1, 4042, 915, ]
+
+=====================
+class: parking
+rank: 2
+subclass: parking
+
+ID: 2660189941
+====== Geometry
+[1, 4270, 1029, ]
+
+=====================
+class: swimming_pool
+rank: 12
+subclass: swimming_pool
+
+ID: 2660238401
+====== Geometry
+[1, 3620, 897, ]
+
+=====================
+class: parking
+rank: 13
+subclass: parking
+
+ID: 2660238421
+====== Geometry
+[1, 3523, 854, ]
+
+=====================
+class: swimming_pool
+rank: 3
+subclass: swimming_pool
+
+ID: 2660362001
+====== Geometry
+[1, 4517, 1112, ]
+
+=====================
+class: parking
+rank: 4
+subclass: parking
+
+ID: 2660362011
+====== Geometry
+[1, 4521, 1127, ]
+
+=====================
+class: parking
+rank: 14
+subclass: parking
+
+ID: 2660362211
+====== Geometry
+[1, 3970, 702, ]
+
+=====================
+class: place_of_worship
+rank: 1
+subclass: christian
+
+ID: 2660362231
+====== Geometry
+[1, 3294, -362, ]
+
+=====================
+class: parking
+rank: 2
+subclass: parking
+
+ID: 2660362261
+====== Geometry
+[1, 3243, -373, ]
+
+=====================
+class: parking
+rank: 5
+subclass: parking
+
+ID: 2660362371
+====== Geometry
+[1, 4548, 1977, ]
+
+=====================
+class: parking
+rank: 9
+subclass: parking
+
+ID: 2660362471
+====== Geometry
+[1, 4733, 2124, ]
+
+=====================
+class: shop
+name: Staples
+name:latin: Staples
+name_de: Staples
+name_en: Staples
+name_int: Staples
+rank: 4
+subclass: stationery
+
+ID: 2660362531
+====== Geometry
+[1, 4885, 2690, ]
+
+=====================
+class: parking
+rank: 10
+subclass: parking
+
+ID: 2660362571
+====== Geometry
+[1, 5114, 2802, ]
+
+=====================
+class: parking
+rank: 4
+subclass: parking
+
+ID: 2660362861
+====== Geometry
+[1, 4648, 3371, ]
+
+=====================
+class: parking
+rank: 3
+subclass: parking
+
+ID: 2660518061
+====== Geometry
+[1, 4813, 1002, ]
+
+=====================
+class: parking
+rank: 4
+subclass: parking
+
+ID: 2660518091
+====== Geometry
+[1, 4698, 917, ]
+
+=====================
+class: parking
+rank: 5
+subclass: parking
+
+ID: 2660518101
+====== Geometry
+[1, 4472, 839, ]
+
+=====================
+class: parking
+rank: 6
+subclass: parking
+
+ID: 2660518131
+====== Geometry
+[1, 4437, 829, ]
+
+=====================
+class: parking
+rank: 7
+subclass: parking
+
+ID: 2660518161
+====== Geometry
+[1, 4405, 813, ]
+
+=====================
+class: parking
+rank: 8
+subclass: parking
+
+ID: 2660518191
+====== Geometry
+[1, 4373, 802, ]
+
+=====================
+class: parking
+rank: 9
+subclass: parking
+
+ID: 2660518221
+====== Geometry
+[1, 4338, 795, ]
+
+=====================
+class: parking
+rank: 10
+subclass: parking
+
+ID: 2660518251
+====== Geometry
+[1, 4307, 779, ]
+
+=====================
+class: parking
+rank: 11
+subclass: parking
+
+ID: 2660518281
+====== Geometry
+[1, 4271, 771, ]
+
+=====================
+class: parking
+rank: 12
+subclass: parking
+
+ID: 2660518311
+====== Geometry
+[1, 4239, 759, ]
+
+=====================
+class: playground
+rank: 5
+subclass: playground
+
+ID: 2692126351
+====== Geometry
+[1, 4064, 4635, ]
+
+=====================
+class: fuel
+name: Canadian Tire
+name:latin: Canadian Tire
+name_de: Canadian Tire
+name_en: Canadian Tire
+name_int: Canadian Tire
+rank: 6
+subclass: fuel
+
+ID: 2696043381
+====== Geometry
+[1, 2148, 33, ]
+
+=====================
+class: parking
+rank: 19
+subclass: parking
+
+ID: 2696045101
+====== Geometry
+[1, 2003, -110, ]
+
+=====================
+class: parking
+rank: 20
+subclass: parking
+
+ID: 2696045111
+====== Geometry
+[1, 1825, -43, ]
+
+=====================
+class: parking
+rank: 21
+subclass: parking
+
+ID: 2696045121
+====== Geometry
+[1, 1896, -271, ]
+
+=====================
+class: parking
+rank: 22
+subclass: parking
+
+ID: 2696045131
+====== Geometry
+[1, 1869, -217, ]
+
+=====================
+class: shop
+name: Petro-Canada
+name:latin: Petro-Canada
+name_de: Petro-Canada
+name_en: Petro-Canada
+name_int: Petro-Canada
+rank: 3
+subclass: convenience
+
+ID: 2696046141
+====== Geometry
+[1, 2112, 271, ]
+
+=====================
+class: parking
+rank: 50
+subclass: parking
+
+ID: 2696050281
+====== Geometry
+[1, 1882, 310, ]
+
+=====================
+class: parking
+rank: 51
+subclass: parking
+
+ID: 2696050291
+====== Geometry
+[1, 1935, 193, ]
+
+=====================
+class: parking
+rank: 52
+subclass: parking
+
+ID: 2696060401
+====== Geometry
+[1, 1823, 445, ]
+
+=====================
+class: parking
+rank: 53
+subclass: parking
+
+ID: 2696060421
+====== Geometry
+[1, 1824, 536, ]
+
+=====================
+class: parking
+rank: 54
+subclass: parking
+
+ID: 2696060431
+====== Geometry
+[1, 2006, 374, ]
+
+=====================
+class: parking
+rank: 24
+subclass: parking
+
+ID: 2696060441
+====== Geometry
+[1, 2133, 503, ]
+
+=====================
+class: parking
+rank: 25
+subclass: parking
+
+ID: 2696060461
+====== Geometry
+[1, 2320, 415, ]
+
+=====================
+class: parking
+rank: 26
+subclass: parking
+
+ID: 2696060471
+====== Geometry
+[1, 2155, 298, ]
+
+=====================
+class: cafe
+name: Tim Hortons
+name:latin: Tim Hortons
+name_de: Tim Hortons
+name_en: Tim Hortons
+name_int: Tim Hortons
+rank: 22
+subclass: cafe
+
+ID: 2702478971
+====== Geometry
+[1, 1740, 754, ]
+
+=====================
+class: place_of_worship
+name: New Testament Baptist Church
+name:latin: New Testament Baptist Church
+name_de: New Testament Baptist Church
+name_en: New Testament Baptist Church
+name_int: New Testament Baptist Church
+rank: 14
+subclass: christian
+
+ID: 2702479001
+====== Geometry
+[1, 1309, 1611, ]
+
+=====================
+class: place_of_worship
+name: Christian Reformed Church-Immanuel
+name:latin: Christian Reformed Church-Immanuel
+name_de: Christian Reformed Church-Immanuel
+name_en: Christian Reformed Church-Immanuel
+name_int: Christian Reformed Church-Immanuel
+rank: 7
+subclass: christian
+
+ID: 2702479011
+====== Geometry
+[1, 1284, -9, ]
+
+=====================
+class: parking
+rank: 14
+subclass: parking
+
+ID: 2720419151
+====== Geometry
+[1, 2243, -102, ]
+
+=====================
+class: parking
+rank: 27
+subclass: parking
+
+ID: 2720419281
+====== Geometry
+[1, 2337, 148, ]
+
+=====================
+class: park
+name: Kernighan Neighbourhood Park
+name:latin: Kernighan Neighbourhood Park
+name_de: Kernighan Neighbourhood Park
+name_en: Kernighan Neighbourhood Park
+name_int: Kernighan Neighbourhood Park
+rank: 4
+subclass: park
+
+ID: 2799268761
+====== Geometry
+[1, 318, 3709, ]
+
+=====================
+class: park
+name: William Connell City-Wide Park
+name:latin: William Connell City-Wide Park
+name_de: William Connell City-Wide Park
+name_en: William Connell City-Wide Park
+name_int: William Connell City-Wide Park
+rank: 1
+subclass: park
+
+ID: 2799269621
+====== Geometry
+[1, -934, 4943, ]
+
+=====================
+class: parking
+rank: 6
+subclass: parking
+
+ID: 2866430401
+====== Geometry
+[1, -617, 388, ]
+
+=====================
+class: parking
+rank: 7
+subclass: parking
+
+ID: 2866430431
+====== Geometry
+[1, -638, 649, ]
+
+=====================
+class: parking
+rank: 8
+subclass: parking
+
+ID: 2866433291
+====== Geometry
+[1, -472, 142, ]
+
+=====================
+class: parking
+rank: 9
+subclass: parking
+
+ID: 2866433301
+====== Geometry
+[1, -481, 249, ]
+
+=====================
+class: parking
+rank: 10
+subclass: parking
+
+ID: 2866444231
+====== Geometry
+[1, -417, 352, ]
+
+=====================
+class: parking
+rank: 11
+subclass: parking
+
+ID: 2866445191
+====== Geometry
+[1, -501, -45, ]
+
+=====================
+class: playground
+rank: 12
+subclass: playground
+
+ID: 2866445201
+====== Geometry
+[1, -555, -106, ]
+
+=====================
+class: parking
+rank: 8
+subclass: parking
+
+ID: 2866445691
+====== Geometry
+[1, -876, 1054, ]
+
+=====================
+class: park
+name: Crerar Neighbourhood Park
+name:latin: Crerar Neighbourhood Park
+name_de: Crerar Neighbourhood Park
+name_en: Crerar Neighbourhood Park
+name_int: Crerar Neighbourhood Park
+rank: 2
+subclass: park
+
+ID: 2974697601
+====== Geometry
+[1, 3918, 4724, ]
+
+=====================
+class: fuel
+name: Petro-Canada
+name:latin: Petro-Canada
+name_de: Petro-Canada
+name_en: Petro-Canada
+name_int: Petro-Canada
+rank: 7
+subclass: fuel
+
+ID: 2989354430
+====== Geometry
+[1, 2069, 231, ]
+
+=====================
+class: grocery
+name: Canadian Tire
+name:latin: Canadian Tire
+name_de: Canadian Tire
+name_en: Canadian Tire
+name_int: Canadian Tire
+rank: 4
+subclass: department_store
+
+ID: 2989354440
+====== Geometry
+[1, 2433, -4, ]
+
+=====================
+class: bank
+name: TD
+name:latin: TD
+name_de: TD
+name_en: TD
+name_int: TD
+rank: 23
+subclass: bank
+
+ID: 2989354450
+====== Geometry
+[1, 1910, 140, ]
+
+=====================
+class: parking
+rank: 11
+subclass: parking
+
+ID: 3091106041
+====== Geometry
+[1, -197, 226, ]
+
+=====================
+class: parking
+rank: 12
+subclass: parking
+
+ID: 3091109091
+====== Geometry
+[1, -219, 293, ]
+
+=====================
+class: parking
+rank: 13
+subclass: parking
+
+ID: 3091109101
+====== Geometry
+[1, -181, 178, ]
+
+=====================
+class: parking
+rank: 14
+subclass: parking
+
+ID: 3091109111
+====== Geometry
+[1, -139, 202, ]
+
+=====================
+class: parking
+rank: 5
+subclass: parking
+
+ID: 3102465621
+====== Geometry
+[1, 4683, 3678, ]
+
+=====================
+class: parking
+rank: 6
+subclass: parking
+
+ID: 3106885711
+====== Geometry
+[1, 4981, 3169, ]
+
+=====================
+class: parking
+rank: 11
+subclass: parking
+
+ID: 3106886941
+====== Geometry
+[1, 4997, 3051, ]
+
+=====================
+class: place_of_worship
+layer: 1
+name: Annunciation of Our Lord Catholic Church
+name:latin: Annunciation of Our Lord Catholic Church
+name_de: Annunciation of Our Lord Catholic Church
+name_en: Annunciation of Our Lord Catholic Church
+name_int: Annunciation of Our Lord Catholic Church
+rank: 4
+subclass: christian
+
+ID: 3118657651
+====== Geometry
+[1, -998, 1396, ]
+
+=====================
+class: parking
+rank: 15
+subclass: parking
+
+ID: 3118661611
+====== Geometry
+[1, -230, 921, ]
+
+=====================
+class: parking
+rank: 9
+subclass: parking
+
+ID: 3125323991
+====== Geometry
+[1, -942, 1286, ]
+
+=====================
+class: parking
+rank: 10
+subclass: parking
+
+ID: 3125324021
+====== Geometry
+[1, -872, 1412, ]
+
+=====================
+class: parking
+rank: 11
+subclass: parking
+
+ID: 3125325551
+====== Geometry
+[1, -374, 1696, ]
+
+=====================
+class: parking
+rank: 12
+subclass: parking
+
+ID: 3125325561
+====== Geometry
+[1, -321, 1716, ]
+
+=====================
+class: parking
+rank: 13
+subclass: parking
+
+ID: 3125325621
+====== Geometry
+[1, -597, 1831, ]
+
+=====================
+class: parking
+rank: 14
+subclass: parking
+
+ID: 3125325641
+====== Geometry
+[1, -732, 1791, ]
+
+=====================
+class: parking
+rank: 15
+subclass: parking
+
+ID: 3125325651
+====== Geometry
+[1, -757, 1851, ]
+
+=====================
+class: parking
+rank: 16
+subclass: parking
+
+ID: 3125325661
+====== Geometry
+[1, -360, 2029, ]
+
+=====================
+class: playground
+rank: 17
+subclass: playground
+
+ID: 3125326581
+====== Geometry
+[1, -393, 1880, ]
+
+=====================
+class: parking
+rank: 18
+subclass: parking
+
+ID: 3125326601
+====== Geometry
+[1, -344, 1891, ]
+
+=====================
+class: parking
+rank: 19
+subclass: parking
+
+ID: 3125326611
+====== Geometry
+[1, -275, 1922, ]
+
+=====================
+class: parking
+rank: 5
+subclass: parking
+
+ID: 3125326621
+====== Geometry
+[1, -126, 2081, ]
+
+=====================
+class: parking
+rank: 1
+subclass: parking
+
+ID: 3125326631
+====== Geometry
+[1, 84, 2065, ]
+
+=====================
+class: parking
+rank: 20
+subclass: parking
+
+ID: 3125326641
+====== Geometry
+[1, -1, 2028, ]
+
+=====================
+class: parking
+rank: 21
+subclass: parking
+
+ID: 3125327171
+====== Geometry
+[1, -114, 1594, ]
+
+=====================
+class: playground
+rank: 22
+subclass: playground
+
+ID: 3125327371
+====== Geometry
+[1, -217, 1658, ]
+
+=====================
+class: post
+rank: 3
+subclass: post_box
+
+ID: 3130937840
+====== Geometry
+[1, 3777, 4296, ]
+
+=====================
+class: post
+rank: 1
+subclass: post_box
+
+ID: 3130938210
+====== Geometry
+[1, 3889, 4073, ]
+
+=====================
+class: post
+rank: 4
+subclass: post_box
+
+ID: 3130938240
+====== Geometry
+[1, 4276, 4640, ]
+
+=====================
+class: post
+rank: 4
+subclass: post_box
+
+ID: 3130938390
+====== Geometry
+[1, 4044, 4130, ]
+
+=====================
+class: post
+rank: 2
+subclass: post_box
+
+ID: 3131636730
+====== Geometry
+[1, 3951, 3787, ]
+
+=====================
+class: parking
+rank: 15
+subclass: parking
+
+ID: 3175987001
+====== Geometry
+[1, 3016, -87, ]
+
+=====================
+class: parking
+rank: 4
+subclass: parking
+
+ID: 3219298731
+====== Geometry
+[1, 3345, 1323, ]
+
+=====================
+class: parking
+rank: 5
+subclass: parking
+
+ID: 3219298741
+====== Geometry
+[1, 3183, 1361, ]
+
+=====================
+class: parking
+rank: 6
+subclass: parking
+
+ID: 3219318311
+====== Geometry
+[1, 3221, 1516, ]
+
+=====================
+class: parking
+rank: 7
+subclass: parking
+
+ID: 3219318321
+====== Geometry
+[1, 3308, 1523, ]
+
+=====================
+class: parking
+rank: 8
+subclass: parking
+
+ID: 3219318331
+====== Geometry
+[1, 3451, 1550, ]
+
+=====================
+class: parking
+rank: 9
+subclass: parking
+
+ID: 3219318341
+====== Geometry
+[1, 3580, 1513, ]
+
+=====================
+class: parking
+rank: 10
+subclass: parking
+
+ID: 3219318351
+====== Geometry
+[1, 3407, 1573, ]
+
+=====================
+class: parking
+rank: 11
+subclass: parking
+
+ID: 3219318361
+====== Geometry
+[1, 3362, 1627, ]
+
+=====================
+class: parking
+rank: 12
+subclass: parking
+
+ID: 3219318371
+====== Geometry
+[1, 3281, 1453, ]
+
+=====================
+class: parking
+rank: 13
+subclass: parking
+
+ID: 3219318381
+====== Geometry
+[1, 3486, 1517, ]
+
+=====================
+class: parking
+rank: 14
+subclass: parking
+
+ID: 3219318391
+====== Geometry
+[1, 3469, 1453, ]
+
+=====================
+class: parking
+rank: 13
+subclass: parking
+
+ID: 3219329101
+====== Geometry
+[1, -789, -768, ]
+
+=====================
+class: parking
+rank: 14
+subclass: parking
+
+ID: 3219329111
+====== Geometry
+[1, -676, -760, ]
+
+=====================
+class: parking
+rank: 13
+subclass: parking
+
+ID: 3297899841
+====== Geometry
+[1, 698, 3277, ]
+
+=====================
+class: parking
+rank: 14
+subclass: parking
+
+ID: 3297899861
+====== Geometry
+[1, 874, 3101, ]
+
+=====================
+class: parking
+rank: 15
+subclass: parking
+
+ID: 3297926431
+====== Geometry
+[1, 753, 3417, ]
+
+=====================
+class: parking
+rank: 16
+subclass: parking
+
+ID: 3297926441
+====== Geometry
+[1, 573, 3464, ]
+
+=====================
+class: parking
+rank: 17
+subclass: parking
+
+ID: 3297926521
+====== Geometry
+[1, 692, 3578, ]
+
+=====================
+class: parking
+rank: 18
+subclass: parking
+
+ID: 3297926541
+====== Geometry
+[1, 823, 3565, ]
+
+=====================
+class: parking
+rank: 19
+subclass: parking
+
+ID: 3297926591
+====== Geometry
+[1, 619, 4035, ]
+
+=====================
+class: parking
+rank: 20
+subclass: parking
+
+ID: 3297926701
+====== Geometry
+[1, 799, 3635, ]
+
+=====================
+class: parking
+rank: 21
+subclass: parking
+
+ID: 3297926711
+====== Geometry
+[1, 740, 3602, ]
+
+=====================
+class: playground
+rank: 22
+subclass: playground
+
+ID: 3297927681
+====== Geometry
+[1, 389, 3702, ]
+
+=====================
+class: parking
+rank: 28
+subclass: parking
+
+ID: 3297930251
+====== Geometry
+[1, 403, 4730, ]
+
+=====================
+class: parking
+rank: 4
+subclass: parking
+
+ID: 3297932321
+====== Geometry
+[1, -594, 3803, ]
+
+=====================
+class: place_of_worship
+name: Church of Mar Mari the Apostle
+name:latin: Church of Mar Mari the Apostle
+name_de: Church of Mar Mari the Apostle
+name_en: Church of Mar Mari the Apostle
+name_int: Church of Mar Mari the Apostle
+rank: 17
+subclass: christian
+
+ID: 3297933911
+====== Geometry
+[1, 15, 4577, ]
+
+=====================
+class: parking
+rank: 29
+subclass: parking
+
+ID: 3297935381
+====== Geometry
+[1, 73, 4557, ]
+
+=====================
+class: parking
+rank: 23
+subclass: parking
+
+ID: 3297936201
+====== Geometry
+[1, 1014, 3605, ]
+
+=====================
+class: parking
+rank: 8
+subclass: parking
+
+ID: 3297936781
+====== Geometry
+[1, 1188, 3103, ]
+
+=====================
+class: parking
+rank: 6
+subclass: parking
+
+ID: 3327682741
+====== Geometry
+[1, 3278, 3137, ]
+
+=====================
+class: parking
+rank: 24
+subclass: parking
+
+ID: 3341110911
+====== Geometry
+[1, 838, 3741, ]
+
+=====================
+class: parking
+rank: 25
+subclass: parking
+
+ID: 3341110921
+====== Geometry
+[1, 959, 3777, ]
+
+=====================
+class: parking
+rank: 26
+subclass: parking
+
+ID: 3341111661
+====== Geometry
+[1, 893, 3954, ]
+
+=====================
+class: parking
+rank: 27
+subclass: parking
+
+ID: 3341111671
+====== Geometry
+[1, 908, 3917, ]
+
+=====================
+class: parking
+rank: 28
+subclass: parking
+
+ID: 3341111681
+====== Geometry
+[1, 975, 4040, ]
+
+=====================
+class: parking
+rank: 29
+subclass: parking
+
+ID: 3341111691
+====== Geometry
+[1, 974, 4015, ]
+
+=====================
+class: parking
+rank: 30
+subclass: parking
+
+ID: 3341111701
+====== Geometry
+[1, 872, 4121, ]
+
+=====================
+class: parking
+rank: 31
+subclass: parking
+
+ID: 3341111761
+====== Geometry
+[1, 324, 4406, ]
+
+=====================
+class: parking
+rank: 32
+subclass: parking
+
+ID: 3341113221
+====== Geometry
+[1, 959, 4334, ]
+
+=====================
+class: parking
+rank: 33
+subclass: parking
+
+ID: 3341113231
+====== Geometry
+[1, 785, 4302, ]
+
+=====================
+class: parking
+rank: 34
+subclass: parking
+
+ID: 3341113241
+====== Geometry
+[1, 852, 4235, ]
+
+=====================
+class: parking
+rank: 35
+subclass: parking
+
+ID: 3341113251
+====== Geometry
+[1, 831, 4270, ]
+
+=====================
+class: parking
+rank: 36
+subclass: parking
+
+ID: 3341113261
+====== Geometry
+[1, 807, 4335, ]
+
+=====================
+class: parking
+rank: 37
+subclass: parking
+
+ID: 3341113271
+====== Geometry
+[1, 816, 4308, ]
+
+=====================
+class: parking
+rank: 55
+subclass: parking
+
+ID: 3366800551
+====== Geometry
+[1, 1434, 527, ]
+
+=====================
+class: parking
+rank: 38
+subclass: parking
+
+ID: 3464161671
+====== Geometry
+[1, 570, 5012, ]
+
+=====================
+class: parking
+rank: 39
+subclass: parking
+
+ID: 3464161701
+====== Geometry
+[1, 890, 5022, ]
+
+=====================
+class: parking
+rank: 40
+subclass: parking
+
+ID: 3464161731
+====== Geometry
+[1, 740, 5068, ]
+
+=====================
+class: parking
+rank: 41
+subclass: parking
+
+ID: 3464161761
+====== Geometry
+[1, 601, 4931, ]
+
+=====================
+class: parking
+rank: 42
+subclass: parking
+
+ID: 3464161791
+====== Geometry
+[1, 547, 5085, ]
+
+=====================
+class: parking
+rank: 43
+subclass: parking
+
+ID: 3464165491
+====== Geometry
+[1, 182, 4863, ]
+
+=====================
+class: parking
+rank: 44
+subclass: parking
+
+ID: 3464165531
+====== Geometry
+[1, 370, 5070, ]
+
+=====================
+class: parking
+rank: 23
+subclass: parking
+
+ID: 3579463951
+====== Geometry
+[1, 1509, -260, ]
+
+=====================
+class: parking
+rank: 24
+subclass: parking
+
+ID: 3579463961
+====== Geometry
+[1, 1717, -248, ]
+
+=====================
+class: parking
+rank: 25
+subclass: parking
+
+ID: 3579463971
+====== Geometry
+[1, 1562, -224, ]
+
+=====================
+class: parking
+rank: 16
+subclass: parking
+
+ID: 3594339191
+====== Geometry
+[1, 3048, -695, ]
+
+=====================
+class: place_of_worship
+name: South Gate Presbyterian Church
+name:latin: South Gate Presbyterian Church
+name_de: South Gate Presbyterian Church
+name_en: South Gate Presbyterian Church
+name_int: South Gate Presbyterian Church
+rank: 8
+subclass: christian
+
+ID: 3594339451
+====== Geometry
+[1, 2978, -671, ]
+
+=====================
+class: parking
+rank: 26
+subclass: parking
+
+ID: 3705438801
+====== Geometry
+[1, 1864, -368, ]
+
+=====================
+class: parking
+rank: 27
+subclass: parking
+
+ID: 3705438811
+====== Geometry
+[1, 1942, -296, ]
+
+=====================
+class: parking
+rank: 28
+subclass: parking
+
+ID: 3705438821
+====== Geometry
+[1, 2033, -231, ]
+
+=====================
+class: parking
+rank: 17
+subclass: parking
+
+ID: 3705438831
+====== Geometry
+[1, 2110, -291, ]
+
+=====================
+class: parking
+rank: 29
+subclass: parking
+
+ID: 3705438841
+====== Geometry
+[1, 2016, -364, ]
+
+=====================
+class: parking
+rank: 18
+subclass: parking
+
+ID: 3705440721
+====== Geometry
+[1, 2437, -247, ]
+
+=====================
+class: parking
+rank: 23
+subclass: parking
+
+ID: 3743610161
+====== Geometry
+[1, 1772, 1156, ]
+
+=====================
+class: parking
+rank: 24
+subclass: parking
+
+ID: 3743610171
+====== Geometry
+[1, 1893, 1136, ]
+
+=====================
+class: parking
+rank: 25
+subclass: parking
+
+ID: 3743610341
+====== Geometry
+[1, 1718, 1298, ]
+
+=====================
+class: parking
+rank: 26
+subclass: parking
+
+ID: 3743610351
+====== Geometry
+[1, 1751, 1258, ]
+
+=====================
+class: parking
+rank: 27
+subclass: parking
+
+ID: 3743610361
+====== Geometry
+[1, 1801, 1324, ]
+
+=====================
+class: parking
+rank: 56
+subclass: parking
+
+ID: 3743610761
+====== Geometry
+[1, 1855, 947, ]
+
+=====================
+class: parking
+rank: 57
+subclass: parking
+
+ID: 3743610771
+====== Geometry
+[1, 1909, 950, ]
+
+=====================
+class: parking
+rank: 58
+subclass: parking
+
+ID: 3743610781
+====== Geometry
+[1, 1880, 955, ]
+
+=====================
+class: parking
+rank: 2
+subclass: parking
+
+ID: 3743612701
+====== Geometry
+[1, 2217, 1121, ]
+
+=====================
+class: parking
+rank: 3
+subclass: parking
+
+ID: 3743614031
+====== Geometry
+[1, 2243, 1036, ]
+
+=====================
+class: parking
+rank: 28
+subclass: parking
+
+ID: 3743614271
+====== Geometry
+[1, 2020, 1026, ]
+
+=====================
+class: parking
+rank: 59
+subclass: parking
+
+ID: 3743614281
+====== Geometry
+[1, 2029, 952, ]
+
+=====================
+class: place_of_worship
+name: Sisters of St. John the Baptist Convent
+name:latin: Sisters of St. John the Baptist Convent
+name_de: Sisters of St. John the Baptist Convent
+name_en: Sisters of St. John the Baptist Convent
+name_int: Sisters of St. John the Baptist Convent
+rank: 2
+subclass: christian
+
+ID: 3751598931
+====== Geometry
+[1, -536, -138, ]
+
+=====================
+class: parking
+rank: 60
+subclass: parking
+
+ID: 3773934981
+====== Geometry
+[1, 1121, 514, ]
+
+=====================
+class: parking
+rank: 29
+subclass: parking
+
+ID: 3773984501
+====== Geometry
+[1, 1413, 1625, ]
+
+=====================
+class: parking
+rank: 30
+subclass: parking
+
+ID: 3773984511
+====== Geometry
+[1, 1362, 1627, ]
+
+=====================
+class: parking
+rank: 31
+subclass: parking
+
+ID: 3773984521
+====== Geometry
+[1, 1475, 1715, ]
+
+=====================
+class: parking
+rank: 32
+subclass: parking
+
+ID: 3773984531
+====== Geometry
+[1, 1345, 1792, ]
+
+=====================
+class: place_of_worship
+name: West Fifth Bible Chapel
+name:latin: West Fifth Bible Chapel
+name_de: West Fifth Bible Chapel
+name_en: West Fifth Bible Chapel
+name_int: West Fifth Bible Chapel
+rank: 8
+subclass: christian
+
+ID: 3980163911
+====== Geometry
+[1, 1138, -398, ]
+
+=====================
+class: place_of_worship
+rank: 6
+subclass: christian
+
+ID: 3980164751
+====== Geometry
+[1, 366, -338, ]
+
+=====================
+class: parking
+rank: 45
+subclass: parking
+
+ID: 4491151201
+====== Geometry
+[1, 738, 4526, ]
+
+=====================
+class: parking
+rank: 46
+subclass: parking
+
+ID: 4491151211
+====== Geometry
+[1, 778, 4574, ]
+
+=====================
+class: park
+rank: 5
+subclass: park
+
+ID: 4491170661
+====== Geometry
+[1, -36, 4112, ]
+
+=====================
+class: parking
+rank: 61
+subclass: parking
+
+ID: 4494720011
+====== Geometry
+[1, 1991, 645, ]
+
+=====================
+class: parking
+rank: 62
+subclass: parking
+
+ID: 4494720021
+====== Geometry
+[1, 1635, 742, ]
+
+=====================
+class: parking
+rank: 63
+subclass: parking
+
+ID: 4494720031
+====== Geometry
+[1, 1664, 732, ]
+
+=====================
+class: parking
+rank: 64
+subclass: parking
+
+ID: 4494720041
+====== Geometry
+[1, 2022, 556, ]
+
+=====================
+class: parking
+rank: 65
+subclass: parking
+
+ID: 4494720051
+====== Geometry
+[1, 1907, 813, ]
+
+=====================
+class: fast_food
+name: Alamin Charcoal Flame
+name:latin: Alamin Charcoal Flame
+name_de: Alamin Charcoal Flame
+name_en: Alamin Charcoal Flame
+name_int: Alamin Charcoal Flame
+rank: 13
+subclass: fast_food
+
+ID: 4494720061
+====== Geometry
+[1, 1880, 895, ]
+
+=====================
+class: parking
+rank: 66
+subclass: parking
+
+ID: 4494720111
+====== Geometry
+[1, 1744, 807, ]
+
+=====================
+class: parking
+rank: 67
+subclass: parking
+
+ID: 4494720121
+====== Geometry
+[1, 1770, 820, ]
+
+=====================
+class: shop
+name: Delux Paints
+name:latin: Delux Paints
+name_de: Delux Paints
+name_en: Delux Paints
+name_int: Delux Paints
+rank: 7
+subclass: paint
+
+ID: 4494720131
+====== Geometry
+[1, 1702, 793, ]
+
+=====================
+class: parking
+rank: 68
+subclass: parking
+
+ID: 4494720871
+====== Geometry
+[1, 1671, 901, ]
+
+=====================
+class: shop
+name: Hakim Optical
+name:latin: Hakim Optical
+name_de: Hakim Optical
+name_en: Hakim Optical
+name_int: Hakim Optical
+rank: 5
+subclass: optician
+
+ID: 4494720921
+====== Geometry
+[1, 1725, 1421, ]
+
+=====================
+class: parking
+rank: 33
+subclass: parking
+
+ID: 4494721601
+====== Geometry
+[1, 1673, 1481, ]
+
+=====================
+class: parking
+rank: 34
+subclass: parking
+
+ID: 4494721611
+====== Geometry
+[1, 1774, 1428, ]
+
+=====================
+class: parking
+rank: 35
+subclass: parking
+
+ID: 4494721621
+====== Geometry
+[1, 1780, 1390, ]
+
+=====================
+class: parking
+rank: 36
+subclass: parking
+
+ID: 4494721881
+====== Geometry
+[1, 1474, 1396, ]
+
+=====================
+class: parking
+rank: 37
+subclass: parking
+
+ID: 4494721891
+====== Geometry
+[1, 1571, 1432, ]
+
+=====================
+class: parking
+rank: 38
+subclass: parking
+
+ID: 4494722721
+====== Geometry
+[1, 1542, 1262, ]
+
+=====================
+class: parking
+rank: 39
+subclass: parking
+
+ID: 4494723321
+====== Geometry
+[1, 1641, 1576, ]
+
+=====================
+class: parking
+rank: 40
+subclass: parking
+
+ID: 4494723331
+====== Geometry
+[1, 1543, 1529, ]
+
+=====================
+class: parking
+rank: 41
+subclass: parking
+
+ID: 4494723371
+====== Geometry
+[1, 1605, 1698, ]
+
+=====================
+class: parking
+rank: 42
+subclass: parking
+
+ID: 4494723821
+====== Geometry
+[1, 1534, 1956, ]
+
+=====================
+class: parking
+rank: 43
+subclass: parking
+
+ID: 4494723831
+====== Geometry
+[1, 1633, 1903, ]
+
+=====================
+class: parking
+rank: 7
+subclass: parking
+
+ID: 4494723841
+====== Geometry
+[1, 1440, 2229, ]
+
+=====================
+class: parking
+rank: 8
+subclass: parking
+
+ID: 4494723851
+====== Geometry
+[1, 1227, 2155, ]
+
+=====================
+class: parking
+rank: 9
+subclass: parking
+
+ID: 4494723861
+====== Geometry
+[1, 1463, 2135, ]
+
+=====================
+class: parking
+rank: 10
+subclass: parking
+
+ID: 4494723871
+====== Geometry
+[1, 1536, 2260, ]
+
+=====================
+class: parking
+rank: 11
+subclass: parking
+
+ID: 4494723881
+====== Geometry
+[1, 1571, 2178, ]
+
+=====================
+class: parking
+rank: 12
+subclass: parking
+
+ID: 4494723891
+====== Geometry
+[1, 1379, 2077, ]
+
+=====================
+class: parking
+rank: 13
+subclass: parking
+
+ID: 4494723901
+====== Geometry
+[1, 1500, 2051, ]
+
+=====================
+class: veterinary
+name: Hamilton Animal Clinic
+name:latin: Hamilton Animal Clinic
+name_de: Hamilton Animal Clinic
+name_en: Hamilton Animal Clinic
+name_int: Hamilton Animal Clinic
+rank: 15
+subclass: veterinary
+
+ID: 4494723971
+====== Geometry
+[1, 1581, 1324, ]
+
+=====================
+class: parking
+rank: 28
+subclass: parking
+
+ID: 4494724591
+====== Geometry
+[1, 2262, 842, ]
+
+=====================
+class: parking
+rank: 5
+subclass: parking
+
+ID: 4514897941
+====== Geometry
+[1, 2930, 5055, ]
+
+=====================
+class: parking
+rank: 6
+subclass: parking
+
+ID: 4514897961
+====== Geometry
+[1, 2938, 4913, ]
+
+=====================
+class: parking
+rank: 7
+subclass: parking
+
+ID: 4514897971
+====== Geometry
+[1, 2646, 4981, ]
+
+=====================
+class: parking
+rank: 8
+subclass: parking
+
+ID: 4514900671
+====== Geometry
+[1, 2396, 4797, ]
+
+=====================
+class: parking
+rank: 9
+subclass: parking
+
+ID: 4514900681
+====== Geometry
+[1, 2369, 4974, ]
+
+=====================
+class: parking
+rank: 10
+subclass: parking
+
+ID: 4514900691
+====== Geometry
+[1, 2477, 4958, ]
+
+=====================
+class: pitch
+rank: 69
+subclass: baseball
+
+ID: 4650749221
+====== Geometry
+[1, 1352, 951, ]
+
+=====================
+class: playground
+rank: 29
+subclass: playground
+
+ID: 4650749291
+====== Geometry
+[1, 2571, 979, ]
+
+=====================
+class: parking
+rank: 4
+subclass: parking
+
+ID: 4650749301
+====== Geometry
+[1, 2594, 1041, ]
+
+=====================
+class: parking
+rank: 3
+subclass: parking
+
+ID: 4650749381
+====== Geometry
+[1, 4009, 2476, ]
+
+=====================
+class: playground
+rank: 12
+subclass: playground
+
+ID: 5070972571
+====== Geometry
+[1, 2802, 3691, ]
+
+=====================
+class: park
+rank: 2
+subclass: park
+
+ID: 5070972631
+====== Geometry
+[1, 2502, 3774, ]
+
+=====================
+class: pitch
+rank: 11
+subclass: soccer
+
+ID: 5070972661
+====== Geometry
+[1, 3055, 4347, ]
+
+=====================
+class: parking
+rank: 4
+subclass: parking
+
+ID: 5070975631
+====== Geometry
+[1, 3148, 2837, ]
+
+=====================
+class: parking
+rank: 5
+subclass: parking
+
+ID: 5070975641
+====== Geometry
+[1, 3097, 2896, ]
+
+=====================
+class: parking
+rank: 6
+subclass: parking
+
+ID: 5070975651
+====== Geometry
+[1, 3073, 2900, ]
+
+=====================
+class: parking
+rank: 1
+subclass: parking
+
+ID: 5070975661
+====== Geometry
+[1, 3064, 2877, ]
+
+=====================
+class: parking
+rank: 2
+subclass: parking
+
+ID: 5070975671
+====== Geometry
+[1, 3011, 2801, ]
+
+=====================
+class: parking
+rank: 6
+subclass: parking
+
+ID: 5070979611
+====== Geometry
+[1, 4769, 1179, ]
+
+=====================
+class: parking
+rank: 7
+subclass: parking
+
+ID: 5529150231
+====== Geometry
+[1, 5047, 3453, ]
+
+=====================
+class: playground
+rank: 16
+subclass: playground
+
+ID: 6706069141
+====== Geometry
+[1, -967, 803, ]
+
+=====================
+class: parking
+rank: 17
+subclass: parking
+
+ID: 6706069161
+====== Geometry
+[1, -868, 850, ]
+
+=====================
+class: parking
+rank: 7
+subclass: parking
+
+ID: 6710935841
+====== Geometry
+[1, 3313, 3227, ]
+
+=====================
+class: parking
+rank: 8
+subclass: parking
+
+ID: 6710935851
+====== Geometry
+[1, 3500, 3296, ]
+
+=====================
+class: parking
+rank: 9
+subclass: parking
+
+ID: 6710935901
+====== Geometry
+[1, 3453, 3292, ]
+
+=====================
+class: parking
+rank: 10
+subclass: parking
+
+ID: 6710935921
+====== Geometry
+[1, 3720, 3376, ]
+
+=====================
+class: parking
+rank: 11
+subclass: parking
+
+ID: 6710935951
+====== Geometry
+[1, 4022, 3483, ]
+
+=====================
+class: parking
+rank: 12
+subclass: parking
+
+ID: 6710935971
+====== Geometry
+[1, 4069, 3494, ]
+
+=====================
+class: parking
+rank: 8
+subclass: parking
+
+ID: 6710935991
+====== Geometry
+[1, 4199, 3488, ]
+
+=====================
+class: parking
+rank: 9
+subclass: parking
+
+ID: 6710936001
+====== Geometry
+[1, 4163, 3441, ]
+
+=====================
+class: parking
+rank: 6
+subclass: parking
+
+ID: 6741370671
+====== Geometry
+[1, -566, 4861, ]
+
+=====================
+class: pitch
+rank: 7
+subclass: tennis
+
+ID: 6741370701
+====== Geometry
+[1, -551, 4976, ]
+
+=====================
+class: school
+name: Westview Middle School
+name:latin: Westview Middle School
+name_de: Westview Middle School
+name_en: Westview Middle School
+name_int: Westview Middle School
+rank: 3
+subclass: school
+
+ID: 7081037951
+====== Geometry
+[1, -404, 872, ]
+
+=====================
+class: park
+rank: 5
+subclass: park
+
+ID: 7757312041
+====== Geometry
+[1, -456, 222, ]
+
+=====================
+class: car
+name: Audi Hamilton
+name:latin: Audi Hamilton
+name_de: Audi Hamilton
+name_en: Audi Hamilton
+name_int: Audi Hamilton
+rank: 5
+subclass: car
+
+ID: 7758321461
+====== Geometry
+[1, 1146, 3523, ]
+
+=====================
+class: restaurant
+name: Shoeless Joe's
+name:latin: Shoeless Joe's
+name_de: Shoeless Joe's
+name_en: Shoeless Joe's
+name_int: Shoeless Joe's
+rank: 6
+subclass: restaurant
+
+ID: 7758321471
+====== Geometry
+[1, 1133, 3322, ]
+
+=====================
+class: sports_centre
+name: Westmount Recreation Centre
+name:latin: Westmount Recreation Centre
+name_de: Westmount Recreation Centre
+name_en: Westmount Recreation Centre
+name_int: Westmount Recreation Centre
+rank: 4
+subclass: sports_centre
+
+ID: 8371795901
+====== Geometry
+[1, -334, 232, ]
+
+=====================
+class: place_of_worship
+rank: 5
+subclass: christian
+
+ID: 8371819441
+====== Geometry
+[1, -492, 3847, ]
+
+=====================
+class: sports_centre
+name: Mountain (Dave Andreychuk) Arena
+name:latin: Mountain (Dave Andreychuk) Arena
+name_de: Mountain (Dave Andreychuk) Arena
+name_en: Mountain (Dave Andreychuk) Arena
+name_int: Mountain (Dave Andreychuk) Arena
+rank: 8
+subclass: sports_centre
+
+ID: 8376486561
+====== Geometry
+[1, 2111, 942, ]
+
+=====================
+class: parking
+rank: 30
+subclass: parking
+
+ID: 8513456081
+====== Geometry
+[1, 1034, -361, ]
+
+=====================
+class: parking
+rank: 15
+subclass: parking
+
+ID: 8513456811
+====== Geometry
+[1, 3469, 1782, ]
+
+=====================
+class: parking
+rank: 7
+subclass: parking
+
+ID: 8513456821
+====== Geometry
+[1, 3338, 2203, ]
+
+=====================
+class: parking
+rank: 12
+subclass: parking
+
+ID: 8516593711
+====== Geometry
+[1, 5003, 2236, ]
+
+=====================
+class: parking
+rank: 7
+subclass: parking
+
+ID: 10233884981
+====== Geometry
+[1, 279, -308, ]
+
+=====================
+class: playground
+rank: 8
+subclass: playground
+
+ID: 10271019231
+====== Geometry
+[1, -713, 4819, ]
+
+=====================
+class: parking
+rank: 9
+subclass: parking
+
+ID: 10271019241
+====== Geometry
+[1, -1012, 4684, ]
+
+=====================
+class: pitch
+rank: 10
+subclass: soccer
+
+ID: 10271019291
+====== Geometry
+[1, -813, 4776, ]
+
+=====================
+class: parking
+rank: 70
+subclass: parking
+
+ID: 11056463731
+====== Geometry
+[1, 1851, 130, ]
+
+=====================
+class: restaurant
+rank: 30
+subclass: restaurant
+
+ID: 11131609841
+====== Geometry
+[1, 2306, 2, ]
+
+=====================
+class: shop
+name: Toys R Us
+name:latin: Toys R Us
+name_de: Toys R Us
+name_en: Toys R Us
+name_int: Toys R Us
+rank: 5
+subclass: toys
+
+ID: 11930056151
+====== Geometry
+[1, 4839, 2817, ]
+
+=====================
+class: parking
+rank: 18
+subclass: parking
+
+ID: 12301094431
+====== Geometry
+[1, -174, 725, ]
+
+=====================
+class: parking
+rank: 31
+subclass: parking
+
+ID: 12302090201
+====== Geometry
+[1, 2207, 633, ]
+
+=====================
+class: playground
+rank: 19
+subclass: playground
+
+ID: 12897218501
+====== Geometry
+[1, -505, 841, ]
+
+=====================
+class: parking
+rank: 11
+subclass: parking
+
+ID: 12962140641
+====== Geometry
+[1, -135, 4697, ]
+
+=====================
+class: parking
+rank: 12
+subclass: parking
+
+ID: 12962140651
+====== Geometry
+[1, -207, 4589, ]
+
+=====================
+class: grocery
+name: Food Basics
+name:latin: Food Basics
+name_de: Food Basics
+name_en: Food Basics
+name_int: Food Basics
+rank: 5
+subclass: supermarket
+
+ID: 14858095550
+====== Geometry
+[1, 2487, -171, ]
+
+=====================
+class: restaurant
+name: D Spot Dessert Cafe
+name:latin: D Spot Dessert Cafe
+name_de: D Spot Dessert Cafe
+name_en: D Spot Dessert Cafe
+name_int: D Spot Dessert Cafe
+rank: 6
+subclass: restaurant
+
+ID: 18708348330
+====== Geometry
+[1, 4998, 2925, ]
+
+=====================
+class: playground
+rank: 3
+subclass: playground
+
+ID: 19375877650
+====== Geometry
+[1, 3004, 2603, ]
+
+=====================
+class: bus
+rank: 2
+subclass: bus_stop
+
+ID: 19756011320
+====== Geometry
+[1, 4700, 4874, ]
+
+=====================
+class: bus
+rank: 3
+subclass: bus_stop
+
+ID: 19756011380
+====== Geometry
+[1, 4623, 4870, ]
+
+=====================
+class: shop
+name: Bell
+name:latin: Bell
+name_de: Bell
+name_en: Bell
+name_int: Bell
+rank: 5
+subclass: mobile_phone
+
+ID: 21221447490
+====== Geometry
+[1, 961, 4096, ]
+
+=====================
+class: fuel
+name: Esso
+name:latin: Esso
+name_de: Esso
+name_en: Esso
+name_int: Esso
+rank: 24
+subclass: fuel
+
+ID: 26174104860
+====== Geometry
+[1, 1858, 979, ]
+
+=====================
+class: fuel
+name: Husky
+name:latin: Husky
+name_de: Husky
+name_en: Husky
+name_int: Husky
+rank: 25
+subclass: fuel
+
+ID: 26174105000
+====== Geometry
+[1, 1794, 595, ]
+
+=====================
+class: fuel
+name: Pioneer
+name:latin: Pioneer
+name_de: Pioneer
+name_en: Pioneer
+name_int: Pioneer
+rank: 26
+subclass: fuel
+
+ID: 26174105040
+====== Geometry
+[1, 1989, 501, ]
+
+=====================
+class: gate
+rank: 15
+subclass: gate
+
+ID: 27161071660
+====== Geometry
+[1, 3613, 862, ]
+
+=====================
+class: parking
+layer: -1
+rank: 10
+subclass: parking
+
+ID: 31564305870
+====== Geometry
+[1, 4982, 3118, ]
+
+=====================
+class: shop
+name: Upper Wentworth Convenience & Variety
+name:latin: Upper Wentworth Convenience & Variety
+name_de: Upper Wentworth Convenience & Variety
+name_en: Upper Wentworth Convenience & Variety
+name_int: Upper Wentworth Convenience & Variety
+rank: 1
+subclass: convenience
+
+ID: 31572092020
+====== Geometry
+[1, 4608, 4771, ]
+
+=====================
+class: telephone
+rank: 9
+subclass: telephone
+
+ID: 31572098620
+====== Geometry
+[1, 4696, 4894, ]
+
+=====================
+class: car
+name: Beverly Tire
+name:latin: Beverly Tire
+name_de: Beverly Tire
+name_en: Beverly Tire
+name_int: Beverly Tire
+rank: 3
+subclass: car_repair
+
+ID: 31614532980
+====== Geometry
+[1, 5109, 3105, ]
+
+=====================
+class: parking
+layer: -1
+rank: 23
+subclass: parking
+
+ID: 31840059680
+====== Geometry
+[1, -136, 1568, ]
+
+=====================
+class: parking
+layer: -1
+rank: 24
+subclass: parking
+
+ID: 31840069630
+====== Geometry
+[1, -263, 1644, ]
+
+=====================
+class: fuel
+name: Esso
+name:latin: Esso
+name_de: Esso
+name_en: Esso
+name_int: Esso
+rank: 18
+subclass: fuel
+
+ID: 33673951880
+====== Geometry
+[1, 760, 4489, ]
+
+=====================
+class: school
+name: Infant Jesus Kindergarten and Nursery
+name:latin: Infant Jesus Kindergarten and Nursery
+name_de: Infant Jesus Kindergarten and Nursery
+name_en: Infant Jesus Kindergarten and Nursery
+name_int: Infant Jesus Kindergarten and Nursery
+rank: 1
+subclass: kindergarten
+
+ID: 36302450930
+====== Geometry
+[1, -470, -173, ]
+
+=====================
+class: post
+rank: 8
+subclass: post_box
+
+ID: 36339678040
+====== Geometry
+[1, -689, -281, ]
+
+=====================
+class: bus
+rank: 4
+subclass: bus_stop
+
+ID: 36339678050
+====== Geometry
+[1, -700, -282, ]
+
+=====================
+class: bus
+name: At 261 MOHAWK
+name:latin: At 261 MOHAWK
+name_de: At 261 MOHAWK
+name_en: At 261 MOHAWK
+name_int: At 261 MOHAWK
+rank: 1
+subclass: bus_stop
+
+ID: 36339690620
+====== Geometry
+[1, 245, -396, ]
+
+=====================
+class: waste_basket
+rank: 8
+subclass: waste_basket
+
+ID: 36339710420
+====== Geometry
+[1, 123, -521, ]
+
+=====================
+class: post
+rank: 9
+subclass: post_box
+
+ID: 36339754540
+====== Geometry
+[1, -138, -626, ]
+
+=====================
+class: post
+rank: 10
+subclass: post_box
+
+ID: 36378274760
+====== Geometry
+[1, -274, -136, ]
+
+=====================
+class: doctors
+name: Smith Health Centre
+name:latin: Smith Health Centre
+name_de: Smith Health Centre
+name_en: Smith Health Centre
+name_int: Smith Health Centre
+rank: 4
+subclass: doctors
+
+ID: 36509406140
+====== Geometry
+[1, 209, -338, ]
+
+=====================
+class: bus
+rank: 5
+subclass: bus_stop
+
+ID: 36710265230
+====== Geometry
+[1, -807, -340, ]
+
+=====================
+class: bus
+name: At 263 MOHAWK
+name:latin: At 263 MOHAWK
+name_de: At 263 MOHAWK
+name_en: At 263 MOHAWK
+name_int: At 263 MOHAWK
+rank: 2
+subclass: bus_stop
+
+ID: 36710298680
+====== Geometry
+[1, 182, -420, ]
+
+=====================
+class: bus
+rank: 7
+subclass: bus_stop
+
+ID: 37611391090
+====== Geometry
+[1, 1030, 3291, ]
+
+=====================
+class: bus
+rank: 21
+subclass: bus_stop
+
+ID: 37773773730
+====== Geometry
+[1, 1681, 1163, ]
+
+=====================
+class: bus
+rank: 6
+subclass: bus_stop
+
+ID: 43331618390
+====== Geometry
+[1, -297, -304, ]
+
+=====================
+class: bus
+rank: 7
+subclass: bus_stop
+
+ID: 43331618400
+====== Geometry
+[1, -265, -345, ]
+
+=====================
+class: bus
+rank: 25
+subclass: bus_stop
+
+ID: 43589268840
+====== Geometry
+[1, 465, 4595, ]
+
+=====================
+class: bus
+rank: 26
+subclass: bus_stop
+
+ID: 43589287250
+====== Geometry
+[1, 461, 4536, ]
+
+=====================
+class: fuel
+name: Petro-Canada
+name:latin: Petro-Canada
+name_de: Petro-Canada
+name_en: Petro-Canada
+name_int: Petro-Canada
+rank: 27
+subclass: fuel
+
+ID: 44642276100
+====== Geometry
+[1, 1726, 879, ]
+
+=====================
+class: office
+name: Hamilton Figure Skating Club
+name:latin: Hamilton Figure Skating Club
+name_de: Hamilton Figure Skating Club
+name_en: Hamilton Figure Skating Club
+name_int: Hamilton Figure Skating Club
+rank: 9
+subclass: association
+
+ID: 47838660690
+====== Geometry
+[1, 2118, 882, ]
+
+=====================
+class: shop
+name: Factory Direct
+name:latin: Factory Direct
+name_de: Factory Direct
+name_en: Factory Direct
+name_int: Factory Direct
+rank: 3
+subclass: electronics
+
+ID: 66597078850
+====== Geometry
+[1, 1251, 3071, ]
+
+=====================
+class: shop
+rank: 3
+subclass: motorcycle
+
+ID: 70223619900
+====== Geometry
+[1, 3472, 1705, ]
+
+=====================
+class: shop
+name: Hasty Market
+name:latin: Hasty Market
+name_de: Hasty Market
+name_en: Hasty Market
+name_int: Hasty Market
+rank: 1
+subclass: convenience
+
+ID: 70763299080
+====== Geometry
+[1, 3964, 917, ]
+
+=====================
+class: library
+name: Big B Comics
+name:latin: Big B Comics
+name_de: Big B Comics
+name_en: Big B Comics
+name_int: Big B Comics
+rank: 2
+subclass: books
+
+ID: 72377135940
+====== Geometry
+[1, 1509, 2088, ]
+
+=====================
+class: fast_food
+name: La Luna Express
+name:latin: La Luna Express
+name_de: La Luna Express
+name_en: La Luna Express
+name_int: La Luna Express
+rank: 4
+subclass: fast_food
+
+ID: 72377135950
+====== Geometry
+[1, 1503, 2119, ]
+
+=====================
+class: bar
+name: Celebrity Billiards
+name:latin: Celebrity Billiards
+name_de: Celebrity Billiards
+name_en: Celebrity Billiards
+name_int: Celebrity Billiards
+rank: 5
+subclass: bar
+
+ID: 72377135960
+====== Geometry
+[1, 1487, 2229, ]
+
+=====================
+class: restaurant
+name: Pho Dui Bo
+name:latin: Pho Dui Bo
+name_de: Pho Dui Bo
+name_en: Pho Dui Bo
+name_int: Pho Dui Bo
+rank: 28
+subclass: restaurant
+
+ID: 72377339300
+====== Geometry
+[1, 1887, 219, ]
+
+=====================
+class: pharmacy
+name: I.D.A.
+name:latin: I.D.A.
+name_de: I.D.A.
+name_en: I.D.A.
+name_int: I.D.A.
+rank: 29
+subclass: pharmacy
+
+ID: 72377339320
+====== Geometry
+[1, 1840, 270, ]
+
+=====================
+class: fast_food
+name: Subway
+name:latin: Subway
+name_de: Subway
+name_en: Subway
+name_int: Subway
+rank: 14
+subclass: fast_food
+
+ID: 72377339330
+====== Geometry
+[1, 1847, 253, ]
+
+=====================
+class: hairdresser
+name: Split Ave
+name:latin: Split Ave
+name_de: Split Ave
+name_en: Split Ave
+name_int: Split Ave
+rank: 30
+subclass: hairdresser
+
+ID: 72377339340
+====== Geometry
+[1, 1845, 243, ]
+
+=====================
+class: fast_food
+name: Pizza Pizza
+name:latin: Pizza Pizza
+name_de: Pizza Pizza
+name_en: Pizza Pizza
+name_int: Pizza Pizza
+rank: 15
+subclass: fast_food
+
+ID: 72377339350
+====== Geometry
+[1, 2047, 377, ]
+
+=====================
+class: fast_food
+name: Quiznos
+name:latin: Quiznos
+name_de: Quiznos
+name_en: Quiznos
+name_int: Quiznos
+rank: 16
+subclass: fast_food
+
+ID: 72377339360
+====== Geometry
+[1, 2043, 391, ]
+
+=====================
+class: fast_food
+name: Osmow's
+name:latin: Osmow's
+name_de: Osmow's
+name_en: Osmow's
+name_int: Osmow's
+rank: 17
+subclass: fast_food
+
+ID: 72377339410
+====== Geometry
+[1, 1795, 502, ]
+
+=====================
+class: restaurant
+name: Pizza Hut
+name:latin: Pizza Hut
+name_de: Pizza Hut
+name_en: Pizza Hut
+name_int: Pizza Hut
+rank: 31
+subclass: restaurant
+
+ID: 72377339430
+====== Geometry
+[1, 2002, 739, ]
+
+=====================
+class: restaurant
+name: Green Leaf
+name:latin: Green Leaf
+name_de: Green Leaf
+name_en: Green Leaf
+name_int: Green Leaf
+rank: 10
+subclass: restaurant
+
+ID: 72377339440
+====== Geometry
+[1, 2091, 639, ]
+
+=====================
+class: shop
+name: The Salvation Army
+name:latin: The Salvation Army
+name_de: The Salvation Army
+name_en: The Salvation Army
+name_int: The Salvation Army
+rank: 8
+subclass: charity
+
+ID: 72377339450
+====== Geometry
+[1, 2009, 698, ]
+
+=====================
+class: fast_food
+name: Quesada
+name:latin: Quesada
+name_de: Quesada
+name_en: Quesada
+name_int: Quesada
+rank: 18
+subclass: fast_food
+
+ID: 72377339470
+====== Geometry
+[1, 1981, 801, ]
+
+=====================
+class: restaurant
+name: Pho #7
+name:latin: Pho #7
+name_de: Pho #7
+name_en: Pho #7
+name_int: Pho #7
+rank: 32
+subclass: restaurant
+
+ID: 72377339480
+====== Geometry
+[1, 1959, 865, ]
+
+=====================
+class: office
+name: H&R Block
+name:latin: H&R Block
+name_de: H&R Block
+name_en: H&R Block
+name_int: H&R Block
+rank: 33
+subclass: tax_advisor
+
+ID: 72377339490
+====== Geometry
+[1, 1953, 886, ]
+
+=====================
+class: restaurant
+name: La Spaghett Pasta House
+name:latin: La Spaghett Pasta House
+name_de: La Spaghett Pasta House
+name_en: La Spaghett Pasta House
+name_int: La Spaghett Pasta House
+rank: 16
+subclass: restaurant
+
+ID: 72377339500
+====== Geometry
+[1, 1533, 1411, ]
+
+=====================
+class: restaurant
+name: Charlie's Chopsticks
+name:latin: Charlie's Chopsticks
+name_de: Charlie's Chopsticks
+name_en: Charlie's Chopsticks
+name_int: Charlie's Chopsticks
+rank: 17
+subclass: restaurant
+
+ID: 72377339510
+====== Geometry
+[1, 1537, 1400, ]
+
+=====================
+class: hairdresser
+name: First Choice Haircutters
+name:latin: First Choice Haircutters
+name_de: First Choice Haircutters
+name_en: First Choice Haircutters
+name_int: First Choice Haircutters
+rank: 18
+subclass: hairdresser
+
+ID: 72377339520
+====== Geometry
+[1, 1540, 1387, ]
+
+=====================
+class: fast_food
+name: Domino's
+name:latin: Domino's
+name_de: Domino's
+name_en: Domino's
+name_int: Domino's
+rank: 3
+subclass: fast_food
+
+ID: 72377367830
+====== Geometry
+[1, 1207, 3208, ]
+
+=====================
+class: shop
+name: Factory Shoe
+name:latin: Factory Shoe
+name_de: Factory Shoe
+name_en: Factory Shoe
+name_int: Factory Shoe
+rank: 1
+subclass: shoes
+
+ID: 72377409960
+====== Geometry
+[1, 1136, 3241, ]
+
+=====================
+class: shop
+name: DOT Furniture
+name:latin: DOT Furniture
+name_de: DOT Furniture
+name_en: DOT Furniture
+name_int: DOT Furniture
+rank: 2
+subclass: furniture
+
+ID: 72377410010
+====== Geometry
+[1, 1113, 3377, ]
+
+=====================
+class: fast_food
+name: Darband Kabab
+name:latin: Darband Kabab
+name_de: Darband Kabab
+name_en: Darband Kabab
+name_int: Darband Kabab
+rank: 7
+subclass: fast_food
+
+ID: 72377410020
+====== Geometry
+[1, 806, 3695, ]
+
+=====================
+class: shop
+name: Dulux Paints
+name:latin: Dulux Paints
+name_de: Dulux Paints
+name_en: Dulux Paints
+name_int: Dulux Paints
+rank: 6
+subclass: paint
+
+ID: 72377410030
+====== Geometry
+[1, 781, 3730, ]
+
+=====================
+class: car
+name: Speedy Glass
+name:latin: Speedy Glass
+name_de: Speedy Glass
+name_en: Speedy Glass
+name_int: Speedy Glass
+rank: 12
+subclass: car_repair
+
+ID: 72377410040
+====== Geometry
+[1, 998, 3795, ]
+
+=====================
+class: grocery
+name: Denninger's
+name:latin: Denninger's
+name_de: Denninger's
+name_en: Denninger's
+name_int: Denninger's
+rank: 7
+subclass: supermarket
+
+ID: 72377410050
+====== Geometry
+[1, 949, 4185, ]
+
+=====================
+class: shop
+name: Rogers
+name:latin: Rogers
+name_de: Rogers
+name_en: Rogers
+name_int: Rogers
+rank: 4
+subclass: mobile_phone
+
+ID: 72377487000
+====== Geometry
+[1, 390, 4852, ]
+
+=====================
+class: fast_food
+name: Booster Juice
+name:latin: Booster Juice
+name_de: Booster Juice
+name_en: Booster Juice
+name_int: Booster Juice
+rank: 9
+subclass: fast_food
+
+ID: 72377487010
+====== Geometry
+[1, 372, 4848, ]
+
+=====================
+class: restaurant
+name: Hilltop Express
+name:latin: Hilltop Express
+name_de: Hilltop Express
+name_en: Hilltop Express
+name_int: Hilltop Express
+rank: 19
+subclass: restaurant
+
+ID: 72377487020
+====== Geometry
+[1, 357, 4842, ]
+
+=====================
+class: shop
+name: Global Pet Foods
+name:latin: Global Pet Foods
+name_de: Global Pet Foods
+name_en: Global Pet Foods
+name_int: Global Pet Foods
+rank: 5
+subclass: pet
+
+ID: 72377487030
+====== Geometry
+[1, 334, 4833, ]
+
+=====================
+class: hairdresser
+name: Great Clips
+name:latin: Great Clips
+name_de: Great Clips
+name_en: Great Clips
+name_int: Great Clips
+rank: 20
+subclass: hairdresser
+
+ID: 72377487050
+====== Geometry
+[1, 268, 4831, ]
+
+=====================
+class: office
+name: Service Ontario
+name:latin: Service Ontario
+name_de: Service Ontario
+name_en: Service Ontario
+name_int: Service Ontario
+rank: 21
+subclass: government
+
+ID: 72377487060
+====== Geometry
+[1, 257, 4846, ]
+
+=====================
+class: restaurant
+name: Cora
+name:latin: Cora
+name_de: Cora
+name_en: Cora
+name_int: Cora
+rank: 22
+subclass: restaurant
+
+ID: 72377487070
+====== Geometry
+[1, 242, 4870, ]
+
+=====================
+class: shop
+name: Edible Arrangements
+name:latin: Edible Arrangements
+name_de: Edible Arrangements
+name_en: Edible Arrangements
+name_int: Edible Arrangements
+rank: 6
+subclass: gift
+
+ID: 72377487080
+====== Geometry
+[1, 285, 4998, ]
+
+=====================
+class: restaurant
+name: Topper's Pizza
+name:latin: Topper's Pizza
+name_de: Topper's Pizza
+name_en: Topper's Pizza
+name_int: Topper's Pizza
+rank: 23
+subclass: restaurant
+
+ID: 72377487090
+====== Geometry
+[1, 292, 5021, ]
+
+=====================
+class: shop
+name: L.A Nails
+name:latin: L.A Nails
+name_de: L.A Nails
+name_en: L.A Nails
+name_int: L.A Nails
+rank: 2
+subclass: beauty
+
+ID: 78180152290
+====== Geometry
+[1, 2090, -338, ]
+
+=====================
+class: restaurant
+name: Pho Binh Minh
+name:latin: Pho Binh Minh
+name_de: Pho Binh Minh
+name_en: Pho Binh Minh
+name_int: Pho Binh Minh
+rank: 9
+subclass: restaurant
+
+ID: 78180152300
+====== Geometry
+[1, 2013, -280, ]
+
+=====================
+class: beer
+name: End Pocket Billiards
+name:latin: End Pocket Billiards
+name_de: End Pocket Billiards
+name_en: End Pocket Billiards
+name_int: End Pocket Billiards
+rank: 19
+subclass: pub
+
+ID: 81248558900
+====== Geometry
+[1, 1533, 1375, ]
+
+=====================
+class: fast_food
+name: Mike's Submarines
+name:latin: Mike's Submarines
+name_de: Mike's Submarines
+name_en: Mike's Submarines
+name_int: Mike's Submarines
+rank: 8
+subclass: fast_food
+
+ID: 81248558910
+====== Geometry
+[1, 1452, 1671, ]
+
+=====================
+class: shop
+name: Alexanian
+name:latin: Alexanian
+name_de: Alexanian
+name_en: Alexanian
+name_int: Alexanian
+rank: 6
+subclass: carpet
+
+ID: 81248558920
+====== Geometry
+[1, 1434, 1712, ]
+
+=====================
+class: bus
+rank: 11
+subclass: bus_stop
+
+ID: 81271056190
+====== Geometry
+[1, 1063, -262, ]
+
+=====================
+class: bus
+rank: 40
+subclass: bus_stop
+
+ID: 81271056330
+====== Geometry
+[1, 1781, 40, ]
+
+=====================
+class: bus
+name: MOHAWK opposite AMANDA
+name:latin: MOHAWK opposite AMANDA
+name_de: MOHAWK opposite AMANDA
+name_en: MOHAWK opposite AMANDA
+name_int: MOHAWK opposite AMANDA
+rank: 1
+subclass: bus_stop
+
+ID: 81271056340
+====== Geometry
+[1, 1679, -49, ]
+
+=====================
+class: bus
+name: Upper James at Mohawk
+name:latin: Upper James at Mohawk
+name_de: Upper James at Mohawk
+name_en: Upper James at Mohawk
+name_int: Upper James at Mohawk
+rank: 2
+subclass: bus_stop
+
+ID: 81271056350
+====== Geometry
+[1, 2045, 170, ]
+
+=====================
+class: telephone
+rank: 71
+subclass: telephone
+
+ID: 81271056360
+====== Geometry
+[1, 1946, 253, ]
+
+=====================
+class: bus
+name: Upper James at Mohawk
+name:latin: Upper James at Mohawk
+name_de: Upper James at Mohawk
+name_en: Upper James at Mohawk
+name_int: Upper James at Mohawk
+rank: 3
+subclass: bus_stop
+
+ID: 81271056370
+====== Geometry
+[1, 1955, 238, ]
+
+=====================
+class: cafe
+name: Tim Hortons
+name:latin: Tim Hortons
+name_de: Tim Hortons
+name_en: Tim Hortons
+name_int: Tim Hortons
+rank: 11
+subclass: cafe
+
+ID: 81271056400
+====== Geometry
+[1, 2121, 269, ]
+
+=====================
+class: alcohol_shop
+name: Vin Bon
+name:latin: Vin Bon
+name_de: Vin Bon
+name_en: Vin Bon
+name_int: Vin Bon
+rank: 12
+subclass: wine
+
+ID: 81271056420
+====== Geometry
+[1, 2050, 365, ]
+
+=====================
+class: shop
+name: MDG Computers
+name:latin: MDG Computers
+name_de: MDG Computers
+name_en: MDG Computers
+name_int: MDG Computers
+rank: 9
+subclass: computer
+
+ID: 81271056440
+====== Geometry
+[1, 1828, 312, ]
+
+=====================
+class: hospital
+name: Hamilton Health & Wellness Centre
+name:latin: Hamilton Health & Wellness Centre
+name_de: Hamilton Health & Wellness Centre
+name_en: Hamilton Health & Wellness Centre
+name_int: Hamilton Health & Wellness Centre
+rank: 1
+subclass: clinic
+
+ID: 81271056480
+====== Geometry
+[1, 2082, 649, ]
+
+=====================
+class: dentist
+name: Mountcrest Dental
+name:latin: Mountcrest Dental
+name_de: Mountcrest Dental
+name_en: Mountcrest Dental
+name_int: Mountcrest Dental
+rank: 13
+subclass: dentist
+
+ID: 81271056490
+====== Geometry
+[1, 2078, 660, ]
+
+=====================
+class: clothing_store
+name: Best for Bride
+name:latin: Best for Bride
+name_de: Best for Bride
+name_en: Best for Bride
+name_int: Best for Bride
+rank: 5
+subclass: clothes
+
+ID: 81271056500
+====== Geometry
+[1, 2077, 669, ]
+
+=====================
+class: bus
+rank: 41
+subclass: bus_stop
+
+ID: 81271056510
+====== Geometry
+[1, 1889, 654, ]
+
+=====================
+class: cafe
+name: Tim Hortons
+name:latin: Tim Hortons
+name_de: Tim Hortons
+name_en: Tim Hortons
+name_int: Tim Hortons
+rank: 34
+subclass: cafe
+
+ID: 81271056600
+====== Geometry
+[1, 1859, 928, ]
+
+=====================
+class: bus
+rank: 22
+subclass: bus_stop
+
+ID: 81271056610
+====== Geometry
+[1, 1751, 1132, ]
+
+=====================
+class: dentist
+name: Red Hill Orthodontics
+name:latin: Red Hill Orthodontics
+name_de: Red Hill Orthodontics
+name_en: Red Hill Orthodontics
+name_int: Red Hill Orthodontics
+rank: 20
+subclass: dentist
+
+ID: 81271056620
+====== Geometry
+[1, 1595, 1249, ]
+
+=====================
+class: dentist
+name: SPINEL DENTAL
+name:latin: SPINEL DENTAL
+name_de: SPINEL DENTAL
+name_en: SPINEL DENTAL
+name_int: SPINEL DENTAL
+rank: 3
+subclass: dentist
+
+ID: 82874239540
+====== Geometry
+[1, -696, -727, ]
+
+=====================
+class: grocery
+name: Eastern Food Market
+name:latin: Eastern Food Market
+name_de: Eastern Food Market
+name_en: Eastern Food Market
+name_int: Eastern Food Market
+rank: 2
+subclass: supermarket
+
+ID: 83226013160
+====== Geometry
+[1, 5025, 3074, ]
+
+=====================
+class: fast_food
+name: National Pizza & Wings
+name:latin: National Pizza & Wings
+name_de: National Pizza & Wings
+name_en: National Pizza & Wings
+name_int: National Pizza & Wings
+rank: 19
+subclass: fast_food
+
+ID: 89513258340
+====== Geometry
+[1, 1780, 536, ]
+
+=====================
+class: doctors
+name: Hamilton Medical Clinic
+name:latin: Hamilton Medical Clinic
+name_de: Hamilton Medical Clinic
+name_en: Hamilton Medical Clinic
+name_int: Hamilton Medical Clinic
+rank: 35
+subclass: doctors
+
+ID: 89513258350
+====== Geometry
+[1, 1834, 287, ]
+
+=====================
+class: dentist
+name: Dr Gabor Filo
+name:latin: Dr Gabor Filo
+name_de: Dr Gabor Filo
+name_en: Dr Gabor Filo
+name_int: Dr Gabor Filo
+rank: 36
+subclass: dentist
+
+ID: 89513258360
+====== Geometry
+[1, 1787, 513, ]
+
+=====================
+class: shop
+name: Al-Amin Grovery and Halal Meat
+name:latin: Al-Amin Grovery and Halal Meat
+name_de: Al-Amin Grovery and Halal Meat
+name_en: Al-Amin Grovery and Halal Meat
+name_int: Al-Amin Grovery and Halal Meat
+rank: 10
+subclass: convenience
+
+ID: 89513258370
+====== Geometry
+[1, 1776, 546, ]
+
+=====================
+class: fast_food
+name: Little Caesars
+name:latin: Little Caesars
+name_de: Little Caesars
+name_en: Little Caesars
+name_int: Little Caesars
+rank: 6
+subclass: fast_food
+
+ID: 89514916750
+====== Geometry
+[1, 1949, -172, ]
+
+=====================
+class: grocery
+name: Samir Halal Foods
+name:latin: Samir Halal Foods
+name_de: Samir Halal Foods
+name_en: Samir Halal Foods
+name_int: Samir Halal Foods
+rank: 6
+subclass: supermarket
+
+ID: 89514916760
+====== Geometry
+[1, 2071, -263, ]
+
+=====================
+class: office
+name: Leadex Realty Inc.
+name:latin: Leadex Realty Inc.
+name_de: Leadex Realty Inc.
+name_en: Leadex Realty Inc.
+name_int: Leadex Realty Inc.
+rank: 37
+subclass: estate_agent
+
+ID: 89514916770
+====== Geometry
+[1, 2035, 415, ]
+
+=====================
+class: office
+name: BDO Financial Recovery Services
+name:latin: BDO Financial Recovery Services
+name_de: BDO Financial Recovery Services
+name_en: BDO Financial Recovery Services
+name_int: BDO Financial Recovery Services
+rank: 38
+subclass: financial
+
+ID: 89514916780
+====== Geometry
+[1, 2042, 407, ]
+
+=====================
+class: escape_game
+name: The Crux Escape Room
+name:latin: The Crux Escape Room
+name_de: The Crux Escape Room
+name_en: The Crux Escape Room
+name_int: The Crux Escape Room
+rank: 39
+subclass: escape_game
+
+ID: 89514916790
+====== Geometry
+[1, 2027, 430, ]
+
+=====================
+class: bank
+name: RBC
+name:en: RBC Royal Bank
+name:fr: RBC Banque Royale
+name:latin: RBC
+name_de: RBC
+name_en: RBC Royal Bank
+name_int: RBC Royal Bank
+rank: 10
+subclass: bank
+
+ID: 89514916800
+====== Geometry
+[1, 1966, -209, ]
+
+=====================
+class: grocery
+name: Dutch Toyo
+name:latin: Dutch Toyo
+name_de: Dutch Toyo
+name_en: Dutch Toyo
+name_int: Dutch Toyo
+rank: 5
+subclass: deli
+
+ID: 89514916810
+====== Geometry
+[1, 1959, -192, ]
+
+=====================
+class: fuel
+name: FLO Canadian Tire - Hamilton Mountain
+name:latin: FLO Canadian Tire - Hamilton Mountain
+name_de: FLO Canadian Tire - Hamilton Mountain
+name_en: FLO Canadian Tire - Hamilton Mountain
+name_int: FLO Canadian Tire - Hamilton Mountain
+rank: 14
+subclass: charging_station
+
+ID: 89514916820
+====== Geometry
+[1, 2205, 106, ]
+
+=====================
+class: shop
+name: Ginseng
+name:latin: Ginseng
+name_de: Ginseng
+name_en: Ginseng
+name_int: Ginseng
+rank: 4
+subclass: convenience
+
+ID: 89514916830
+====== Geometry
+[1, 2076, 358, ]
+
+=====================
+class: office
+name: Wescan Accountants
+name:latin: Wescan Accountants
+name_de: Wescan Accountants
+name_en: Wescan Accountants
+name_int: Wescan Accountants
+rank: 15
+subclass: accountant
+
+ID: 89514916840
+====== Geometry
+[1, 2068, 396, ]
+
+=====================
+class: office
+name: Ron Barrs Lawyer
+name:latin: Ron Barrs Lawyer
+name_de: Ron Barrs Lawyer
+name_en: Ron Barrs Lawyer
+name_int: Ron Barrs Lawyer
+rank: 16
+subclass: lawyer
+
+ID: 89514916850
+====== Geometry
+[1, 2063, 409, ]
+
+=====================
+class: bicycle_parking
+rank: 72
+subclass: bicycle_parking
+
+ID: 89514916860
+====== Geometry
+[1, 2036, 359, ]
+
+=====================
+class: hospital
+name: Hamilton Public Health Clinic
+name:latin: Hamilton Public Health Clinic
+name_de: Hamilton Public Health Clinic
+name_en: Hamilton Public Health Clinic
+name_int: Hamilton Public Health Clinic
+rank: 1
+subclass: clinic
+
+ID: 89515073410
+====== Geometry
+[1, 1982, 791, ]
+
+=====================
+class: shop
+name: Classy Nails
+name:latin: Classy Nails
+name_de: Classy Nails
+name_en: Classy Nails
+name_int: Classy Nails
+rank: 11
+subclass: beauty
+
+ID: 89515073420
+====== Geometry
+[1, 1971, 818, ]
+
+=====================
+class: bus
+rank: 2
+subclass: bus_stop
+
+ID: 93802828610
+====== Geometry
+[1, -875, 4121, ]
+
+=====================
+class: bus
+rank: 3
+subclass: bus_stop
+
+ID: 93802828640
+====== Geometry
+[1, -126, 4335, ]
+
+=====================
+class: bus
+rank: 4
+subclass: bus_stop
+
+ID: 93802828650
+====== Geometry
+[1, -264, 4329, ]
+
+=====================
+class: bus
+rank: 4
+subclass: bus_stop
+
+ID: 100785659690
+====== Geometry
+[1, 3783, 740, ]
+
+=====================
+class: bus
+rank: 5
+subclass: bus_stop
+
+ID: 100785659700
+====== Geometry
+[1, 3855, 806, ]
+
+=====================
+class: bus
+rank: 6
+subclass: bus_stop
+
+ID: 100785659710
+====== Geometry
+[1, 3830, 683, ]
+
+=====================
+class: bus
+rank: 7
+subclass: bus_stop
+
+ID: 100785659720
+====== Geometry
+[1, 3422, 561, ]
+
+=====================
+class: bus
+rank: 8
+subclass: bus_stop
+
+ID: 100785659730
+====== Geometry
+[1, 3359, 589, ]
+
+=====================
+class: bus
+rank: 17
+subclass: bus_stop
+
+ID: 100785659740
+====== Geometry
+[1, 2955, 446, ]
+
+=====================
+class: bus
+rank: 18
+subclass: bus_stop
+
+ID: 100785659750
+====== Geometry
+[1, 2889, 376, ]
+
+=====================
+class: bus
+rank: 19
+subclass: bus_stop
+
+ID: 100785659760
+====== Geometry
+[1, 2537, 251, ]
+
+=====================
+class: bus
+rank: 20
+subclass: bus_stop
+
+ID: 100785659770
+====== Geometry
+[1, 2656, 342, ]
+
+=====================
+class: bus
+rank: 21
+subclass: bus_stop
+
+ID: 100785659780
+====== Geometry
+[1, 2101, 97, ]
+
+=====================
+class: bus
+rank: 22
+subclass: bus_stop
+
+ID: 100785659790
+====== Geometry
+[1, 2173, 177, ]
+
+=====================
+class: bus
+rank: 12
+subclass: bus_stop
+
+ID: 100785659800
+====== Geometry
+[1, 1249, -143, ]
+
+=====================
+class: bus
+rank: 13
+subclass: bus_stop
+
+ID: 100785659810
+====== Geometry
+[1, 1136, -275, ]
+
+=====================
+class: bus
+rank: 14
+subclass: bus_stop
+
+ID: 100785659820
+====== Geometry
+[1, 1153, -142, ]
+
+=====================
+class: bus
+rank: 15
+subclass: bus_stop
+
+ID: 100785659830
+====== Geometry
+[1, 1391, -927, ]
+
+=====================
+class: bus
+rank: 16
+subclass: bus_stop
+
+ID: 100785659840
+====== Geometry
+[1, 1361, -995, ]
+
+=====================
+class: bus
+rank: 9
+subclass: bus_stop
+
+ID: 100785660000
+====== Geometry
+[1, 2414, -997, ]
+
+=====================
+class: bus
+rank: 10
+subclass: bus_stop
+
+ID: 100785660020
+====== Geometry
+[1, 2259, -693, ]
+
+=====================
+class: bus
+rank: 11
+subclass: bus_stop
+
+ID: 100785660030
+====== Geometry
+[1, 2288, -609, ]
+
+=====================
+class: bus
+rank: 12
+subclass: bus_stop
+
+ID: 100785660040
+====== Geometry
+[1, 2184, -296, ]
+
+=====================
+class: bus
+rank: 13
+subclass: bus_stop
+
+ID: 100785660050
+====== Geometry
+[1, 2135, -310, ]
+
+=====================
+class: bus
+name: Upper James at Stone Church
+name:latin: Upper James at Stone Church
+name_de: Upper James at Stone Church
+name_en: Upper James at Stone Church
+name_int: Upper James at Stone Church
+rank: 1
+subclass: bus_stop
+
+ID: 100859809690
+====== Geometry
+[1, 613, 4562, ]
+
+=====================
+class: bus
+name: Upper James at Stone Church
+name:latin: Upper James at Stone Church
+name_de: Upper James at Stone Church
+name_en: Upper James at Stone Church
+name_int: Upper James at Stone Church
+rank: 2
+subclass: bus_stop
+
+ID: 100859809700
+====== Geometry
+[1, 641, 4684, ]
+
+=====================
+class: bus
+name: STONE CHURCH at DICENZO
+name:latin: STONE CHURCH at DICENZO
+name_de: STONE CHURCH at DICENZO
+name_en: STONE CHURCH at DICENZO
+name_int: STONE CHURCH at DICENZO
+rank: 1
+subclass: bus_stop
+
+ID: 100859809810
+====== Geometry
+[1, 1424, 4933, ]
+
+=====================
+class: bus
+name: Upper James North of Linc
+name:latin: Upper James North of Linc
+name_de: Upper James North of Linc
+name_en: Upper James North of Linc
+name_int: Upper James North of Linc
+rank: 1
+subclass: bus_stop
+
+ID: 101776671020
+====== Geometry
+[1, 1402, 2288, ]
+
+=====================
+class: bus
+name: Upper James at Aldridge
+name:latin: Upper James at Aldridge
+name_de: Upper James at Aldridge
+name_en: Upper James at Aldridge
+name_int: Upper James at Aldridge
+rank: 1
+subclass: bus_stop
+
+ID: 101776671030
+====== Geometry
+[1, 1433, 1964, ]
+
+=====================
+class: restaurant
+rank: 32
+subclass: restaurant
+
+ID: 101843614050
+====== Geometry
+[1, 2305, 2, ]
+
+=====================
+class: bus
+name: Upper James at Blossom
+name:latin: Upper James at Blossom
+name_de: Upper James at Blossom
+name_en: Upper James at Blossom
+name_int: Upper James at Blossom
+rank: 1
+subclass: bus_stop
+
+ID: 107494559140
+====== Geometry
+[1, 886, 3774, ]
+
+=====================
+class: bus
+name: Upper James at Chipman
+name:latin: Upper James at Chipman
+name_de: Upper James at Chipman
+name_en: Upper James at Chipman
+name_int: Upper James at Chipman
+rank: 2
+subclass: bus_stop
+
+ID: 107494559150
+====== Geometry
+[1, 871, 3918, ]
+
+=====================
+class: bicycle_parking
+rank: 73
+subclass: bicycle_parking
+
+ID: 111777071370
+====== Geometry
+[1, 1757, 763, ]
+
+=====================
+class: restaurant
+name: Kinton Ramen
+name:latin: Kinton Ramen
+name_de: Kinton Ramen
+name_en: Kinton Ramen
+name_int: Kinton Ramen
+rank: 24
+subclass: restaurant
+
+ID: 113365424320
+====== Geometry
+[1, 627, 4960, ]
+
+=====================
+class: place_of_worship
+name: Bethel Gospel Tabernacle
+name:en: Bethel Gospel Tabernacle
+name:latin: Bethel Gospel Tabernacle
+name_de: Bethel Gospel Tabernacle
+name_en: Bethel Gospel Tabernacle
+name_int: Bethel Gospel Tabernacle
+rank: 1
+
+ID: 126885067020
+====== Geometry
+[1, 2868, 4647, ]
+
+=====================
+class: park
+name: Mohawk/Sanitorium Parkette
+name:latin: Mohawk/Sanitorium Parkette
+name_de: Mohawk/Sanitorium Parkette
+name_en: Mohawk/Sanitorium Parkette
+name_int: Mohawk/Sanitorium Parkette
+rank: 3
+subclass: park
+
+ID: 126886307010
+====== Geometry
+[1, 237, -489, ]
+
+=====================
+class: shop
+name: Blue Willow Variety & Communication
+name:latin: Blue Willow Variety & Communication
+name_de: Blue Willow Variety & Communication
+name_en: Blue Willow Variety & Communication
+name_int: Blue Willow Variety & Communication
+rank: 3
+subclass: convenience
+
+ID: 126886347010
+====== Geometry
+[1, 2106, -349, ]
+
+=====================
+class: fast_food
+name: Burger King
+name:latin: Burger King
+name_de: Burger King
+name_en: Burger King
+name_int: Burger King
+rank: 7
+subclass: fast_food
+
+ID: 127799690010
+====== Geometry
+[1, 2153, -157, ]
+
+=====================
+class: shop
+name: Neighbour 2 Neighbour - Hamilton Community Food Centre Garden
+name:latin: Neighbour 2 Neighbour - Hamilton Community Food Centre Garden
+name_de: Neighbour 2 Neighbour - Hamilton Community Food Centre Garden
+name_en: Neighbour 2 Neighbour - Hamilton Community Food Centre Garden
+name_int: Neighbour 2 Neighbour - Hamilton Community Food Centre Garden
+rank: 3
+subclass: garden_centre
+
+ID: 129896197020
+====== Geometry
+[1, -215, 1393, ]
+
+=====================
+class: bus
+name: Chesley and Chester
+name:latin: Chesley and Chester
+name_de: Chesley and Chester
+name_en: Chesley and Chester
+name_int: Chesley and Chester
+rank: 1
+subclass: bus_stop
+
+ID: 131609882180
+====== Geometry
+[1, -665, 3263, ]
+
+=====================
+class: bus
+name: Chester and Annabelle
+name:latin: Chester and Annabelle
+name_de: Chester and Annabelle
+name_en: Chester and Annabelle
+name_int: Chester and Annabelle
+rank: 2
+subclass: bus_stop
+
+ID: 131609882190
+====== Geometry
+[1, -306, 3345, ]
+
+=====================
+class: bus
+name: Chester and West 5th
+name:latin: Chester and West 5th
+name_de: Chester and West 5th
+name_en: Chester and West 5th
+name_int: Chester and West 5th
+rank: 3
+subclass: bus_stop
+
+ID: 131609882200
+====== Geometry
+[1, -5, 3449, ]

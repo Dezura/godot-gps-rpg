@@ -1,0 +1,123 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8hakvjcb3x6q"]
+
+[ext_resource type="Script" uid="uid://bvf620k3ofjhm" path="res://Source/Scripts/android_gps_wrapper.gd" id="1_ep1f6"]
+[ext_resource type="Texture2D" uid="uid://cebvy4jjded4w" path="res://Assets/icon.svg" id="1_gru2d"]
+[ext_resource type="Script" uid="uid://cqbsgavm1fwag" path="res://Source/Scripts/main.gd" id="1_rxwwu"]
+[ext_resource type="Script" uid="uid://dp3p1ii8i1exo" path="res://Source/Player/player.gd" id="2_hdpnb"]
+[ext_resource type="Script" uid="uid://ctqxene7odmga" path="res://Source/Scripts/tile_api.gd" id="2_rxwwu"]
+[ext_resource type="Script" uid="uid://bkvd7myuqs3rf" path="res://Source/Player/player_hud.gd" id="3_5nn6f"]
+[ext_resource type="Script" uid="uid://c72t5bk516ojj" path="res://Source/Scripts/map_renderer.gd" id="4_rxwwu"]
+
+[node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "android_gps", "tile_api", "player")]
+script = ExtResource("1_rxwwu")
+map_renderer = NodePath("MapRenderer")
+android_gps = NodePath("AndroidGPS")
+tile_api = NodePath("TileAPI")
+player = NodePath("Player")
+
+[node name="TileAPI" type="Node" parent="."]
+script = ExtResource("2_rxwwu")
+metadata/_custom_type_script = "uid://ctqxene7odmga"
+
+[node name="AndroidGPS" type="Node" parent="."]
+script = ExtResource("1_ep1f6")
+metadata/_custom_type_script = "uid://bvf620k3ofjhm"
+
+[node name="MapRenderer" type="Node2D" parent="." node_paths=PackedStringArray("game", "tile_api")]
+script = ExtResource("4_rxwwu")
+game = NodePath("..")
+tile_api = NodePath("../TileAPI")
+texture_test = ExtResource("1_gru2d")
+metadata/_custom_type_script = "uid://c72t5bk516ojj"
+
+[node name="Player" type="Node2D" parent="." node_paths=PackedStringArray("game")]
+z_index = 1
+position = Vector2(272, 600)
+script = ExtResource("2_hdpnb")
+game = NodePath("..")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_gru2d")
+
+[node name="DebugGPSCoords" type="Label" parent="Player"]
+offset_left = -232.0
+offset_top = -144.0
+offset_right = 232.0
+offset_bottom = -32.0
+theme_override_font_sizes/font_size = 12
+text = "Latitude: 
+Longitude: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DebugTileCoords" type="Label" parent="Player"]
+offset_left = -208.0
+offset_top = 32.0
+offset_right = 208.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 12
+text = "Tile X: 
+Tile Y: 
+Zoom Level: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+ignore_rotation = false
+
+[node name="Dummies" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PlayerHUD" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_5nn6f")
+metadata/_edit_lock_ = true
+
+[node name="FPS" type="Label" parent="CanvasLayer/PlayerHUD"]
+layout_mode = 1
+offset_left = 24.0
+offset_top = 32.0
+offset_right = 152.0
+offset_bottom = 88.0
+text = "FPS: "
+
+[node name="GPSCoords" type="Label" parent="CanvasLayer/PlayerHUD"]
+layout_mode = 1
+offset_right = 544.0
+offset_bottom = 312.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ZoomIn" type="Button" parent="CanvasLayer/PlayerHUD"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -88.0
+offset_right = 216.0
+offset_bottom = -24.0
+grow_vertical = 0
+text = "Zoom In"
+
+[node name="ZoomOut" type="Button" parent="CanvasLayer/PlayerHUD"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -216.0
+offset_top = -88.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Zoom Out"

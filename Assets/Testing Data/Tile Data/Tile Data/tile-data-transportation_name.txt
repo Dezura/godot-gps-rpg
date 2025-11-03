@@ -1,0 +1,1663 @@
+Hi!!!!! transportation_name
+
+
+
+=====================
+class: motorway
+name: Lincoln M. Alexander Parkway
+name:latin: Lincoln M. Alexander Parkway
+name_de: Lincoln M. Alexander Parkway
+name_en: Lincoln M. Alexander Parkway
+name_int: Lincoln M. Alexander Parkway
+network: ca-provincial
+route_1_name: Lincoln M. Alexander Parkway
+route_1_network: CA:ON:Hamilton:Expressway
+
+ID: 8602449
+====== Geometry
+[1, -128, 2236, ]
+[2, 102, 34, 269, 90, 177, 61, 79, 26, 502, 171, 273, 102, 790, 271, 484, 159, 625, 219, 590, 194, 392, 129, 69, 24, ]
+[1, 0, -59, ]
+[2, -168, -55, -1107, -357, -487, -171, -451, -158, -37, -13, -627, -216, -169, -58, -565, -199, -194, -65, -545, -179, -2, -1, ]
+
+=====================
+class: tertiary
+name: West 5th Street
+name:latin: West 5th Street
+name_de: West 5th Street
+name_en: West 5th Street
+name_int: West 5th Street
+
+ID: 20316028
+====== Geometry
+[1, 1113, -88, ]
+[2, 16, -11, 9, -29, ]
+[1, -27, 0, ]
+[2, -6, 21, 8, 19, -41, 145, -13, 50, -4, 13, -9, 31, -23, 76, -41, 129, -40, 134, -57, 186, -7, 21, -199, 654, -132, 431, -75, 251, -5, 16, -7, 25, -4, 13, -55, 179, -62, 212, -122, 412, -86, 280, -82, 281, -108, 359, -69, 232, ]
+
+=====================
+class: secondary
+name: Upper Wellington Street
+name:latin: Upper Wellington Street
+name_de: Upper Wellington Street
+name_en: Upper Wellington Street
+name_int: Upper Wellington Street
+
+ID: 22323319
+====== Geometry
+[1, 3883, 617, ]
+[2, -22, 23, -19, 61, -5, 17, -7, 26, -6, 19, -20, 78, 6, 28, ]
+[1, -1012, 3355, ]
+[2, 116, -355, 7, -20, 10, -29, 74, -221, 80, -225, 38, -114, 39, -133, 24, -74, 12, -38, 9, -30, 14, -49, 7, -22, 13, -44, 25, -96, 9, -37, 29, -103, 49, -176, 16, -62, 34, -117, 35, -125, 14, -47, 13, -44, 58, -204, 6, -22, 27, -92, 16, -57, 5, -17, 4, -13, 29, -103, 91, -313, 51, -177, 25, -84, 8, -28, 25, -84, 21, -21, 20, -69, 2, -8, 5, -16, 8, -28, 5, -16, 18, -65, -6, -29, 48, -171, 2, -6, 6, -20, 125, -398, 2, -9, 4, -10, 40, -131, ]
+
+=====================
+class: minor
+name: David Avenue
+name:latin: David Avenue
+name_de: David Avenue
+name_en: David Avenue
+name_int: David Avenue
+
+ID: 24801792
+====== Geometry
+[1, 4224, 166, ]
+[2, -24, 79, -55, 168, -39, 119, -3, 25, 7, 26, ]
+
+=====================
+class: minor
+name: Duncombe Drive
+name:latin: Duncombe Drive
+name_de: Duncombe Drive
+name_en: Duncombe Drive
+name_int: Duncombe Drive
+
+ID: 24801793
+====== Geometry
+[1, 4110, 583, ]
+[2, 15, 18, 28, 12, 71, 24, ]
+
+=====================
+class: minor
+name: South Bend Road East
+name:latin: South Bend Road East
+name_de: South Bend Road East
+name_en: South Bend Road East
+name_int: South Bend Road East
+
+ID: 24801796
+====== Geometry
+[1, 3657, -128, ]
+[2, 178, 74, 203, 59, 28, 8, ]
+[1, 158, 39, ]
+[2, -128, -41, -26, -8, ]
+
+=====================
+class: minor
+name: Crestwood Drive
+name:latin: Crestwood Drive
+name_de: Crestwood Drive
+name_en: Crestwood Drive
+name_int: Crestwood Drive
+
+ID: 24801821
+====== Geometry
+[1, 4224, 253, ]
+[2, -24, -8, ]
+[1, -55, 168, ]
+[2, 79, 25, ]
+
+=====================
+class: minor
+name: Terrace Drive
+name:latin: Terrace Drive
+name_de: Terrace Drive
+name_en: Terrace Drive
+name_int: Terrace Drive
+
+ID: 27202687
+====== Geometry
+[1, 2568, 287, ]
+[2, 11, -31, 37, -104, 86, -272, 3, -8, ]
+
+=====================
+class: minor
+name: Norrie Avenue
+name:latin: Norrie Avenue
+name_de: Norrie Avenue
+name_en: Norrie Avenue
+name_int: Norrie Avenue
+
+ID: 27203367
+====== Geometry
+[1, 3933, 440, ]
+[2, -229, -85, -219, -76, -215, -69, ]
+
+=====================
+class: minor
+name: Dana Drive
+name:latin: Dana Drive
+name_de: Dana Drive
+name_en: Dana Drive
+name_int: Dana Drive
+
+ID: 27203368
+====== Geometry
+[1, 3270, 210, ]
+[2, 49, -172, 48, -145, 6, -21, ]
+
+=====================
+class: minor
+name: Dodson Street
+name:latin: Dodson Street
+name_de: Dodson Street
+name_en: Dodson Street
+name_int: Dodson Street
+
+ID: 27203375
+====== Geometry
+[1, 3608, -128, ]
+[2, -120, 396, -3, 11, -4, 10, -96, 283, ]
+
+=====================
+class: minor
+name: Warren Avenue
+name:latin: Warren Avenue
+name_de: Warren Avenue
+name_en: Warren Avenue
+name_int: Warren Avenue
+
+ID: 27204550
+====== Geometry
+[1, 2936, 416, ]
+[2, 56, -179, 69, -231, 17, -55, 25, -79, ]
+
+=====================
+class: minor
+name: Durrell Court
+name:latin: Durrell Court
+name_de: Durrell Court
+name_en: Durrell Court
+name_int: Durrell Court
+
+ID: 28461115
+====== Geometry
+[1, 3823, 4180, ]
+[2, -184, -66, ]
+
+=====================
+class: minor
+name: Cyprus Drive
+name:latin: Cyprus Drive
+name_de: Cyprus Drive
+name_en: Cyprus Drive
+name_int: Cyprus Drive
+
+ID: 28461116
+====== Geometry
+[1, 3811, 4224, ]
+[2, 12, -44, 66, -193, ]
+
+=====================
+class: minor
+name: Merrilee Crescent
+name:latin: Merrilee Crescent
+name_de: Merrilee Crescent
+name_en: Merrilee Crescent
+name_int: Merrilee Crescent
+
+ID: 28461120
+====== Geometry
+[1, 3613, 3747, ]
+[2, 2, 2, 13, -7, 10, -6, 11, -6, 18, -4, 14, -1, 15, 0, 13, 2, 13, 4, 93, 31, 133, 49, 160, 54, 58, 32, 46, 54, 12, 23, ]
+[1, 0, 247, ]
+[2, -1, 3, ]
+
+=====================
+class: minor
+name: Towercrest Drive
+name:latin: Towercrest Drive
+name_de: Towercrest Drive
+name_en: Towercrest Drive
+name_int: Towercrest Drive
+
+ID: 28500034
+====== Geometry
+[1, 2390, 3564, ]
+[2, 77, 23, 59, 30, 23, 19, 38, 40, 2, 2, 36, 40, 43, 37, 40, 20, 7, 4, 22, 7, 153, 53, 31, 10, ]
+
+=====================
+class: minor
+name: Limeridge Road East
+name:latin: Limeridge Road East
+name_de: Limeridge Road East
+name_en: Limeridge Road East
+name_int: Limeridge Road East
+
+ID: 28500310
+====== Geometry
+[1, 1807, 2541, ]
+[2, 14, 12, 255, 92, 79, 27, 47, 16, 34, 12, 215, 72, 91, 29, 112, 39, 5, 11, 16, 5, 9, -7, ]
+[1, 1540, 509, ]
+[2, -21, -7, -164, -53, -233, -79, -66, -22, -51, -16, -122, -45, -27, -9, -63, -20, -64, -20, -117, -41, -64, -20, -34, -11, -28, -9, -60, -20, -22, -7, -69, -21, -13, -4, -82, -25, -14, -5, -149, -49, -77, -26, -5, -11, -16, -5, -9, 7, ]
+
+=====================
+class: minor
+name: Bobolink Road
+name:latin: Bobolink Road
+name_de: Bobolink Road
+name_en: Bobolink Road
+name_int: Bobolink Road
+
+ID: 28500321
+====== Geometry
+[1, 4224, 2039, ]
+[2, -21, -7, -107, -29, -103, -44, -159, -135, -104, -96, -12, -11, -18, -10, -103, -30, -20, -6, ]
+
+=====================
+class: tertiary
+name: Hester Street
+name:latin: Hester Street
+name_de: Hester Street
+name_en: Hester Street
+name_int: Hester Street
+
+ID: 28500330
+====== Geometry
+[1, 3577, 1671, ]
+[2, -23, -8, -104, -37, -95, -33, -29, -10, -65, -23, -60, -21, -58, -21, -49, -17, -109, -39, -220, -74, -112, -37, -25, -7, -68, -17, -96, -31, -87, -29, -67, -23, -100, -34, -7, -3, -128, -43, -123, -42, -81, -28, -98, -33, -33, -11, ]
+
+=====================
+class: minor
+name: Hummingbird Lane
+name:latin: Hummingbird Lane
+name_de: Hummingbird Lane
+name_en: Hummingbird Lane
+name_int: Hummingbird Lane
+
+ID: 31514352
+====== Geometry
+[1, 3919, 2643, ]
+[2, 1, -19, 31, -104, 8, -29, 16, -57, 36, -128, 17, -61, 44, -154, 24, -88, ]
+
+=====================
+class: minor
+name: Skylark Drive
+name:latin: Skylark Drive
+name_de: Skylark Drive
+name_en: Skylark Drive
+name_int: Skylark Drive
+
+ID: 31514401
+====== Geometry
+[1, 4224, 2737, ]
+[2, -200, -67, -57, -21, -25, -5, -23, -1, -22, 3, -25, 5, -21, 11, -24, 16, -17, 14, -15, 18, -87, 124, -81, 130, -60, 172, ]
+
+=====================
+class: minor
+name: Pheasant Place
+name:latin: Pheasant Place
+name_de: Pheasant Place
+name_en: Pheasant Place
+name_int: Pheasant Place
+
+ID: 31514556
+====== Geometry
+[1, 3708, 2834, ]
+[2, -175, -123, -23, -4, ]
+
+=====================
+class: minor
+name: Flamingo Drive
+name:latin: Flamingo Drive
+name_de: Flamingo Drive
+name_en: Flamingo Drive
+name_int: Flamingo Drive
+
+ID: 31514766
+====== Geometry
+[1, 4024, 2670, ]
+[2, -45, 126, -170, 217, -69, 184, ]
+
+=====================
+class: minor
+name: Jay Street
+name:latin: Jay Street
+name_de: Jay Street
+name_en: Jay Street
+name_int: Jay Street
+
+ID: 31514808
+====== Geometry
+[1, 3810, 2692, ]
+[2, -104, -106, -48, -33, -97, -29, -208, -66, ]
+
+=====================
+class: minor
+name: Goldfinch Road
+name:latin: Goldfinch Road
+name_de: Goldfinch Road
+name_en: Goldfinch Road
+name_int: Goldfinch Road
+
+ID: 31515120
+====== Geometry
+[1, 3834, 1824, ]
+[2, -55, 62, -39, 56, -32, 61, -53, 175, -94, 346, ]
+
+=====================
+class: minor
+name: Crane Court
+name:latin: Crane Court
+name_de: Crane Court
+name_en: Crane Court
+name_int: Crane Court
+
+ID: 31515161
+====== Geometry
+[1, 3837, 2231, ]
+[2, -182, -53, ]
+[1, 215, -61, ]
+[2, -33, 114, -46, 162, ]
+
+=====================
+class: minor
+name: Purdy Crescent
+name:latin: Purdy Crescent
+name_de: Purdy Crescent
+name_en: Purdy Crescent
+name_int: Purdy Crescent
+
+ID: 35288673
+====== Geometry
+[1, 2273, 2256, ]
+[2, 6, -16, 72, -236, 5, -21, 74, -247, 53, -161, 9, -25, 9, -23, 0, -12, -12, -9, -167, -57, ]
+
+=====================
+class: minor
+name: Marlowe Drive
+name:latin: Marlowe Drive
+name_de: Marlowe Drive
+name_en: Marlowe Drive
+name_int: Marlowe Drive
+
+ID: 35288704
+====== Geometry
+[1, 1046, 151, ]
+[2, -21, -8, -7, -2, -143, -48, -21, -5, -13, -2, -37, -5, -60, -6, -29, -5, -37, -12, -50, -17, -215, -69, -89, -45, -50, -26, -33, -11, -55, -18, ]
+
+=====================
+class: minor
+name: Hawkridge Avenue
+name:latin: Hawkridge Avenue
+name_de: Hawkridge Avenue
+name_en: Hawkridge Avenue
+name_int: Hawkridge Avenue
+
+ID: 35288755
+====== Geometry
+[1, 757, 2169, ]
+[2, 8, -22, 3, -9, 41, -141, 2, -9, 49, -150, 5, -17, 4, -15, 57, -187, 48, -161, 5, -14, 5, -16, 4, -13, 87, -285, 48, -167, ]
+
+=====================
+class: minor
+name: Tampa Court
+name:latin: Tampa Court
+name_de: Tampa Court
+name_en: Tampa Court
+name_int: Tampa Court
+
+ID: 35288786
+====== Geometry
+[1, 286, 530, ]
+[2, -73, -22, -25, -7, ]
+
+=====================
+class: minor
+name: Huntsville Street
+name:latin: Huntsville Street
+name_de: Huntsville Street
+name_en: Huntsville Street
+name_int: Huntsville Street
+
+ID: 35288852
+====== Geometry
+[1, 2843, 2619, ]
+[2, 2, -7, 10, -28, 26, -89, 85, -264, 1, -19, ]
+
+=====================
+class: minor
+name: Deschene Avenue
+name:latin: Deschene Avenue
+name_de: Deschene Avenue
+name_en: Deschene Avenue
+name_int: Deschene Avenue
+
+ID: 35288859
+====== Geometry
+[1, 2637, 2554, ]
+[2, 120, -381, 10, -35, 84, -256, 71, -225, 58, -181, 5, -14, 6, -17, 1, -4, 88, -270, 98, -306, ]
+
+=====================
+class: minor
+name: Victor Boulevard
+name:latin: Victor Boulevard
+name_de: Victor Boulevard
+name_en: Victor Boulevard
+name_int: Victor Boulevard
+
+ID: 35288960
+====== Geometry
+[1, 1928, 1376, ]
+[2, -11, -25, -1, -32, ]
+[1, 215, 125, ]
+[2, -187, -65, -16, -3, -14, 14, -233, 792, -10, 13, -2, 23, 11, 14, 192, 70, ]
+
+=====================
+class: minor
+name: Caledon Avenue
+name:latin: Caledon Avenue
+name_de: Caledon Avenue
+name_en: Caledon Avenue
+name_int: Caledon Avenue
+
+ID: 35289267
+====== Geometry
+[1, 1161, 1917, ]
+[2, 40, -129, 68, -238, 4, -15, 5, -15, 75, -239, 67, -220, 5, -14, 14, -43, 12, -38, 68, -221, 18, -59, 4, -14, 17, -53, 5, -15, 3, -14, 17, -59, 10, -18, 4, -9, 5, -10, 7, -9, 5, -7, 7, -9, 14, -16, 7, -6, 84, -60, 14, -15, 9, -23, 41, -132, 46, -149, 15, -45, ]
+
+=====================
+class: minor
+name: Marriott Place
+name:latin: Marriott Place
+name_de: Marriott Place
+name_en: Marriott Place
+name_int: Marriott Place
+
+ID: 35289318
+====== Geometry
+[1, 231, 706, ]
+[2, -85, -30, ]
+
+=====================
+class: minor
+name: Athens Street
+name:latin: Athens Street
+name_de: Athens Street
+name_en: Athens Street
+name_int: Athens Street
+
+ID: 35289321
+====== Geometry
+[1, 1344, 314, ]
+[2, 7, -25, 28, -42, 10, -22, 51, -162, 35, -122, 2, -6, 10, -25, ]
+
+=====================
+class: minor
+name: Swallow Crescent
+name:latin: Swallow Crescent
+name_de: Swallow Crescent
+name_en: Swallow Crescent
+name_int: Swallow Crescent
+
+ID: 35289407
+====== Geometry
+[1, 4224, 1821, ]
+[2, -123, -42, -12, -3, -9, -2, -9, -5, -9, -2, -18, -10, -10, -7, -6, -4, -9, -7, -7, -7, -12, -10, -158, -146, ]
+
+=====================
+class: minor
+name: Lorenzo Drive
+name:latin: Lorenzo Drive
+name_de: Lorenzo Drive
+name_en: Lorenzo Drive
+name_int: Lorenzo Drive
+
+ID: 35289502
+====== Geometry
+[1, 2084, 3190, ]
+[2, -7, 3, -9, 8, -6, 12, -62, 197, -34, 112, -32, 100, -30, 96, 0, 1, -18, 58, -2, 4, -6, 8, -8, 6, -5, 2, -10, 2, -4, -1, -6, -1, -20, -6, -97, -33, -153, -51, -11, -4, -37, -12, ]
+
+=====================
+class: minor
+name: Greeningdon Drive
+name:latin: Greeningdon Drive
+name_de: Greeningdon Drive
+name_en: Greeningdon Drive
+name_int: Greeningdon Drive
+
+ID: 35289531
+====== Geometry
+[1, 2278, 2489, ]
+[2, -50, -33, -169, -60, -15, -10, 0, -24, 11, -23, 54, -181, 3, -9, 4, -15, 206, -685, 51, -168, 4, -14, ]
+
+=====================
+class: minor
+name: Coralridge Court
+name:latin: Coralridge Court
+name_de: Coralridge Court
+name_en: Coralridge Court
+name_int: Coralridge Court
+
+ID: 35289675
+====== Geometry
+[1, 278, 1546, ]
+[2, 7, -21, 14, -46, -2, -13, -7, -7, -98, -32, ]
+
+=====================
+class: minor
+name: Bridgette Drive
+name:latin: Bridgette Drive
+name_de: Bridgette Drive
+name_en: Bridgette Drive
+name_int: Bridgette Drive
+
+ID: 35289760
+====== Geometry
+[1, 1263, 4224, ]
+[2, -119, -41, ]
+
+=====================
+class: minor
+name: Mountbatten Drive
+name:latin: Mountbatten Drive
+name_de: Mountbatten Drive
+name_en: Mountbatten Drive
+name_int: Mountbatten Drive
+
+ID: 35289773
+====== Geometry
+[1, 106, 1698, ]
+[2, 29, -95, 28, -91, 29, -85, 2, -7, 31, -96, 17, -55, 31, -93, 17, -38, 40, -112, 65, -214, 77, -254, 19, -65, 31, -101, 7, -29, 44, -143, 55, -179, ]
+
+=====================
+class: minor
+name: Manning Avenue
+name:latin: Manning Avenue
+name_de: Manning Avenue
+name_en: Manning Avenue
+name_int: Manning Avenue
+
+ID: 35289811
+====== Geometry
+[1, 2202, 2688, ]
+[2, 38, -119, 17, -47, 21, -33, 90, -65, 23, -16, 33, -32, 26, -37, 28, -48, 69, -220, 12, -41, 87, -268, 115, -361, 4, -13, 5, -13, 3, -8, 83, -259, 52, -162, 51, -158, ]
+
+=====================
+class: minor
+name: Hayden Street
+name:latin: Hayden Street
+name_de: Hayden Street
+name_en: Hayden Street
+name_int: Hayden Street
+
+ID: 35289823
+====== Geometry
+[1, 2342, 746, ]
+[2, 20, -64, 24, -81, 12, -38, 17, -62, 65, -213, 8, -28, ]
+
+=====================
+class: minor
+name: Sonata Avenue
+name:latin: Sonata Avenue
+name_de: Sonata Avenue
+name_en: Sonata Avenue
+name_int: Sonata Avenue
+
+ID: 35289827
+====== Geometry
+[1, 217, 2890, ]
+[2, 75, 28, 43, 8, 54, -2, 42, -6, 5, 0, 53, -22, 113, -72, ]
+
+=====================
+class: minor
+name: Meadowlark Drive
+name:latin: Meadowlark Drive
+name_de: Meadowlark Drive
+name_en: Meadowlark Drive
+name_int: Meadowlark Drive
+
+ID: 35290074
+====== Geometry
+[1, 4224, 1177, ]
+[2, -39, -14, -26, -3, -190, -23, -217, -72, ]
+[1, 451, 967, ]
+[2, 6, -18, 15, -46, ]
+
+=====================
+class: minor
+name: Burrwood Drive
+name:latin: Burrwood Drive
+name_de: Burrwood Drive
+name_en: Burrwood Drive
+name_int: Burrwood Drive
+
+ID: 35290245
+====== Geometry
+[1, 841, 86, ]
+[2, -45, 105, -99, 317, -12, 43, -24, 78, -45, 152, -108, 344, -29, 94, -7, 30, -2, 2, -3, 2, -2, 3, -5, 2, -7, 0, -4, -3, -153, -69, -23, -10, ]
+[1, 216, 92, ]
+[2, -19, -17, ]
+
+=====================
+class: minor
+name: Jeremy Street
+name:latin: Jeremy Street
+name_de: Jeremy Street
+name_en: Jeremy Street
+name_int: Jeremy Street
+
+ID: 35290309
+====== Geometry
+[1, 1354, 4224, ]
+[2, 77, -247, 96, -286, ]
+
+=====================
+class: minor
+name: Coronet Court
+name:latin: Coronet Court
+name_de: Coronet Court
+name_en: Coronet Court
+name_int: Coronet Court
+
+ID: 35290330
+====== Geometry
+[1, 3099, 837, ]
+[2, 19, -59, 13, -20, 13, -14, ]
+
+=====================
+class: minor
+name: Bermuda Court
+name:latin: Bermuda Court
+name_de: Bermuda Court
+name_en: Bermuda Court
+name_int: Bermuda Court
+
+ID: 35290589
+====== Geometry
+[1, 573, 220, ]
+[2, -264, -87, -36, -27, ]
+
+=====================
+class: minor
+name: Chipman Avenue
+name:latin: Chipman Avenue
+name_de: Chipman Avenue
+name_en: Chipman Avenue
+name_int: Chipman Avenue
+
+ID: 35290783
+====== Geometry
+[1, 1777, 4099, ]
+[2, -46, -16, -169, -60, -131, -46, -72, -26, -143, -50, -34, -7, -27, 0, -56, 10, -26, -3, -20, -6, -64, -24, -24, -8, -49, -18, -33, -13, ]
+
+=====================
+class: minor
+name: Westmount Drive
+name:latin: Westmount Drive
+name_de: Westmount Drive
+name_en: Westmount Drive
+name_int: Westmount Drive
+
+ID: 35290794
+====== Geometry
+[1, 52, 211, ]
+[2, 6, -19, 58, -181, 46, -139, ]
+
+=====================
+class: minor
+name: Redwing Road
+name:latin: Redwing Road
+name_de: Redwing Road
+name_en: Redwing Road
+name_int: Redwing Road
+
+ID: 35290933
+====== Geometry
+[1, 4000, 1722, ]
+[2, 15, -55, 17, -57, 17, -55, 14, -58, 34, -114, 14, -55, 17, -58, 15, -57, 16, -53, ]
+
+=====================
+class: minor
+name: Elkwood Court
+name:latin: Elkwood Court
+name_de: Elkwood Court
+name_en: Elkwood Court
+name_int: Elkwood Court
+
+ID: 35290992
+====== Geometry
+[1, 106, 1698, ]
+[2, -21, -8, -59, -21, -29, 5, ]
+
+=====================
+class: minor
+name: Washington Street
+name:latin: Washington Street
+name_de: Washington Street
+name_en: Washington Street
+name_int: Washington Street
+
+ID: 35291137
+====== Geometry
+[1, 2967, 2212, ]
+[2, -11, -10, -19, -8, -170, -56, -220, -67, -18, -7, -178, -60, ]
+
+=====================
+class: minor
+name: Maitland Avenue
+name:latin: Maitland Avenue
+name_de: Maitland Avenue
+name_en: Maitland Avenue
+name_int: Maitland Avenue
+
+ID: 35291297
+====== Geometry
+[1, 2451, 2772, ]
+[2, 79, -254, ]
+
+=====================
+class: minor
+name: Aldridge Street
+name:latin: Aldridge Street
+name_de: Aldridge Street
+name_en: Aldridge Street
+name_int: Aldridge Street
+
+ID: 35291582
+====== Geometry
+[1, 1454, 2003, ]
+[2, -36, -10, -79, -24, -146, -43, -32, -9, -121, -36, -135, -41, -24, -12, -16, -7, ]
+
+=====================
+class: minor
+name: Yeoville Court
+name:latin: Yeoville Court
+name_de: Yeoville Court
+name_en: Yeoville Court
+name_int: Yeoville Court
+
+ID: 35291586
+====== Geometry
+[1, 1067, 2093, ]
+[2, -14, -7, -52, -32, -5, -15, 44, -158, ]
+
+=====================
+class: minor
+name: Miami Drive
+name:latin: Miami Drive
+name_de: Miami Drive
+name_en: Miami Drive
+name_int: Miami Drive
+
+ID: 35291742
+====== Geometry
+[1, 522, 392, ]
+[2, -178, -55, -213, -66, -6, -4, -14, -7, -13, -11, -17, -12, -29, -26, ]
+
+=====================
+class: minor
+name: Ronaldshay Avenue
+name:latin: Ronaldshay Avenue
+name_de: Ronaldshay Avenue
+name_en: Ronaldshay Avenue
+name_int: Ronaldshay Avenue
+
+ID: 35291745
+====== Geometry
+[1, 2560, 1327, ]
+[2, 5, -16, 2, -6, 55, -176, 37, -118, 42, -133, 10, -30, 0, -23, -2, -7, -3, -2, -4, -7, -2, -3, -5, -2, -2, -2, -5, -3, -2, -2, -5, -2, -6, -3, -3, -2, -302, -105, -8, -3, ]
+
+=====================
+class: minor
+name: Quarry Court
+name:latin: Quarry Court
+name_de: Quarry Court
+name_en: Quarry Court
+name_int: Quarry Court
+
+ID: 35291768
+====== Geometry
+[1, 809, 1997, ]
+[2, -18, -6, -83, -32, -16, -6, ]
+
+=====================
+class: minor
+name: Elkwood Drive
+name:latin: Elkwood Drive
+name_de: Elkwood Drive
+name_en: Elkwood Drive
+name_int: Elkwood Drive
+
+ID: 35291821
+====== Geometry
+[1, 547, 1782, ]
+[2, -80, -29, -21, -8, -24, -3, -191, -4, -125, -40, ]
+
+=====================
+class: minor
+name: Chester Avenue
+name:latin: Chester Avenue
+name_de: Chester Avenue
+name_en: Chester Avenue
+name_int: Chester Avenue
+
+ID: 35291843
+====== Geometry
+[1, 49, 3451, ]
+[2, -177, -60, ]
+
+=====================
+class: minor
+name: Silvercrest Drive
+name:latin: Silvercrest Drive
+name_de: Silvercrest Drive
+name_en: Silvercrest Drive
+name_int: Silvercrest Drive
+
+ID: 35292319
+====== Geometry
+[1, 116, 11, ]
+[2, -203, -69, -30, -10, -11, -3, ]
+
+=====================
+class: minor
+name: Ridge Street
+name:latin: Ridge Street
+name_de: Ridge Street
+name_en: Ridge Street
+name_int: Ridge Street
+
+ID: 35292637
+====== Geometry
+[1, 1807, 2541, ]
+[2, -2, -21, 67, -218, 41, -136, 21, -68, 3, -10, 4, -12, 29, -96, 128, -426, 33, -110, 66, -216, 6, -21, ]
+
+=====================
+class: minor
+name: Sarasota Avenue
+name:latin: Sarasota Avenue
+name_de: Sarasota Avenue
+name_en: Sarasota Avenue
+name_int: Sarasota Avenue
+
+ID: 35293007
+====== Geometry
+[1, 102, 1122, ]
+[2, 35, -106, 41, -135, 24, -76, 29, -99, 55, -176, 7, -23, 51, -170, ]
+
+=====================
+class: tertiary
+name: Jameston Avenue
+name:latin: Jameston Avenue
+name_de: Jameston Avenue
+name_en: Jameston Avenue
+name_int: Jameston Avenue
+
+ID: 35293386
+====== Geometry
+[1, 1569, 1627, ]
+[2, -34, -10, -5, -2, -23, -7, -51, -16, -8, -3, -62, -19, -26, -8, -72, -23, -15, -4, -14, -5, -266, -81, -14, -5, -16, -5, -259, -80, -5, -2, -20, -6, ]
+
+=====================
+class: minor
+name: Benjamin Drive
+name:latin: Benjamin Drive
+name_de: Benjamin Drive
+name_en: Benjamin Drive
+name_int: Benjamin Drive
+
+ID: 35293499
+====== Geometry
+[1, 1634, 4224, ]
+[2, -1, -2, ]
+
+=====================
+class: minor
+name: Jena Court
+name:latin: Jena Court
+name_de: Jena Court
+name_en: Jena Court
+name_int: Jena Court
+
+ID: 35293585
+====== Geometry
+[1, 1707, 3822, ]
+[2, 21, -64, ]
+
+=====================
+class: minor
+name: Fortissimo Drive
+name:latin: Fortissimo Drive
+name_de: Fortissimo Drive
+name_en: Fortissimo Drive
+name_int: Fortissimo Drive
+
+ID: 35294100
+====== Geometry
+[1, 131, 3870, ]
+[2, 71, -227, 26, -79, 12, -35, 27, -78, 33, -94, 4, -11, 5, -13, 28, -77, 9, -25, 16, -41, 12, -10, 12, -3, 195, 61, 12, -1, 11, -9, 54, -167, 8, -62, -3, -41, -12, -45, -15, -34, -34, -55, -33, -54, -25, -25, -18, -9, -22, 0, ]
+
+=====================
+class: tertiary
+name: Limeridge Road West
+name:latin: Limeridge Road West
+name_de: Limeridge Road West
+name_en: Limeridge Road West
+name_int: Limeridge Road West
+
+ID: 35294152
+====== Geometry
+[1, -128, 1859, ]
+[2, 2, 1, 57, 19, 62, 21, 67, 22, 93, 32, 126, 42, 82, 28, 11, 16, 59, 23, 29, 11, ]
+[1, 7, -25, ]
+[2, -29, -10, -27, -10, -32, -12, -18, 7, ]
+
+=====================
+class: minor
+name: Rolston Drive
+name:latin: Rolston Drive
+name_de: Rolston Drive
+name_en: Rolston Drive
+name_int: Rolston Drive
+
+ID: 35294358
+====== Geometry
+[1, -128, 894, ]
+[2, 28, -83, 5, -15, 45, -145, 90, -283, 11, -30, 13, -19, 37, -47, 10, -12, ]
+[1, 162, 916, ]
+[2, -39, -13, -121, -39, -11, -2, -52, -22, -36, -26, -137, -126, -5, -12, ]
+
+=====================
+class: minor
+name: Tyrone Drive
+name:latin: Tyrone Drive
+name_de: Tyrone Drive
+name_en: Tyrone Drive
+name_int: Tyrone Drive
+
+ID: 35294385
+====== Geometry
+[1, 1420, 1061, ]
+[2, -20, -7, -183, -60, -94, -31, -80, -27, -21, -5, -4, -2, 0, -2, -2, -5, 0, -7, 38, -133, 3, -7, -3, -14, -2, -4, -4, -5, -5, -2, -9, -3, -138, -44, -18, -6, -20, -6, -18, -6, -142, -46, -37, -10, ]
+
+=====================
+class: minor
+name: Dorothy Street
+name:latin: Dorothy Street
+name_de: Dorothy Street
+name_en: Dorothy Street
+name_int: Dorothy Street
+
+ID: 35294466
+====== Geometry
+[1, 3704, 355, ]
+[2, 4, -13, 127, -396, ]
+
+=====================
+class: minor
+name: Canary Court
+name:latin: Canary Court
+name_de: Canary Court
+name_en: Canary Court
+name_int: Canary Court
+
+ID: 35294840
+====== Geometry
+[1, 4224, 1609, ]
+[2, -13, -4, ]
+
+=====================
+class: minor
+name: June Street
+name:latin: June Street
+name_de: June Street
+name_en: June Street
+name_int: June Street
+
+ID: 35295599
+====== Geometry
+[1, 2843, 2619, ]
+[2, -7, 0, -36, -12, -32, -10, -131, -43, -27, -10, -80, -26, -57, -17, -14, -5, -11, -5, -14, -7, -23, -14, -11, -9, -9, -10, -12, -11, -6, -12, -5, -4, ]
+
+=====================
+class: minor
+name: Clearwater Drive
+name:latin: Clearwater Drive
+name_de: Clearwater Drive
+name_en: Clearwater Drive
+name_int: Clearwater Drive
+
+ID: 35296277
+====== Geometry
+[1, 685, 551, ]
+[2, -194, -58, ]
+
+=====================
+class: minor
+name: Atwater Crescent
+name:latin: Atwater Crescent
+name_de: Atwater Crescent
+name_en: Atwater Crescent
+name_int: Atwater Crescent
+
+ID: 35296466
+====== Geometry
+[1, 341, -128, ]
+[2, -17, 55, ]
+[1, 530, 161, ]
+[2, 29, -103, 9, -20, 5, -9, 0, -14, -3, -11, -21, -8, -28, -5, -138, -46, ]
+
+=====================
+class: minor
+name: Talisman Court
+name:latin: Talisman Court
+name_de: Talisman Court
+name_en: Talisman Court
+name_int: Talisman Court
+
+ID: 35296539
+====== Geometry
+[1, 178, 881, ]
+[2, -85, -32, ]
+
+=====================
+class: minor
+name: Limeridge Road West
+name:latin: Limeridge Road West
+name_de: Limeridge Road West
+name_en: Limeridge Road West
+name_int: Limeridge Road West
+
+ID: 35296953
+====== Geometry
+[1, 460, 2074, ]
+[2, 55, 19, 17, -6, ]
+[1, 692, 273, ]
+[2, -23, -26, -58, -21, -386, -144, -225, -82, -9, -15, -30, -13, -26, -10, ]
+
+=====================
+class: minor
+name: Amanda Street
+name:latin: Amanda Street
+name_de: Amanda Street
+name_en: Amanda Street
+name_int: Amanda Street
+
+ID: 35296977
+====== Geometry
+[1, 1524, 382, ]
+[2, 3, -24, 38, -59, 93, -295, 1, -6, 9, -27, ]
+
+=====================
+class: minor
+name: Lorenzo Court
+name:latin: Lorenzo Court
+name_de: Lorenzo Court
+name_en: Lorenzo Court
+name_int: Lorenzo Court
+
+ID: 35297892
+====== Geometry
+[1, 1359, 3702, ]
+[2, -1, -23, 7, -27, 9, -7, 9, -2, 144, 48, ]
+
+=====================
+class: minor
+name: Aldridge Court
+name:latin: Aldridge Court
+name_de: Aldridge Court
+name_en: Aldridge Court
+name_int: Aldridge Court
+
+ID: 35297921
+====== Geometry
+[1, 865, 1821, ]
+[2, -15, -5, -87, -27, -17, -5, ]
+
+=====================
+class: minor
+name: Bryna Avenue
+name:latin: Bryna Avenue
+name_de: Bryna Avenue
+name_en: Bryna Avenue
+name_int: Bryna Avenue
+
+ID: 35298159
+====== Geometry
+[1, 3304, 2634, ]
+[2, -215, -69, -29, -10, -179, -60, ]
+
+=====================
+class: minor
+name: Theodore Drive
+name:latin: Theodore Drive
+name_de: Theodore Drive
+name_en: Theodore Drive
+name_int: Theodore Drive
+
+ID: 35298196
+====== Geometry
+[1, 1131, 4224, ]
+[2, 13, -41, 22, -76, 14, -20, 12, -19, ]
+
+=====================
+class: minor
+name: Lotus Avenue
+name:latin: Lotus Avenue
+name_de: Lotus Avenue
+name_en: Lotus Avenue
+name_int: Lotus Avenue
+
+ID: 35298246
+====== Geometry
+[1, 1848, 700, ]
+[2, -32, -10, -6, -2, -71, -24, -34, -11, -125, -44, -17, -5, ]
+
+=====================
+class: minor
+name: Wingate Place
+name:latin: Wingate Place
+name_de: Wingate Place
+name_en: Wingate Place
+name_int: Wingate Place
+
+ID: 35298522
+====== Geometry
+[1, 3121, 278, ]
+[2, -17, -3, -112, -38, ]
+
+=====================
+class: minor
+name: Luscombe Street
+name:latin: Luscombe Street
+name_de: Luscombe Street
+name_en: Luscombe Street
+name_int: Luscombe Street
+
+ID: 35298964
+====== Geometry
+[1, 3752, 1065, ]
+[2, -299, -106, -172, -60, -103, -34, -79, -28, -140, -49, -24, -20, -18, -20, -68, -80, -17, -17, -22, -11, -387, -136, -8, -3, ]
+
+=====================
+class: minor
+name: Bluebird Avenue
+name:latin: Bluebird Avenue
+name_de: Bluebird Avenue
+name_en: Bluebird Avenue
+name_int: Bluebird Avenue
+
+ID: 35299950
+====== Geometry
+[1, 3730, 1728, ]
+[2, 98, -134, 4, -5, 5, -6, 5, -7, 4, -6, 3, -4, 2, -7, 5, -7, 5, -14, 0, -7, 108, -394, ]
+
+=====================
+class: minor
+name: Westside Place
+name:latin: Westside Place
+name_de: Westside Place
+name_en: Westside Place
+name_int: Westside Place
+
+ID: 35300155
+====== Geometry
+[1, -117, -68, ]
+[2, 12, -46, 3, -14, ]
+
+=====================
+class: minor
+name: Lynbrook Drive
+name:latin: Lynbrook Drive
+name_de: Lynbrook Drive
+name_en: Lynbrook Drive
+name_int: Lynbrook Drive
+
+ID: 35300196
+====== Geometry
+[1, 52, 211, ]
+[2, -5, -2, -66, -23, -73, -25, -32, -11, -4, -1, ]
+
+=====================
+class: minor
+name: Allegro Place
+name:latin: Allegro Place
+name_de: Allegro Place
+name_en: Allegro Place
+name_int: Allegro Place
+
+ID: 35300298
+====== Geometry
+[1, 473, 2995, ]
+[2, -15, -11, -22, -66, ]
+
+=====================
+class: minor
+name: Manning Court
+name:latin: Manning Court
+name_de: Manning Court
+name_en: Manning Court
+name_int: Manning Court
+
+ID: 35300661
+====== Geometry
+[1, 2917, 748, ]
+[2, 42, -35, 11, -17, 4, -16, ]
+
+=====================
+class: minor
+name: Citino Drive
+name:latin: Citino Drive
+name_de: Citino Drive
+name_en: Citino Drive
+name_int: Citino Drive
+
+ID: 54674241
+====== Geometry
+[1, -59, 3810, ]
+[2, 34, 11, 156, 49, 103, 33, 60, 20, 53, 18, 22, -3, ]
+
+=====================
+class: minor
+name: Colin Crescent
+name:latin: Colin Crescent
+name_de: Colin Crescent
+name_en: Colin Crescent
+name_int: Colin Crescent
+
+ID: 54674254
+====== Geometry
+[1, 1966, 3522, ]
+[2, 93, 30, 73, 23, 30, 10, 94, 30, 80, 25, 17, -3, 13, -10, 24, -63, 58, -171, 17, -57, -5, -15, -15, -15, -338, -116, -23, 0, ]
+
+=====================
+class: minor
+name: Aztec Court
+name:latin: Aztec Court
+name_de: Aztec Court
+name_en: Aztec Court
+name_int: Aztec Court
+
+ID: 54674286
+====== Geometry
+[1, 2162, 3585, ]
+[2, 47, -151, ]
+
+=====================
+class: minor
+name: Benedict Place
+name:latin: Benedict Place
+name_de: Benedict Place
+name_en: Benedict Place
+name_int: Benedict Place
+
+ID: 54674312
+====== Geometry
+[1, 1934, 3622, ]
+[2, -102, -32, -127, -62, -234, -79, ]
+
+=====================
+class: minor
+name: Rosehill Avenue
+name:latin: Rosehill Avenue
+name_de: Rosehill Avenue
+name_en: Rosehill Avenue
+name_int: Rosehill Avenue
+
+ID: 54740982
+====== Geometry
+[1, 131, 3170, ]
+[2, -218, -74, -41, -14, ]
+
+=====================
+class: minor
+name: Forbes Street
+name:latin: Forbes Street
+name_de: Forbes Street
+name_en: Forbes Street
+name_int: Forbes Street
+
+ID: 54743247
+====== Geometry
+[1, 369, 3938, ]
+[2, 16, -17, 45, -143, 13, -40, 7, -18, 16, -11, ]
+
+=====================
+class: minor
+name: Goldstrum Avenue
+name:latin: Goldstrum Avenue
+name_de: Goldstrum Avenue
+name_en: Goldstrum Avenue
+name_int: Goldstrum Avenue
+
+ID: 54743268
+====== Geometry
+[1, 2112, 2149, ]
+[2, -175, -61, ]
+
+=====================
+class: minor
+name: Blossom Lane
+name:latin: Blossom Lane
+name_de: Blossom Lane
+name_en: Blossom Lane
+name_int: Blossom Lane
+
+ID: 54743298
+====== Geometry
+[1, 466, 3709, ]
+[2, 14, -3, 12, 1, 232, 75, 121, 38, 38, 12, ]
+
+=====================
+class: secondary
+name: Mohawk Road West
+name:latin: Mohawk Road West
+name_de: Mohawk Road West
+name_en: Mohawk Road West
+name_int: Mohawk Road West
+
+ID: 54778806
+====== Geometry
+[1, 1377, -128, ]
+[2, 51, 17, 59, 21, 25, 8, 67, 23, 89, 30, 86, 30, 29, -2, 68, 24, 11, 4, 137, 45, 21, 8, 14, 5, ]
+[1, -280, -84, ]
+[2, 16, 21, 73, 25, 50, 18, 96, 35, 22, 7, 16, 6, ]
+
+=====================
+class: motorway
+subclass: junction
+
+ID: 61158004
+====== Geometry
+[1, 4155, 3692, ]
+
+=====================
+class: minor
+name: Newport Crescent
+name:latin: Newport Crescent
+name_de: Newport Crescent
+name_en: Newport Crescent
+name_int: Newport Crescent
+
+ID: 100747318
+====== Geometry
+[1, 3205, 3935, ]
+[2, 109, -315, 10, -13, 15, -3, 166, 55, 59, 36, 49, 52, ]
+[1, 44, 177, ]
+[2, 2, -23, -1, -21, -2, -22, -4, -21, -5, -21, -8, -21, -9, -20, -15, -26, ]
+
+=====================
+class: minor
+name: Deborah Court
+name:latin: Deborah Court
+name_de: Deborah Court
+name_en: Deborah Court
+name_int: Deborah Court
+
+ID: 100747538
+====== Geometry
+[1, 3480, 3956, ]
+[2, -8, -38, -25, -62, ]
+
+=====================
+class: minor
+name: Sirente Drive
+name:latin: Sirente Drive
+name_de: Sirente Drive
+name_en: Sirente Drive
+name_int: Sirente Drive
+
+ID: 148017446
+====== Geometry
+[1, 2921, 3849, ]
+[2, 33, 11, 63, 18, 32, 10, 156, 47, 16, 6, 27, 9, 14, 5, 89, 10, 68, 0, 61, -9, 122, -26, 31, -6, 24, 0, 47, 3, 47, 16, 138, 44, 152, 55, 18, 27, -1, 35, -38, 120, ]
+
+=====================
+class: primary
+name: Upper James Street
+name:latin: Upper James Street
+name_de: Upper James Street
+name_en: Upper James Street
+name_int: Upper James Street
+
+ID: 158462173
+====== Geometry
+[1, 1395, 2193, ]
+[2, -24, 39, -45, 144, -12, 39, -34, 112, -29, 73, -42, 143, -45, 152, -19, 57, -9, 33, -25, 92, -21, 65, 4, 18, ]
+[1, 997, -3288, ]
+[2, -25, 71, -22, 64, -19, 58, -14, 42, -7, 23, -34, 114, 10, 24, ]
+[1, -1223, 3956, ]
+[2, 12, -35, 29, -91, 26, -81, 18, -57, 7, -21, 15, -46, 19, -61, 20, -63, 10, -33, 12, -39, 15, -48, 5, -15, 29, -91, 30, -98, 13, -43, 18, -53, 1, -4, 3, -10, 22, -71, 31, -99, 2, -5, 13, -15, 56, -172, 12, -36, 10, -33, 18, -56, 34, -96, 45, -140, 41, -150, 19, -62, 8, -23, 13, -46, 29, -91, 3, -47, 11, -35, 12, -40, 11, -35, 16, -51, 9, -29, 12, -40, 12, -41, 16, -52, 25, -81, 14, -47, 5, -17, 9, -30, 16, -50, 6, -18, 15, -51, 14, -47, 16, -54, 17, -56, 5, -19, 11, -36, 3, -9, 7, -23, 2, -9, 6, -18, 25, -85, 4, -13, 9, -32, 29, -98, 8, -27, 10, -34, 9, -28, 16, -50, 5, -15, 6, -20, 12, -41, 4, -10, 11, -37, 9, -28, 6, -21, 11, -38, 9, -28, 3, -9, 11, -37, 15, -47, 15, -50, 10, -33, 6, -20, 21, -67, 4, -14, 6, -19, 29, -97, 9, -28, 3, -11, 20, -19, 15, -49, 19, -59, 8, -23, 8, -27, 6, -18, 52, -161, 11, -38, 1, -2, ]
+
+=====================
+class: secondary
+name: Mohawk Road East
+name:latin: Mohawk Road East
+name_de: Mohawk Road East
+name_en: Mohawk Road East
+name_int: Mohawk Road East
+
+ID: 160175909
+====== Geometry
+[1, 2387, 226, ]
+[2, -17, -21, -106, -37, -50, -18, -45, -16, -97, -35, -22, -8, -16, -6, ]
+[1, 1650, 592, ]
+[2, 18, 18, 37, 15, 72, 27, 19, 7, 28, 11, 17, 6, 127, 42, 32, -3, 12, 4, 35, 12, 6, 2, 57, 20, 22, 8, 53, 18, 5, 2, ]
+[1, -190, -66, ]
+[2, -15, -19, -58, -21, -77, -27, -18, -6, -29, -9, -17, -6, -108, -38, -28, 3, -26, -9, -273, -96, -449, -156, -355, -124, -13, -5, -80, -27, -22, -8, -79, -26, -26, 3, -61, -20, -41, -14, -49, -18, -9, -3, -54, -20, -86, -29, -19, -7, -15, -5, ]
+
+=====================
+class: minor
+name: Crown Court
+name:latin: Crown Court
+name_de: Crown Court
+name_en: Crown Court
+name_int: Crown Court
+
+ID: 166303840
+====== Geometry
+[1, 3281, 899, ]
+[2, 31, -100, 3, -22, ]
+
+=====================
+class: minor
+name: Fontana Court
+name:latin: Fontana Court
+name_de: Fontana Court
+name_en: Fontana Court
+name_int: Fontana Court
+
+ID: 183386598
+====== Geometry
+[1, -128, 2714, ]
+[2, 149, 49, ]
+
+=====================
+class: minor
+name: Maya Court
+name:latin: Maya Court
+name_de: Maya Court
+name_en: Maya Court
+name_int: Maya Court
+
+ID: 183411927
+====== Geometry
+[1, 2110, 3741, ]
+[2, 13, -24, 39, -132, ]
+
+=====================
+class: motorway
+subclass: junction
+
+ID: 215645621
+====== Geometry
+[1, 2011, 2916, ]
+
+=====================
+class: motorway
+subclass: junction
+
+ID: 215651766
+====== Geometry
+[1, 420, 2421, ]
+
+=====================
+class: minor
+name: Desoto Drive
+name:latin: Desoto Drive
+name_de: Desoto Drive
+name_en: Desoto Drive
+name_int: Desoto Drive
+
+ID: 263519675
+====== Geometry
+[1, 2400, 4155, ]
+[2, -23, 69, ]
+
+=====================
+class: minor
+name: Ralfana Crescent
+name:latin: Ralfana Crescent
+name_de: Ralfana Crescent
+name_en: Ralfana Crescent
+name_int: Ralfana Crescent
+
+ID: 263519679
+====== Geometry
+[1, 2577, 4221, ]
+[2, -1, 3, ]
+
+=====================
+class: minor
+name: Chartwell Circle
+name:latin: Chartwell Circle
+name_de: Chartwell Circle
+name_en: Chartwell Circle
+name_int: Chartwell Circle
+
+ID: 263520085
+====== Geometry
+[1, 1829, 3350, ]
+[2, -107, -38, -60, -23, -152, -52, -12, -17, 0, -19, 85, -268, 15, -9, 161, 50, 86, 27, 63, 22, 7, 7, 4, 5, 3, 9, 0, 7, -1, 9, -92, 290, 171, 60, ]
+
+=====================
+class: service
+name: Tim Hortons Drive-Through
+name:latin: Tim Hortons Drive-Through
+name_de: Tim Hortons Drive-Through
+name_en: Tim Hortons Drive-Through
+name_int: Tim Hortons Drive-Through
+
+ID: 270247894
+====== Geometry
+[1, 1770, 748, ]
+[2, -7, -8, -61, -21, -6, -1, -5, 2, -5, 4, -5, 13, 1, 6, 4, 6, 12, 7, 14, 3, 11, 1, 29, 9, 8, 2, 11, -1, 20, 7, 31, 10, ]
+[1, 6, -21, ]
+[2, -30, -9, -28, -9, -62, -20, -7, -1, -4, 2, -6, 13, 0, 6, 7, 8, ]
+[1, 234, 225, ]
+[2, 5, -31, 0, -8, -3, -5, -5, -3, -72, -23, -8, -1, -19, 4, ]
+
+=====================
+class: service
+name: Esso Car Wash Drive-Through
+name:latin: Esso Car Wash Drive-Through
+name_de: Esso Car Wash Drive-Through
+name_en: Esso Car Wash Drive-Through
+name_int: Esso Car Wash Drive-Through
+
+ID: 270247895
+====== Geometry
+[1, 1932, 981, ]
+[2, 17, -28, 6, -5, 9, -1, 6, 2, 4, 6, -1, 8, -4, 5, -5, 7, -3, 7, -6, 28, -12, 34, -9, 23, -6, 4, -7, -1, -28, -10, ]
+
+=====================
+class: service
+name: Canadian Tire Car Wash Drive-Through
+name:latin: Canadian Tire Car Wash Drive-Through
+name_de: Canadian Tire Car Wash Drive-Through
+name_en: Canadian Tire Car Wash Drive-Through
+name_int: Canadian Tire Car Wash Drive-Through
+
+ID: 272041906
+====== Geometry
+[1, 2171, 75, ]
+[2, -5, 16, -6, 7, -7, 2, -6, -1, -35, -13, -3, -3, -15, -29, -1, -7, 1, -8, 22, -64, 4, -6, 7, -2, 10, 1, 81, 26, ]
+
+=====================
+class: minor
+name: Connell Crescent
+name:latin: Connell Crescent
+name_de: Connell Crescent
+name_en: Connell Crescent
+name_int: Connell Crescent
+
+ID: 279923336
+====== Geometry
+[1, 304, 3346, ]
+[2, 121, 40, 15, 16, 3, 25, -46, 136, -9, 6, -16, -2, -132, -38, ]
+
+=====================
+class: minor
+name: Stonepine Crescent
+name:latin: Stonepine Crescent
+name_de: Stonepine Crescent
+name_en: Stonepine Crescent
+name_int: Stonepine Crescent
+
+ID: 279926743
+====== Geometry
+[1, 294, 3923, ]
+[2, -78, 240, -16, 13, -19, 4, -116, -40, -9, -6, -4, -11, 1, -13, 72, -219, 6, -21, ]
+
+=====================
+class: path
+name: Pussywillow Lane
+name:latin: Pussywillow Lane
+name_de: Pussywillow Lane
+name_en: Pussywillow Lane
+name_int: Pussywillow Lane
+subclass: path
+
+ID: 279926863
+====== Geometry
+[1, 52, 4123, ]
+[2, -13, 3, -5, 2, -6, -1, -120, -38, -18, 0, -18, -4, ]
+
+=====================
+class: minor
+name: St. Anthony Place
+name:latin: St. Anthony Place
+name_de: St. Anthony Place
+name_en: St. Anthony Place
+name_int: St. Anthony Place
+
+ID: 495052592
+====== Geometry
+[1, -77, 2437, ]
+[2, -28, 73, ]
+
+=====================
+class: minor
+name: Springvalley Crescent
+name:latin: Springvalley Crescent
+name_de: Springvalley Crescent
+name_en: Springvalley Crescent
+name_int: Springvalley Crescent
+
+ID: 495052594
+====== Geometry
+[1, -128, 2911, ]
+[2, 67, 22, 3, 1, 2, 1, 8, 0, 24, -17, 10, -43, 35, -112, 25, -79, 50, -159, -2, -17, -20, -14, -151, -57, -51, -15, ]
+
+=====================
+class: minor
+name: Pinemeadow Drive
+name:latin: Pinemeadow Drive
+name_de: Pinemeadow Drive
+name_en: Pinemeadow Drive
+name_int: Pinemeadow Drive
+
+ID: 507097165
+====== Geometry
+[1, 1662, 3289, ]
+[2, 97, -315, ]
