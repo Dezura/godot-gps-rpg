@@ -10,7 +10,11 @@ export_presets.cfg
 # Imported translations (automatically generated from CSV files)
 *.translation
 
+# Ignore temporary DLLs
+~*.dll
+
 # Mono-specific ignores
 .mono/
 data_*/
 mono_crash.*.json
+server.cfg
