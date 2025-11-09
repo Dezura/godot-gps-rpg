@@ -16,4 +16,4 @@ func _on_player_coords_updated(new_coords: GeoCoordinate, _old_coords: GeoCoordi
 	
 	var tile_position: Vector2i = new_coords.get_tile_position()
 	var tile_offset: Vector2 = new_coords.get_tile_offset()
-	$DebugTileCoords.text = "Tile X: %s\nTile Y: %s\nTileOffset X: %s\nTileOffset Y: %s\nZoom Level: %s" % [tile_position.x, tile_position.y, tile_offset.x, tile_offset.y, 14]
+	$DebugTileCoords.text = "Tile X: %s\nTile Y: %s\nTileOffset X: %s\nTileOffset Y: %s\nZoom Level: %s" % [tile_position.x, tile_position.y, tile_offset.x, tile_offset.y, Util.TILE_LEVEL]

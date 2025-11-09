@@ -1,7 +1,7 @@
 extends Node
 # Autoload Singleton Script, can be used globally anywhere
 
-const WORLD_SCALE: float = 160000
+const WORLD_SCALE: float = 100000
 const TILE_LEVEL: int = 14
 
 var server_conf = ConfigFile.new()

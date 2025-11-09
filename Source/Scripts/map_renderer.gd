@@ -45,7 +45,7 @@ func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
 	#Util.generate_tile_debug_files(tile)
 	for layer: MvtLayer in tile.layers():
 		match layer.name():
-			"road", "road_label":
+			"transportation":
 				_render_layer_linestrings(layer, new_chunk, Color(0.363, 0.377, 0.49, 1.0), 8)
 			"pathway":
 				_render_layer_linestrings(layer, new_chunk, Color(0.363, 0.377, 0.49, 1.0), 5)
@@ -57,8 +57,8 @@ func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
 				#_render_layer_polygons(layer, new_chunk, Color(0.861, 0.198, 0.407, 0.5))
 			
 			
-			#"farmland", "wetland", "wood":
-				#_render_layer_polygons(layer, new_chunk, Color(0.639, 0.88, 0.158, 0.361))
+			"park":
+				_render_layer_polygons(layer, new_chunk, Color(0.639, 0.88, 0.158, 0.361))
 			
 			"water":
 				_render_layer_polygons(layer, new_chunk, Color(0.495, 0.471, 1.892, 0.69))
@@ -66,8 +66,8 @@ func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
 				_render_layer_polygons(layer, new_chunk, Color(0.154, 0.163, 0.23, 1.0))
 			_:
 				print(layer.name())
-				if layer.name().begins_with("poi") and not layer.name() in ["poi_station", "poi_transport"]:
-					_render_pois(layer, new_chunk)
+				#if layer.name().begins_with("poi") and not layer.name() in ["poi_station", "poi_transport"]:
+					#_render_pois(layer, new_chunk)
 
 
 func _render_pois(layer: MvtLayer, parent: Node2D) -> void:

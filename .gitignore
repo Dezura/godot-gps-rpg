@@ -17,4 +17,12 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
-server.cfg
+
+# Ignore server config
+/server.cfg
+
+# Ignore testing data
+/Assets/Testing Data
+
+
+/.vscode
