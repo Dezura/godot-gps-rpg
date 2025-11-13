@@ -66,8 +66,8 @@ func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
 				_render_layer_polygons(layer, new_chunk, Color(0.154, 0.163, 0.23, 1.0))
 			_:
 				print(layer.name())
-				#if layer.name().begins_with("poi") and not layer.name() in ["poi_station", "poi_transport"]:
-					#_render_pois(layer, new_chunk)
+				if layer.name().begins_with("poi") and not layer.name() in ["poi_station", "poi_transport"]:
+					_render_pois(layer, new_chunk)
 
 
 func _render_pois(layer: MvtLayer, parent: Node2D) -> void:

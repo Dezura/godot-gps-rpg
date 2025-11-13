@@ -29,6 +29,10 @@ func _ready() -> void:
 	new_dummy.name = "My Super Cool House"
 	new_dummy.bottom_label.text = "My Super Cool House"
 	
+	var coolerHouse = Util.spawn_new_dummy(GeoCoordinate.new(43.211297, -79.891929).game_position)
+	coolerHouse.name = "My Even Cooler Super Cool House"
+	coolerHouse.bottom_label.text = "My Even Cooler Super Cool House"
+	
 	#tile_api.request_points_of_interest(player_coords, 100, 100)
 	#tile_api.request_points_of_interest(player_coords, 100, 100)
 	#map.queue_render_tile(player_coords.get_tile_position())
