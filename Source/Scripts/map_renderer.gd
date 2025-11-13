@@ -3,20 +3,20 @@ class_name MapRenderer extends Node2D
 var _rendered_map_tiles: Array[Vector2i]
 
 @export var game: GameManager
-@export var tile_api: TileAPI
+@export var server_api: ServerAPI
 const MVT = preload("res://addons/geo-tile-loader/vector_tile_loader.gd")
 
 @export var texture_test: Texture
 
 func _ready() -> void:
-	tile_api.tile_received.connect(_on_tile_received)
-	tile_api.tile_failed.connect(_on_tile_failed)
+	server_api.tile_received.connect(_on_tile_received)
+	server_api.tile_failed.connect(_on_tile_failed)
 
 
 func queue_render_tile(tile_pos: Vector2i) -> void:
 	if is_tile_rendered(tile_pos): 
 		return
-	tile_api.request_tile_data(tile_pos)
+	server_api.request_tile_data(tile_pos)
 	_rendered_map_tiles.append(Vector2i(tile_pos.x, tile_pos.y))
 
 
@@ -57,17 +57,18 @@ func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
 				#_render_layer_polygons(layer, new_chunk, Color(0.861, 0.198, 0.407, 0.5))
 			
 			
-			"park":
-				_render_layer_polygons(layer, new_chunk, Color(0.639, 0.88, 0.158, 0.361))
+			"landcover":
+				_render_layer_polygons(layer, new_chunk, Color(0.639, 0.88, 0.158, 0.361), "park")
 			
 			"water":
 				_render_layer_polygons(layer, new_chunk, Color(0.495, 0.471, 1.892, 0.69))
 			"building":
 				_render_layer_polygons(layer, new_chunk, Color(0.154, 0.163, 0.23, 1.0))
 			_:
+				pass
 				print(layer.name())
-				#if layer.name().begins_with("poi") and not layer.name() in ["poi_station", "poi_transport"]:
-					#_render_pois(layer, new_chunk)
+				if layer.name().begins_with("poi") and not layer.name() in ["poi_station", "poi_transport"]:
+					_render_pois(layer, new_chunk)
 
 
 func _render_pois(layer: MvtLayer, parent: Node2D) -> void:
@@ -89,8 +90,12 @@ func _render_pois(layer: MvtLayer, parent: Node2D) -> void:
 			new_dummy.name_label.text = feature.tags(layer)["name"]
 
 
-func _render_layer_polygons(layer: MvtLayer, parent: Node2D, color: Color) -> void:
+func _render_layer_polygons(layer: MvtLayer, parent: Node2D, color: Color, target_subclass: String = "") -> void:
 	for feature: MvtFeature in layer.features():
+		if target_subclass != "":
+			if feature.tags(layer).has("subclass"):
+				if feature.tags(layer)["subclass"] != target_subclass:
+					return
 		var polygons = Util.parse_feature_geometry_points(feature.geometry())
 		
 		for polygon: PackedVector2Array in polygons:
