@@ -36,6 +36,9 @@ func _ready() -> void:
 	if server_api.client.get_status() != HTTPClient.STATUS_CONNECTED: 
 		await server_api.server_connected
 	
+	map_renderer.queue_render_tile(player_coords.get_tile_position())
+	map_renderer.queue_render_pois("Hamilton,Ontario")
+	
 	set_process(true)
 
 

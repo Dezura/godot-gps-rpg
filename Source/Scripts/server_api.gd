@@ -3,7 +3,7 @@ class_name ServerAPI extends Node
 signal server_connected
 signal tile_received(tile_pos: Vector2i, tile: MvtTile)
 signal tile_failed(tile_pos: Vector2i, message: String)
-signal city_poi_received(city_name: String, poi_list: Array[Vector2])
+signal city_poi_received(city_name: String, poi_list: Array[PointOfInterestData])
 signal city_poi_failed(city_name: String, message: String)
 signal city_tiles_received(city_name: String, tiles: Dictionary[Vector2i, MvtTile])
 signal city_tiles_failed(city_name: String, message: String)
@@ -53,6 +53,8 @@ func _connect() -> void:
 func request_tile_data(tile_pos: Vector2i) -> void:
 	# Check if an existing request already exists before proceeding
 	for i in _request_queue.size():
+		if typeof(_request_queue[i].initial_data) != typeof(tile_pos):
+			continue
 		if _request_queue[i].initial_data == tile_pos:
 			return
 	var new_request := RequestData.new()
@@ -67,10 +69,28 @@ func request_tile_data(tile_pos: Vector2i) -> void:
 	new_request.received_signal = tile_received
 	new_request.failed_signal = tile_failed
 	_request_queue.append(new_request)
+	print("[ServerAPI] New request added to queue (%s)" % _request_queue.size())
 
 
-func request_poi_data() -> void:
-	pass
+func request_poi_data(city: String) -> void:
+	for i in _request_queue.size():
+		if typeof(_request_queue[i].initial_data) != typeof(city):
+			continue
+		if _request_queue[i].initial_data == city:
+			return
+	var new_request := RequestData.new()
+	
+	new_request.url = "/name?place=%s&limit=%s&categories=%s" % [city, 100, "commercial"]
+	new_request.headers = [
+		"Content-Type: application/json",
+		"Connection: keep-alive"
+	]
+	new_request.initial_data = city
+	new_request.parse_method = _parse_city_pois
+	new_request.received_signal = city_poi_received
+	new_request.failed_signal = city_poi_failed
+	_request_queue.append(new_request)
+	print("[ServerAPI] New request added to queue (%s)" % _request_queue.size())
 
 
 func _process(_delta: float) -> void:
@@ -83,7 +103,7 @@ func _process(_delta: float) -> void:
 
 func _perform_request(request: RequestData, attempt: int) -> void:
 	if client.get_status() != HTTPClient.STATUS_CONNECTED:
-		print("[ServerAPI] Status not CONNECTED (%s) – reconnecting..." % client.get_status())
+		print("[ServerAPI] NOT CONNECTED to server (Status: %s)" % client.get_status())
 		await _reconnect()
 	
 	print("[ServerAPI] → GET %s (attempt %d)" % [request.url, attempt])
@@ -110,7 +130,7 @@ func _perform_request(request: RequestData, attempt: int) -> void:
 		client.poll()
 		await get_tree().process_frame
 	
-	# ---- NO RESPONSE ? (server closed connection or 204) ----
+	# ---- no response (server closed connection or 204) ----
 	if not client.has_response():
 		if attempt >= request.max_attempts:
 			_finish_with_error(request, "no response (even after retry)")
@@ -138,10 +158,12 @@ func _perform_request(request: RequestData, attempt: int) -> void:
 		client.poll()
 		await get_tree().process_frame
 	
-	assert(client.get_status() == HTTPClient.STATUS_CONNECTED, "client not idle")
 	
 	# ---- parse ----
-	request.parse_method.call(request, body)
+	if body.size() > 0:
+		request.parse_method.call(request, body)
+	else:
+		_finish_with_error(request, "HTTP body returned empty")
 
 
 func _reconnect() -> void:
@@ -151,22 +173,40 @@ func _reconnect() -> void:
 
 
 func _parse_tile_data(request: RequestData, body: PackedByteArray) -> void:
-	var tile: MvtTile = null
-	if body.size() > 0:
-		tile = MvtTile.read(body)
-		if tile == null:
-			_finish_with_error(request, "MvtTile.read() returned null")
-			return
+	var tile := MvtTile.read(body)
+	if tile == null:
+		_finish_with_error(request, "MvtTile.read() returned null")
+		return
 	_finish_with_success(request, tile)
+
+
+func _parse_city_pois(request: RequestData, body: PackedByteArray) -> void:
+	var json = JSON.parse_string(body.get_string_from_utf8())
+	if json == null:
+		_finish_with_error(request, "POI json.parse_string() returned null")
+		return
+	
+	# Create new list of POIData from json (I guess we can assume the json isn't missing keys
+	var poi_list: Array[PointOfInterestData] = []
+	for place in json.features:
+		# place.properties is a dictionary, but Godot is dynamically typed so you can just access keys like this instead of dict[key]
+		var new_poi := PointOfInterestData.new(
+			place.properties.place_id,
+			place.properties.name,
+			GeoCoordinate.new(place.properties.lat, place.properties.lon),
+			place.properties.categories)
+		poi_list.append(new_poi)
+	_finish_with_success(request, poi_list)
 
 
 func _finish_with_success(request: RequestData, parsed_data) -> void:
 	busy = false
-	print("[ServerAPI] ← data %s OK")
+	print("[ServerAPI] ← data %s OK" % request.url)
 	request.received_signal.emit(request.initial_data, parsed_data)
 
 
 func _finish_with_error(request: RequestData, message: String) -> void:
 	busy = false
-	push_warning("[ServerAPI] ← data FAILED: %s: $s" % [message, request.url])
+	print("[ServerAPI] ← data FAILED: %s: %s" % [message, request.url])
+	push_warning("[ServerAPI] ← data FAILED: %s: %s" % [message, request.url])
 	request.failed_signal.emit(request.initial_data, message)

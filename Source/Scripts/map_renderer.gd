@@ -11,6 +11,8 @@ const MVT = preload("res://addons/geo-tile-loader/vector_tile_loader.gd")
 func _ready() -> void:
 	server_api.tile_received.connect(_on_tile_received)
 	server_api.tile_failed.connect(_on_tile_failed)
+	server_api.city_poi_received.connect(_on_city_poi_received)
+	server_api.city_poi_failed.connect(_on_city_poi_failed)
 
 
 func queue_render_tile(tile_pos: Vector2i) -> void:
@@ -18,6 +20,10 @@ func queue_render_tile(tile_pos: Vector2i) -> void:
 		return
 	server_api.request_tile_data(tile_pos)
 	_rendered_map_tiles.append(Vector2i(tile_pos.x, tile_pos.y))
+
+
+func queue_render_pois(city: String) -> void:
+	server_api.request_poi_data(city)
 
 
 func is_tile_rendered(tile_pos: Vector2i) -> bool:
@@ -30,7 +36,22 @@ func _on_tile_received(tile_pos: Vector2i, tile: MvtTile) -> void:
 
 
 func _on_tile_failed(tile_pos: Vector2i, msg: String) -> void:
-	push_warning("A tile failed to fetch... (%s) (%s)", tile_pos, msg)
+	push_warning("A tile failed to fetch... (%s) (%s)" % [tile_pos, msg])
+
+
+func _on_city_poi_received(city: String, poi_list: Array[PointOfInterestData]) -> void:
+	print("=========================")
+	print(city)
+	print(poi_list.size())
+	print(poi_list[0].name)
+	print(poi_list[0].place_id)
+	print(poi_list[0].coords.game_position)
+
+
+func _on_city_poi_failed(city: String, msg: String) -> void:
+	push_warning("City POIs failed to fetch... (%s) (%s)" % [city, msg])
+	# Just retry fetching the pois
+	queue_render_pois(city)
 
 
 func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
@@ -66,9 +87,9 @@ func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
 				_render_layer_polygons(layer, new_chunk, Color(0.154, 0.163, 0.23, 1.0))
 			_:
 				pass
-				print(layer.name())
-				if layer.name().begins_with("poi") and not layer.name() in ["poi_station", "poi_transport"]:
-					_render_pois(layer, new_chunk)
+				#print(layer.name())
+				#if layer.name().begins_with("poi") and not layer.name() in ["poi_station", "poi_transport"]:
+					#_render_pois(layer, new_chunk)
 
 
 func _render_pois(layer: MvtLayer, parent: Node2D) -> void:
