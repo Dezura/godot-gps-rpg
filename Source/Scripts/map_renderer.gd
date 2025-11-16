@@ -40,12 +40,7 @@ func _on_tile_failed(tile_pos: Vector2i, msg: String) -> void:
 
 
 func _on_city_poi_received(city: String, poi_list: Array[PointOfInterestData]) -> void:
-	print("=========================")
-	print(city)
-	print(poi_list.size())
-	print(poi_list[0].name)
-	print(poi_list[0].place_id)
-	print(poi_list[0].coords.game_position)
+	_render_pois(poi_list)
 
 
 func _on_city_poi_failed(city: String, msg: String) -> void:
@@ -92,23 +87,14 @@ func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
 					#_render_pois(layer, new_chunk)
 
 
-func _render_pois(layer: MvtLayer, parent: Node2D) -> void:
-	for feature: MvtFeature in layer.features():
-		if not feature.tags(layer).has("name"):
-			continue
-		var points = feature.geometry()
-		
-		for point: Array in points:
-			var layer_extent = layer.extent()
-			var new_point = Vector2(point[1], point[2])
-			new_point -= Vector2(layer_extent/2.0, layer_extent/2.0)
-			new_point *= Util.get_tile_unit_scale()
-			
-			var new_dummy: Dummy = Util.dummy_prefab.instantiate()
-			parent.add_child(new_dummy)
-			new_dummy.position = new_point
-			new_dummy.name = feature.tags(layer)["name"]
-			new_dummy.name_label.text = feature.tags(layer)["name"]
+func _render_pois(poi_list: Array[PointOfInterestData]) -> void:
+	# Only spawning test dummies for now 
+	for poi in poi_list:
+		var new_dummy: Dummy = Util.dummy_prefab.instantiate()
+		add_child(new_dummy)
+		new_dummy.global_position = poi.coords.game_position
+		new_dummy.name = poi.name
+		new_dummy.name_label.text = poi.name
 
 
 func _render_layer_polygons(layer: MvtLayer, parent: Node2D, color: Color, target_subclass: String = "") -> void:

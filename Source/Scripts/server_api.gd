@@ -80,7 +80,7 @@ func request_poi_data(city: String) -> void:
 			return
 	var new_request := RequestData.new()
 	
-	new_request.url = "/name?place=%s&limit=%s&categories=%s" % [city, 100, "commercial"]
+	new_request.url = "/name?place=%s&limit=%s&categories=%s" % [city, 300, "commercial"]
 	new_request.headers = [
 		"Content-Type: application/json",
 		"Connection: keep-alive"
