@@ -4,7 +4,7 @@ signal player_coords_updated(new_coords: GeoCoordinate, old_coords: GeoCoordinat
 
 @export var map_renderer: MapRenderer
 @export var android_gps: AndroidGPSWrapper
-@export var tile_api: TileAPI
+@export var server_api: ServerAPI
 @export var player: Player
 const MVT = preload("res://addons/geo-tile-loader/vector_tile_loader.gd")
 
@@ -37,8 +37,11 @@ func _ready() -> void:
 	#tile_api.request_points_of_interest(player_coords, 100, 100)
 	#map.queue_render_tile(player_coords.get_tile_position())
 	
-	if tile_api.client.get_status() != HTTPClient.STATUS_CONNECTED: 
-		await tile_api.server_connected
+	if server_api.client.get_status() != HTTPClient.STATUS_CONNECTED: 
+		await server_api.server_connected
+	
+	map_renderer.queue_render_tile(player_coords.get_tile_position())
+	map_renderer.queue_render_pois("Hamilton,Ontario")
 	
 	set_process(true)
 

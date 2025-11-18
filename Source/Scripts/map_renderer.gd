@@ -3,21 +3,27 @@ class_name MapRenderer extends Node2D
 var _rendered_map_tiles: Array[Vector2i]
 
 @export var game: GameManager
-@export var tile_api: TileAPI
+@export var server_api: ServerAPI
 const MVT = preload("res://addons/geo-tile-loader/vector_tile_loader.gd")
 
 @export var texture_test: Texture
 
 func _ready() -> void:
-	tile_api.tile_received.connect(_on_tile_received)
-	tile_api.tile_failed.connect(_on_tile_failed)
+	server_api.tile_received.connect(_on_tile_received)
+	server_api.tile_failed.connect(_on_tile_failed)
+	server_api.city_poi_received.connect(_on_city_poi_received)
+	server_api.city_poi_failed.connect(_on_city_poi_failed)
 
 
 func queue_render_tile(tile_pos: Vector2i) -> void:
 	if is_tile_rendered(tile_pos): 
 		return
-	tile_api.request_tile_data(tile_pos)
+	server_api.request_tile_data(tile_pos)
 	_rendered_map_tiles.append(Vector2i(tile_pos.x, tile_pos.y))
+
+
+func queue_render_pois(city: String) -> void:
+	server_api.request_poi_data(city)
 
 
 func is_tile_rendered(tile_pos: Vector2i) -> bool:
@@ -30,7 +36,17 @@ func _on_tile_received(tile_pos: Vector2i, tile: MvtTile) -> void:
 
 
 func _on_tile_failed(tile_pos: Vector2i, msg: String) -> void:
-	push_warning("A tile failed to fetch... (%s) (%s)", tile_pos, msg)
+	push_warning("A tile failed to fetch... (%s) (%s)" % [tile_pos, msg])
+
+
+func _on_city_poi_received(city: String, poi_list: Array[PointOfInterestData]) -> void:
+	_render_pois(poi_list)
+
+
+func _on_city_poi_failed(city: String, msg: String) -> void:
+	push_warning("City POIs failed to fetch... (%s) (%s)" % [city, msg])
+	# Just retry fetching the pois
+	queue_render_pois(city)
 
 
 func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
@@ -57,40 +73,36 @@ func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
 				#_render_layer_polygons(layer, new_chunk, Color(0.861, 0.198, 0.407, 0.5))
 			
 			
-			"park":
-				_render_layer_polygons(layer, new_chunk, Color(0.639, 0.88, 0.158, 0.361))
+			"landcover":
+				_render_layer_polygons(layer, new_chunk, Color(0.639, 0.88, 0.158, 0.361), "park")
 			
 			"water":
 				_render_layer_polygons(layer, new_chunk, Color(0.495, 0.471, 1.892, 0.69))
 			"building":
 				_render_layer_polygons(layer, new_chunk, Color(0.154, 0.163, 0.23, 1.0))
 			_:
-				print(layer.name())
-				if layer.name().begins_with("poi") and not layer.name() in ["poi_station", "poi_transport"]:
-					_render_pois(layer, new_chunk)
+				pass
+				#print(layer.name())
+				#if layer.name().begins_with("poi") and not layer.name() in ["poi_station", "poi_transport"]:
+					#_render_pois(layer, new_chunk)
 
 
-func _render_pois(layer: MvtLayer, parent: Node2D) -> void:
+func _render_pois(poi_list: Array[PointOfInterestData]) -> void:
+	# Only spawning test dummies for now 
+	for poi in poi_list:
+		var new_dummy: Dummy = Util.dummy_prefab.instantiate()
+		add_child(new_dummy)
+		new_dummy.global_position = poi.coords.game_position
+		new_dummy.name = poi.name
+		new_dummy.name_label.text = poi.name
+
+
+func _render_layer_polygons(layer: MvtLayer, parent: Node2D, color: Color, target_subclass: String = "") -> void:
 	for feature: MvtFeature in layer.features():
-		if not feature.tags(layer).has("name"):
-			continue
-		var points = feature.geometry()
-		
-		for point: Array in points:
-			var layer_extent = layer.extent()
-			var new_point = Vector2(point[1], point[2])
-			new_point -= Vector2(layer_extent/2.0, layer_extent/2.0)
-			new_point *= Util.get_tile_unit_scale()
-			
-			var new_dummy: Dummy = Util.dummy_prefab.instantiate()
-			parent.add_child(new_dummy)
-			new_dummy.position = new_point
-			new_dummy.name = feature.tags(layer)["name"]
-			new_dummy.name_label.text = feature.tags(layer)["name"]
-
-
-func _render_layer_polygons(layer: MvtLayer, parent: Node2D, color: Color) -> void:
-	for feature: MvtFeature in layer.features():
+		if target_subclass != "":
+			if feature.tags(layer).has("subclass"):
+				if feature.tags(layer)["subclass"] != target_subclass:
+					return
 		var polygons = Util.parse_feature_geometry_points(feature.geometry())
 		
 		for polygon: PackedVector2Array in polygons:
