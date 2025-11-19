@@ -4,29 +4,29 @@
 [ext_resource type="Texture2D" uid="uid://cebvy4jjded4w" path="res://Assets/icon.svg" id="1_gru2d"]
 [ext_resource type="Script" uid="uid://cqbsgavm1fwag" path="res://Source/Scripts/main.gd" id="1_rxwwu"]
 [ext_resource type="Script" uid="uid://dp3p1ii8i1exo" path="res://Source/Player/player.gd" id="2_hdpnb"]
-[ext_resource type="Script" uid="uid://ctqxene7odmga" path="res://Source/Scripts/tile_api.gd" id="2_rxwwu"]
+[ext_resource type="Script" uid="uid://dvud6br2lrxb1" path="res://Source/Scripts/server_api.gd" id="2_rxwwu"]
 [ext_resource type="Script" uid="uid://bkvd7myuqs3rf" path="res://Source/Player/player_hud.gd" id="3_5nn6f"]
 [ext_resource type="Script" uid="uid://c72t5bk516ojj" path="res://Source/Scripts/map_renderer.gd" id="4_rxwwu"]
 
-[node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "android_gps", "tile_api", "player")]
+[node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "android_gps", "server_api", "player")]
 script = ExtResource("1_rxwwu")
 map_renderer = NodePath("MapRenderer")
 android_gps = NodePath("AndroidGPS")
-tile_api = NodePath("TileAPI")
+server_api = NodePath("ServerAPI")
 player = NodePath("Player")
 
-[node name="TileAPI" type="Node" parent="."]
+[node name="ServerAPI" type="Node" parent="."]
 script = ExtResource("2_rxwwu")
-metadata/_custom_type_script = "uid://ctqxene7odmga"
+metadata/_custom_type_script = "uid://dvud6br2lrxb1"
 
 [node name="AndroidGPS" type="Node" parent="."]
 script = ExtResource("1_ep1f6")
 metadata/_custom_type_script = "uid://bvf620k3ofjhm"
 
-[node name="MapRenderer" type="Node2D" parent="." node_paths=PackedStringArray("game", "tile_api")]
+[node name="MapRenderer" type="Node2D" parent="." node_paths=PackedStringArray("game", "server_api")]
 script = ExtResource("4_rxwwu")
 game = NodePath("..")
-tile_api = NodePath("../TileAPI")
+server_api = NodePath("../ServerAPI")
 texture_test = ExtResource("1_gru2d")
 metadata/_custom_type_script = "uid://c72t5bk516ojj"
 
@@ -69,7 +69,6 @@ ignore_rotation = false
 [node name="Dummies" type="Node2D" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="PlayerHUD" type="Control" parent="CanvasLayer"]
 layout_mode = 3
