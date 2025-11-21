@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://co0uqk7ayhahb"]
+
+[ext_resource type="FontFile" uid="uid://dlut3q8w13jnr" path="res://Assets/fonts/RetroByte.ttf" id="1_2crgg"]
+[ext_resource type="StyleBox" uid="uid://d34dlcuosxh8g" path="res://Assets/UI/Tres/button_pressed.tres" id="2_xavxv"]
+[ext_resource type="StyleBox" uid="uid://craqfd288hb7p" path="res://Assets/UI/Tres/button_hover.tres" id="3_8a1ek"]
+[ext_resource type="StyleBox" uid="uid://b15g8gqo0st3s" path="res://Assets/UI/Tres/button_normal.tres" id="4_xyvtj"]
+
+[resource]
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 0.69803923)
+Button/colors/font_pressed_color = Color(1, 1, 1, 0.69803923)
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_2crgg")
+Button/styles/disabled = ExtResource("2_xavxv")
+Button/styles/focus = null
+Button/styles/hover = ExtResource("3_8a1ek")
+Button/styles/hover_pressed = ExtResource("2_xavxv")
+Button/styles/normal = ExtResource("4_xyvtj")
+Button/styles/pressed = ExtResource("2_xavxv")
