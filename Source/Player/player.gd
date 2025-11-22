@@ -1,7 +1,7 @@
 class_name Player extends Node2D
 
 @export var game: GameManager
-@export var interaction_radius: float = 150.0
+@export var interaction_radius: float = 75.0
 
 
 func _ready() -> void:
