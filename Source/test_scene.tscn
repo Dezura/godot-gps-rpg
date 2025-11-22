@@ -78,6 +78,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("3_5nn6f")
 metadata/_edit_lock_ = true
 
@@ -121,6 +122,32 @@ offset_bottom = -24.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Zoom Out"
+
+[node name="POI_Menu" type="Panel" parent="CanvasLayer/PlayerHUD"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PlayerHUD/POI_Menu"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 62.0
+offset_right = 343.0
+offset_bottom = 267.0
+theme_override_constants/separation = 10
+
+[node name="POI_Name" type="Label" parent="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer"]
+layout_mode = 2
+text = "Placeholder name"
+
+[node name="POI_info" type="RichTextLabel" parent="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer"]
+layout_mode = 2
+text = "Placeholder info"
+fit_content = true
+
+[node name="PlaceholderButton" type="Button" parent="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer"]
+layout_mode = 2
+text = "Heal"
 
 [node name="WebSocket" type="Node" parent="."]
 script = ExtResource("8_3brre")

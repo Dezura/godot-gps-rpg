@@ -1,14 +1,20 @@
 class_name Player extends Node2D
 
 @export var game: GameManager
+@export var interaction_radius: float = 150.0
 
 
 func _ready() -> void:
 	game.player_coords_updated.connect(_on_player_coords_updated)
+	queue_redraw()
 
 
 func _process(_delta: float) -> void:
 	position = position.lerp(game.player_coords.game_position, 0.05)
+	
+
+func _draw() -> void:
+	draw_arc(Vector2.ZERO, interaction_radius, 0, TAU, 64, Color.GREEN, 2.0)
 
 
 func _on_player_coords_updated(new_coords: GeoCoordinate, _old_coords: GeoCoordinate) -> void:

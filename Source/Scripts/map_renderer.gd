@@ -95,6 +95,8 @@ func _render_pois(poi_list: Array[PointOfInterestData]) -> void:
 		new_dummy.global_position = poi.coords.game_position
 		new_dummy.name = poi.name
 		new_dummy.name_label.text = poi.name
+		
+		new_dummy.data = poi
 
 
 func _render_layer_polygons(layer: MvtLayer, parent: Node2D, color: Color, target_subclass: String = "") -> void:
