@@ -54,7 +54,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") != Vector2.ZERO:
 		var movement: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") * 0.003 * _delta
-		
+
 		_on_cooridnates_fetched({"latitude": player_coords.latitude - movement.y, "longitude": player_coords.longitude + movement.x})
 	if not map_renderer.is_tile_rendered(player_coords.get_tile_position()):
 		map_renderer.queue_render_tile(player_coords.get_tile_position())
