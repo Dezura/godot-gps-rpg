@@ -7,6 +7,9 @@ signal city_poi_received(city_name: String, poi_list: Array[PointOfInterestData]
 signal city_poi_failed(city_name: String, message: String)
 signal city_tiles_received(city_name: String, tiles: Dictionary[Vector2i, MvtTile])
 signal city_tiles_failed(city_name: String, message: String)
+signal city_enemies_received(city_name: String, enemy_data: Dictionary)
+signal city_enemies_failed(city_name: String, message: String)
+
 
 class RequestData:
 	var initial_data
@@ -23,7 +26,7 @@ var client: HTTPClient
 var busy := false
 var host: String
 var port: int
-
+var _enemies: Dictionary = {}
 var _request_queue: Array[RequestData] = []
 
 
@@ -92,6 +95,37 @@ func request_poi_data(city: String) -> void:
 	_request_queue.append(new_request)
 	print("[ServerAPI] New request added to queue (%s)" % _request_queue.size())
 
+func request_enemy_data(city: String) -> void:
+	if _enemies.has(city):
+		var cache_entry = _enemies[city]
+		var current_time_ms = Time.get_unix_time_from_system() * 1000
+		
+		if current_time_ms < cache_entry.expiry:
+			city_enemies_received.emit(city, cache_entry.data)
+			return
+		else:
+			print("enemies expired")
+	
+	for i in _request_queue.size():
+		if typeof(_request_queue[i].initial_data) != typeof(city):
+			continue
+		if _request_queue[i].initial_data == city:
+			return
+
+	var new_request := RequestData.new()
+	
+	new_request.url = "/enemy-tile?place=%s" % [city.uri_encode()]
+	new_request.headers = [
+		"Content-Type: application/json",
+		"Connection: keep-alive"
+	]
+	new_request.initial_data = city
+	new_request.parse_method = _parse_enemy_data
+	new_request.received_signal = city_enemies_received
+	new_request.failed_signal = city_enemies_failed
+	
+	_request_queue.append(new_request)
+	print("[ServerAPI] enemy request added to queue (%s)" % _request_queue.size())
 
 func _process(_delta: float) -> void:
 	if busy or _request_queue.is_empty():
@@ -179,6 +213,35 @@ func _parse_tile_data(request: RequestData, body: PackedByteArray) -> void:
 		return
 	_finish_with_success(request, tile)
 
+# AI GENERATED FUNCTION WITH GEMINI 3.0 PRO
+func _parse_enemy_data(request: RequestData, body: PackedByteArray) -> void:
+	var json_string = body.get_string_from_utf8()
+	var json = JSON.parse_string(json_string)
+	
+	if json == null:
+		_finish_with_error(request, "no enemy data")
+		return
+	
+	if not json is Dictionary:
+		_finish_with_error(request, "not a dictionary, got %s" % type_string(typeof(json)))
+		return
+
+	# Calculate Expiry (Find the earliest expiry time among the tiles to be safe)
+	var expiry_timestamp = 0
+	if not json.is_empty():
+		# Just grab the first tile's expiry as a baseline
+		var first_key = json.keys()[0]
+		if json[first_key].has("expiryTime"):
+			expiry_timestamp = json[first_key].expiryTime
+	
+	# Update Cache
+	_enemies[request.initial_data] = {
+		"data": json,
+		"expiry": expiry_timestamp
+	}
+	
+	print("[ServerAPI] SUCCESS: Fetched fresh enemies for %s." % request.initial_data)
+	_finish_with_success(request, json)
 
 func _parse_city_pois(request: RequestData, body: PackedByteArray) -> void:
 	var json = JSON.parse_string(body.get_string_from_utf8())
@@ -210,3 +273,4 @@ func _finish_with_error(request: RequestData, message: String) -> void:
 	print("[ServerAPI] ← data FAILED: %s: %s" % [message, request.url])
 	push_warning("[ServerAPI] ← data FAILED: %s: %s" % [message, request.url])
 	request.failed_signal.emit(request.initial_data, message)
+	

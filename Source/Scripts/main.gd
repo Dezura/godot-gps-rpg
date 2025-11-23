@@ -42,6 +42,7 @@ func _ready() -> void:
 	
 	map_renderer.queue_render_tile(player_coords.get_tile_position())
 	map_renderer.queue_render_pois("Hamilton,Ontario")
+	server_api.request_enemy_data("Hamilton, Ontario")
 	
 	set_process(true)
 
