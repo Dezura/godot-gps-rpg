@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=3 uid="uid://i6eym788y6iw"]
+
+[ext_resource type="Theme" uid="uid://co0uqk7ayhahb" path="res://Assets/UI/UI_Theme.tres" id="1_uyms8"]
+[ext_resource type="Script" uid="uid://bkvd7myuqs3rf" path="res://Source/Player/player_hud.gd" id="2_5y5js"]
+[ext_resource type="Texture2D" uid="uid://djs21ab7jhx0u" path="res://Assets/Sprites/exp_bar.aseprite" id="3_2ocl1"]
+[ext_resource type="Texture2D" uid="uid://c2wxtaasro8uc" path="res://Assets/Sprites/exp_bar_filled.aseprite" id="4_gy2nl"]
+[ext_resource type="Texture2D" uid="uid://db5g740g8tene" path="res://Assets/Sprites/health_bar.png" id="5_kpvy7"]
+[ext_resource type="Texture2D" uid="uid://blrhjv2boieqo" path="res://Assets/Sprites/health_bar_filled.png" id="6_ly01m"]
+[ext_resource type="Texture2D" uid="uid://dxelf6hr0kip" path="res://Assets/Sprites/player_head.png" id="7_72lis"]
+
+[node name="PlayerHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_behavior_recursive = 1
+theme = ExtResource("1_uyms8")
+script = ExtResource("2_5y5js")
+metadata/_edit_lock_ = true
+
+[node name="FPS" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_bottom = 56.0
+grow_horizontal = 0
+text = "FPS: "
+horizontal_alignment = 2
+
+[node name="Exp Bar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -247.99998
+offset_top = 46.0
+offset_right = -169.99998
+offset_bottom = 51.0
+grow_horizontal = 2
+scale = Vector2(6.5, 6.5)
+value = 50.0
+texture_under = ExtResource("3_2ocl1")
+texture_progress = ExtResource("4_gy2nl")
+
+[node name="Health Bar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+offset_left = 17.000002
+offset_top = 84.0
+offset_right = 95.0
+offset_bottom = 103.0
+scale = Vector2(6.5, 6.5)
+max_value = 36.0
+value = 36.0
+texture_under = ExtResource("5_kpvy7")
+texture_progress = ExtResource("6_ly01m")
+texture_progress_offset = Vector2(15, 3)
+
+[node name="PlayerHead" type="Sprite2D" parent="Health Bar"]
+position = Vector2(9.384617, 10.000002)
+scale = Vector2(0.876923, 0.876923)
+texture = ExtResource("7_72lis")
+
+[node name="Health Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 69.0
+offset_right = 351.0
+offset_bottom = 157.0
+theme = ExtResource("1_uyms8")
+theme_override_font_sizes/font_size = 40
+text = "16/16"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_right = 64.0
+offset_bottom = 56.0
+grow_horizontal = 2
+text = "Level: 1"
+horizontal_alignment = 1
