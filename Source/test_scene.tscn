@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8hakvjcb3x6q"]
+[gd_scene load_steps=10 format=3 uid="uid://c8hakvjcb3x6q"]
 
 [ext_resource type="Script" uid="uid://bvf620k3ofjhm" path="res://Source/Scripts/android_gps_wrapper.gd" id="1_ep1f6"]
 [ext_resource type="Texture2D" uid="uid://cebvy4jjded4w" path="res://Assets/icon.svg" id="1_gru2d"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dvud6br2lrxb1" path="res://Source/Scripts/server_api.gd" id="2_rxwwu"]
 [ext_resource type="Script" uid="uid://bkvd7myuqs3rf" path="res://Source/Player/player_hud.gd" id="3_5nn6f"]
 [ext_resource type="Script" uid="uid://c72t5bk516ojj" path="res://Source/Scripts/map_renderer.gd" id="4_rxwwu"]
+[ext_resource type="SpriteFrames" uid="uid://c7m0g8t6wi8et" path="res://Assets/Sprites/Player.aseprite" id="7_evoug"]
 [ext_resource type="Script" uid="uid://s3ub8fflb3xj" path="res://Source/Scripts/websocket.gd" id="8_3brre"]
 
 [node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "android_gps", "server_api", "player")]
@@ -37,9 +38,11 @@ position = Vector2(272, 600)
 script = ExtResource("2_hdpnb")
 game = NodePath("..")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_gru2d")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+z_index = 1
+scale = Vector2(2.2, 2.2)
+sprite_frames = ExtResource("7_evoug")
+animation = &"Idle"
 
 [node name="DebugGPSCoords" type="Label" parent="Player"]
 offset_left = -232.0
