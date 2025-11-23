@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8hakvjcb3x6q"]
+[gd_scene load_steps=11 format=3 uid="uid://c8hakvjcb3x6q"]
 
 [ext_resource type="Script" uid="uid://bvf620k3ofjhm" path="res://Source/Scripts/android_gps_wrapper.gd" id="1_ep1f6"]
 [ext_resource type="Texture2D" uid="uid://cebvy4jjded4w" path="res://Assets/icon.svg" id="1_gru2d"]
@@ -9,6 +9,14 @@
 [ext_resource type="Script" uid="uid://c72t5bk516ojj" path="res://Source/Scripts/map_renderer.gd" id="4_rxwwu"]
 [ext_resource type="SpriteFrames" uid="uid://c7m0g8t6wi8et" path="res://Assets/Sprites/Player.aseprite" id="7_evoug"]
 [ext_resource type="Script" uid="uid://s3ub8fflb3xj" path="res://Source/Scripts/websocket.gd" id="8_3brre"]
+[ext_resource type="Script" uid="uid://cy540lohgtnqy" path="res://Source/Scripts/pause_menu.gd" id="9_tiy2u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tiy2u"]
+bg_color = Color(0.23392546, 0.23392549, 0.23392531, 1)
+expand_margin_left = 15.0
+expand_margin_top = 25.0
+expand_margin_right = 15.0
+expand_margin_bottom = 25.0
 
 [node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "android_gps", "server_api", "player")]
 script = ExtResource("1_rxwwu")
@@ -18,6 +26,7 @@ server_api = NodePath("ServerAPI")
 player = NodePath("Player")
 
 [node name="ServerAPI" type="Node" parent="."]
+process_mode = 3
 script = ExtResource("2_rxwwu")
 metadata/_custom_type_script = "uid://dvud6br2lrxb1"
 
@@ -124,6 +133,59 @@ offset_bottom = -24.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Zoom Out"
+
+[node name="PauseButton" type="Button" parent="CanvasLayer/PlayerHUD"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.0
+offset_bottom = 42.0
+grow_horizontal = 0
+text = "Pause"
+
+[node name="PauseMenu" type="Control" parent="CanvasLayer"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_tiy2u")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PauseMenu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/PauseMenu/CenterContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tiy2u")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PauseMenu/CenterContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Placeholder1" type="Button" parent="CanvasLayer/PauseMenu/CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Placeholder1"
+
+[node name="Placeholder2" type="Button" parent="CanvasLayer/PauseMenu/CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Placeholder2"
+
+[node name="ResumeButton" type="Button" parent="CanvasLayer/PauseMenu/CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
 
 [node name="WebSocket" type="Node" parent="."]
 script = ExtResource("8_3brre")

@@ -8,7 +8,7 @@ var _userID = "Player" + OS.get_unique_id()
 func _ready():
 	WEBSOCKET_URL = Util.server_conf.get_value("NETWORK", "WEBSOCKET_PORT")
 	WEBSOCKET_URL += "/?user=" + _userID
-	print("attempting to connect to %s", WEBSOCKET_URL)
+	print("attempting to connect to ", WEBSOCKET_URL)
 	var res = _client.connect_to_url(WEBSOCKET_URL)
 	assert(res == OK, "connect_to_host() failed")
 	

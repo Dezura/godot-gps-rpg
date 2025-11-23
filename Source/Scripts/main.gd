@@ -12,6 +12,10 @@ var player_coords := GeoCoordinate.new()
 
 
 func _ready() -> void:
+	
+	var pauseButton = $CanvasLayer/PlayerHUD/PauseButton
+	pauseButton.pressed.connect($CanvasLayer/PauseMenu.open_menu)
+
 	set_process(false)
 	android_gps.cooridnates_fetched.connect(_on_cooridnates_fetched)
 	
@@ -45,7 +49,7 @@ func _ready() -> void:
 	server_api.request_enemy_data("Hamilton, Ontario")
 	
 	set_process(true)
-
+	
 
 func _process(_delta: float) -> void:
 	if Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") != Vector2.ZERO:
