@@ -23,7 +23,9 @@ func queue_render_tile(tile_pos: Vector2i) -> void:
 
 
 func queue_render_pois(city: String) -> void:
-	server_api.request_poi_data(city)
+	var categories = ["leisure", "commercial", "catering"]
+	for category in categories:
+		server_api.request_poi_data(city, category)
 
 
 func is_tile_rendered(tile_pos: Vector2i) -> bool:
@@ -97,6 +99,15 @@ func _render_pois(poi_list: Array[PointOfInterestData]) -> void:
 		new_dummy.name_label.text = poi.name
 		
 		new_dummy.data = poi
+		var sprite = new_dummy.get_node_or_null("TestDummy")
+		
+		if sprite:
+			if poi.categories.has("catering"):
+				sprite.modulate = Color.RED
+			elif poi.categories.has("commercial"):
+				sprite.modulate = Color.BLUE
+			elif poi.categories.has("leisure"):
+				sprite.modulate = Color.GREEN
 
 
 func _render_layer_polygons(layer: MvtLayer, parent: Node2D, color: Color, target_subclass: String = "") -> void:

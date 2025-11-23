@@ -135,6 +135,7 @@ grow_vertical = 0
 text = "Zoom Out"
 
 [node name="POI_Menu" type="PanelContainer" parent="CanvasLayer/PlayerHUD"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
