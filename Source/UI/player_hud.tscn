@@ -10,6 +10,13 @@
 [ext_resource type="Script" uid="uid://cy540lohgtnqy" path="res://Source/Scripts/pause_menu.gd" id="8_72lis"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="9_2bgv2"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6sh0"]
+bg_color = Color(0.23392546, 0.23392549, 0.23392531, 1)
+expand_margin_left = 15.0
+expand_margin_top = 25.0
+expand_margin_right = 15.0
+expand_margin_bottom = 25.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gi274"]
 bg_color = Color(0.22352941, 0.22352941, 0.22352941, 1)
 corner_radius_top_left = 10
@@ -20,13 +27,6 @@ expand_margin_left = 7.0
 expand_margin_top = 7.0
 expand_margin_right = 7.0
 expand_margin_bottom = 7.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6sh0"]
-bg_color = Color(0.23392546, 0.23392549, 0.23392531, 1)
-expand_margin_left = 15.0
-expand_margin_top = 25.0
-expand_margin_right = 15.0
-expand_margin_bottom = 25.0
 
 [node name="PlayerHUD" type="Control"]
 layout_mode = 3
@@ -87,11 +87,10 @@ texture = ExtResource("7_72lis")
 
 [node name="Health Text" type="Label" parent="."]
 layout_mode = 0
-offset_left = 101.0
-offset_top = 69.0
-offset_right = 351.0
-offset_bottom = 157.0
-theme = ExtResource("1_uyms8")
+offset_left = 103.0
+offset_top = 76.0
+offset_right = 353.0
+offset_bottom = 164.0
 theme_override_font_sizes/font_size = 40
 text = "16/16"
 horizontal_alignment = 1
@@ -108,47 +107,6 @@ offset_bottom = 56.0
 grow_horizontal = 2
 text = "Level: 1"
 horizontal_alignment = 1
-
-[node name="POI_Menu" type="PanelContainer" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -135.0
-offset_top = -157.0
-offset_right = 135.0
-offset_bottom = 157.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_gi274")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="POI_Menu"]
-layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="POI_Name" type="Label" parent="POI_Menu/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 6
-text = "Placeholder name"
-
-[node name="POI_info" type="RichTextLabel" parent="POI_Menu/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Placeholder info"
-fit_content = true
-
-[node name="PlaceholderButton" type="Button" parent="POI_Menu/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Heal"
-
-[node name="CloseButton" type="Button" parent="POI_Menu/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Close"
 
 [node name="PauseButton" type="Button" parent="."]
 layout_mode = 1
@@ -178,10 +136,13 @@ script = ExtResource("8_72lis")
 pause_button = NodePath("../PauseButton")
 
 [node name="ColorRect" type="ColorRect" parent="PauseMenu"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5254902)
 
 [node name="CenterContainer" type="CenterContainer" parent="PauseMenu"]
 layout_mode = 1
@@ -220,3 +181,47 @@ offset_top = -406.0
 offset_right = 150.0
 offset_bottom = -106.0
 grow_horizontal = 2
+
+[node name="POI_Menu" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -270.0
+offset_right = 135.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gi274")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="POI_Menu"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="POI_Name" type="Label" parent="POI_Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Placeholder name"
+
+[node name="POI_info" type="RichTextLabel" parent="POI_Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Placeholder info"
+fit_content = true
+
+[node name="PlaceholderButton" type="Button" parent="POI_Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Heal"
+
+[node name="CloseButton" type="Button" parent="POI_Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Close"
+
+[connection signal="pressed" from="POI_Menu/VBoxContainer/PlaceholderButton" to="." method="_on_placeholder_button_pressed"]
+[connection signal="pressed" from="POI_Menu/VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
