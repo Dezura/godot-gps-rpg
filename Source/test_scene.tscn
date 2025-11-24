@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8hakvjcb3x6q"]
+[gd_scene load_steps=12 format=3 uid="uid://c8hakvjcb3x6q"]
 
 [ext_resource type="Script" uid="uid://bvf620k3ofjhm" path="res://Source/Scripts/android_gps_wrapper.gd" id="1_ep1f6"]
 [ext_resource type="Texture2D" uid="uid://cebvy4jjded4w" path="res://Assets/icon.svg" id="1_gru2d"]
 [ext_resource type="Script" uid="uid://cqbsgavm1fwag" path="res://Source/Scripts/main.gd" id="1_rxwwu"]
 [ext_resource type="Script" uid="uid://dp3p1ii8i1exo" path="res://Source/Player/player.gd" id="2_hdpnb"]
 [ext_resource type="Script" uid="uid://dvud6br2lrxb1" path="res://Source/Scripts/server_api.gd" id="2_rxwwu"]
+[ext_resource type="Script" uid="uid://6jhl5kdckno2" path="res://Source/Scripts/enemy_manager.gd" id="4_evoug"]
 [ext_resource type="Script" uid="uid://c72t5bk516ojj" path="res://Source/Scripts/map_renderer.gd" id="4_rxwwu"]
 [ext_resource type="SpriteFrames" uid="uid://c7m0g8t6wi8et" path="res://Assets/Sprites/Player.aseprite" id="7_evoug"]
 [ext_resource type="Script" uid="uid://s3ub8fflb3xj" path="res://Source/Scripts/websocket.gd" id="8_3brre"]
@@ -13,9 +14,10 @@
 [sub_resource type="LabelSettings" id="LabelSettings_3brre"]
 font_size = 28
 
-[node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "android_gps", "server_api", "player", "loadingScreen")]
+[node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "enemy_manager", "android_gps", "server_api", "player", "loadingScreen")]
 script = ExtResource("1_rxwwu")
 map_renderer = NodePath("MapRenderer")
+enemy_manager = NodePath("EnemyManager")
 android_gps = NodePath("AndroidGPS")
 server_api = NodePath("ServerAPI")
 player = NodePath("Player")
@@ -29,6 +31,12 @@ metadata/_custom_type_script = "uid://dvud6br2lrxb1"
 [node name="AndroidGPS" type="Node" parent="."]
 script = ExtResource("1_ep1f6")
 metadata/_custom_type_script = "uid://bvf620k3ofjhm"
+
+[node name="EnemyManager" type="Node2D" parent="." node_paths=PackedStringArray("game", "server_api")]
+script = ExtResource("4_evoug")
+game = NodePath("..")
+server_api = NodePath("../ServerAPI")
+metadata/_custom_type_script = "uid://6jhl5kdckno2"
 
 [node name="MapRenderer" type="Node2D" parent="." node_paths=PackedStringArray("game", "server_api")]
 script = ExtResource("4_rxwwu")

@@ -3,6 +3,7 @@ class_name GameManager extends Node2D
 signal player_coords_updated(new_coords: GeoCoordinate, old_coords: GeoCoordinate)
 
 @export var map_renderer: MapRenderer
+@export var enemy_manager: EnemyManager
 @export var android_gps: AndroidGPSWrapper
 @export var server_api: ServerAPI
 @export var player: Player
@@ -59,7 +60,7 @@ func _ready() -> void:
 	_tasks_loading += 3
 	map_renderer.queue_render_pois("Hamilton,Ontario")
 	_tasks_loading += 1
-	server_api.request_enemy_data("Hamilton, Ontario")
+	enemy_manager.fetch_enemy_data("Hamilton, Ontario")
 
 func _process(_delta: float) -> void:
 	if Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") != Vector2.ZERO:
