@@ -50,7 +50,7 @@ func show_poi_info(data: PointOfInterestData) -> void:
 	
 	var current_time = int(Time.get_unix_time_from_system())
 	var time_diff = current_time - data.last_visited_at
-	var cooldown_duration = 30 # 5 minutes in seconds
+	var cooldown_duration = 300 # 5 minutes in seconds
 
 	# If less than 5 minutes have passed since last visit
 	if data.last_visited_at != 0 and time_diff < cooldown_duration:
