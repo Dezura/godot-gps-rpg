@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Retro-GPS-Game"
-run/main_scene="uid://c8hakvjcb3x6q"
+run/main_scene="uid://ci07kmlcbdods"
 config/features=PackedStringArray("4.5", "Mobile")
 
 [autoload]

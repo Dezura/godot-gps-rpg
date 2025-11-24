@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8hakvjcb3x6q"]
+[gd_scene load_steps=14 format=3 uid="uid://c8hakvjcb3x6q"]
 
 [ext_resource type="Script" uid="uid://bvf620k3ofjhm" path="res://Source/Scripts/android_gps_wrapper.gd" id="1_ep1f6"]
 [ext_resource type="Texture2D" uid="uid://cebvy4jjded4w" path="res://Assets/icon.svg" id="1_gru2d"]
@@ -19,12 +19,16 @@ expand_margin_top = 25.0
 expand_margin_right = 15.0
 expand_margin_bottom = 25.0
 
-[node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "android_gps", "server_api", "player")]
+[sub_resource type="LabelSettings" id="LabelSettings_3brre"]
+font_size = 28
+
+[node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "android_gps", "server_api", "player", "loadingScreen")]
 script = ExtResource("1_rxwwu")
 map_renderer = NodePath("MapRenderer")
 android_gps = NodePath("AndroidGPS")
 server_api = NodePath("ServerAPI")
 player = NodePath("Player")
+loadingScreen = NodePath("CanvasLayer/LoadingScreen")
 
 [node name="ServerAPI" type="Node" parent="."]
 process_mode = 3
@@ -198,6 +202,32 @@ text = "Placeholder2"
 [node name="ResumeButton" type="Button" parent="CanvasLayer/PauseMenu/CenterContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 text = "Resume"
+
+[node name="LoadingScreen" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.29586652, 0.2958665, 0.2958665, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/LoadingScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.67392
+offset_top = -23.25
+offset_right = 62.67392
+offset_bottom = 23.25
+grow_horizontal = 2
+grow_vertical = 2
+text = "Loading"
+label_settings = SubResource("LabelSettings_3brre")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="WebSocket" type="Node" parent="."]
 script = ExtResource("8_3brre")

@@ -21,7 +21,7 @@ func _ready() -> void:
 	else:
 		printerr("No server.cfg detected! Please create a new cfg on root.")
 	
-	dummies = get_tree().current_scene.find_child("Dummies")
+	#dummies = get_tree().current_scene.find_child("Dummies")
 
 
 func spawn_new_dummy(pos: Vector2) -> Dummy:
