@@ -17,6 +17,14 @@ func _ready() -> void:
 	if loadingScreen:
 		loadingScreen.visible = true
 	
+	player.update_level.connect($CanvasLayer/PlayerHUD._on_level_changed)
+	player.update_xp.connect($CanvasLayer/PlayerHUD._on_xp_changed)
+	player.update_hp.connect($CanvasLayer/PlayerHUD._on_hp_changed)
+	
+	$CanvasLayer/PlayerHUD._on_level_changed(player.level)
+	$CanvasLayer/PlayerHUD._on_xp_changed(player.xp, player.max_xp)
+	$CanvasLayer/PlayerHUD._on_hp_changed(player.hp, player.max_hp)
+
 	set_process(false)
 	Util.dummies = $Dummies
 	android_gps.cooridnates_fetched.connect(_on_cooridnates_fetched)
