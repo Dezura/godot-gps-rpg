@@ -54,8 +54,8 @@ func _ready() -> void:
 	if server_api.client.get_status() != HTTPClient.STATUS_CONNECTED: 
 		await server_api.server_connected
 	
-	_tasks_loading += 1
-	map_renderer.queue_render_tile(player_coords.get_tile_position())
+	_tasks_loading += 9
+	map_renderer.update_3x3_tile_render(player_coords.get_tile_position())
 	_tasks_loading += 3
 	map_renderer.queue_render_pois("Hamilton,Ontario")
 	_tasks_loading += 1
@@ -66,8 +66,6 @@ func _process(_delta: float) -> void:
 		var movement: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") * 0.003 * _delta
 		_on_cooridnates_fetched({"latitude": player_coords.latitude - movement.y, "longitude": player_coords.longitude + movement.x})
 	
-	if not map_renderer.is_tile_rendered(player_coords.get_tile_position()):
-		map_renderer.queue_render_tile(player_coords.get_tile_position())
 
 
 func _on_cooridnates_fetched(location_dictionary: Dictionary) -> void:
@@ -79,6 +77,9 @@ func _on_cooridnates_fetched(location_dictionary: Dictionary) -> void:
 	player_coords.longitude = longitude
 	
 	player_coords_updated.emit(player_coords, old_coords)
+	
+	if old_coords.get_tile_position() != player_coords.get_tile_position():
+		map_renderer.update_3x3_tile_render(player_coords.get_tile_position())
 
 
 func _on_loading_task_finished() -> void:

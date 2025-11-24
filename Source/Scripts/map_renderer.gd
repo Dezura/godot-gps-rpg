@@ -15,6 +15,15 @@ func _ready() -> void:
 	server_api.city_poi_failed.connect(_on_city_poi_failed)
 
 
+func update_3x3_tile_render(center_tile_pos: Vector2i):
+	for i in range(3):
+		for j in range(3):
+			var tile_pos := center_tile_pos + Vector2i(i-1, j-1)
+			if not is_tile_rendered(tile_pos):
+				server_api.request_tile_data(tile_pos)
+				_rendered_map_tiles.append(Vector2i(tile_pos.x, tile_pos.y))
+
+
 func queue_render_tile(tile_pos: Vector2i) -> void:
 	if is_tile_rendered(tile_pos): 
 		return
@@ -56,9 +65,6 @@ func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
 	new_chunk.name = "newChunk"
 	add_child(new_chunk)
 	new_chunk.global_position = Util.get_tile_center_position(tile_pos.x, tile_pos.y).game_position
-	var test := Sprite2D.new()
-	test.texture = texture_test
-	new_chunk.add_child(test)
 	
 	#Util.generate_tile_debug_files(tile)
 	for layer: MvtLayer in tile.layers():
