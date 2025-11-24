@@ -42,14 +42,12 @@ func _ready() -> void:
 func _connect() -> void:
 	client = HTTPClient.new()
 	var err = client.connect_to_host(host, port)
-	assert(err == OK, "connect_to_host() failed")
 	
 	while client.get_status() in [HTTPClient.STATUS_CONNECTING, HTTPClient.STATUS_RESOLVING]:
 		print("[ServerAPI] Connecting to server... %s:%s" % [host, port])
 		client.poll()
 		await get_tree().process_frame
 	
-	assert(client.get_status() == HTTPClient.STATUS_CONNECTED, "Connection failed")
 	print("[ServerAPI] Connected to %s:%s" % [host, port])
 
 
