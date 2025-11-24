@@ -22,11 +22,29 @@ func _ready() -> void:
 	hp_label = $"Health Text"
 	hp_bar = $"Health Bar"
 	xp_bar = $"Exp Bar"
+	
+	$PauseMenu.visibility_changed.connect(on_pause_menu_visibility_changed)
 
 func _process(_delta: float) -> void:
 	$FPS.set_text("FPS " + str(Engine.get_frames_per_second()))
 	if poi_menu.visible and current_poi_data:
 		_update_button_state()
+		
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.keycode == KEY_P and event.pressed:
+		$PauseMenu.visible = not $PauseMenu.visible
+
+func on_pause_menu_visibility_changed() -> void:
+	var is_in_menu = $PauseMenu.visible
+	$"Virtual Joystick".visible = not is_in_menu
+	if is_in_menu:
+		$"Virtual Joystick".process_mode = PROCESS_MODE_DISABLED
+	else:
+		$"Virtual Joystick".process_mode = PROCESS_MODE_INHERIT
+	
+	if is_in_menu:
+		poi_menu.visible = false
 
 func _on_level_changed(new_level: int) -> void:
 	level_label.text = "Level: %d" % new_level

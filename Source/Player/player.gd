@@ -4,11 +4,11 @@ signal update_level(new_level: int)
 signal update_xp(new_xp: int, max_xp: int)
 signal update_hp(new_hp: int, max_hp: int)
 
-var level: int = 2
+var level: int = 1
 var xp: int = 0
 var max_xp: int = 100
 var hp: int = 8
-var max_hp: int = 100
+var max_hp: int = 16
 
 @export var game: GameManager
 @onready var _anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -20,8 +20,6 @@ func _ready() -> void:
 	game.player_coords_updated.connect(_on_player_coords_updated)
 	queue_redraw()
 	
-	xp = 50
-	hp = 50
 
 func gain_xp(amount: int) -> void:
 	xp += amount
