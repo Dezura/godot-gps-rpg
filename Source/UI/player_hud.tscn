@@ -207,12 +207,6 @@ layout_mode = 2
 size_flags_vertical = 6
 text = "Placeholder name"
 
-[node name="POI_info" type="RichTextLabel" parent="POI_Menu/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Placeholder info"
-fit_content = true
-
 [node name="PlaceholderButton" type="Button" parent="POI_Menu/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3

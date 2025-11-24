@@ -27,17 +27,25 @@ func gain_xp(amount: int) -> void:
 	xp += amount
 	
 	if xp >= max_xp:
-		xp = 0
+		xp = xp - max_xp
 		level += 1
 		max_xp += 10
+		max_hp += 1
+		hp += 1
 		
 	update_xp.emit(xp, max_xp)
+	update_hp.emit(hp, max_hp)
 	update_level.emit(level)
 
 func modify_health(amount: int) -> void:
 	hp += amount
-	
+	hp = clamp(hp, 0, max_hp)
 	update_hp.emit(hp, max_hp)
+
+func full_heal() -> void:
+	hp = max_hp
+	update_hp.emit(hp, max_hp)
+	
 
 func _process(_delta: float) -> void:
 	if global_position != game.player_coords.game_position:
