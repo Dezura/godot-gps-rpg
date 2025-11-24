@@ -2,9 +2,12 @@ class_name Player extends Node2D
 
 @export var game: GameManager
 @onready var _anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@export var interaction_radius: float = 75.0
+
 
 func _ready() -> void:
 	game.player_coords_updated.connect(_on_player_coords_updated)
+	queue_redraw()
 
 
 func _process(_delta: float) -> void:
@@ -19,6 +22,10 @@ func _process(_delta: float) -> void:
 	
 	if global_position == game.player_coords.game_position:
 		_anim_sprite.play("Idle")
+
+func _draw() -> void:
+	draw_arc(Vector2.ZERO, interaction_radius, 0, TAU, 64, Color.GREEN, 2.0)
+
 
 func _on_player_coords_updated(new_coords: GeoCoordinate, old_coords: GeoCoordinate) -> void:
 	$DebugGPSCoords.text = "Latitude: %s\nLongitude: %s\nPos X: %s\nPos Y: %s" % [new_coords.latitude, new_coords.longitude, new_coords.game_position.x, new_coords.game_position.y]

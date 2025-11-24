@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c8hakvjcb3x6q"]
+[gd_scene load_steps=15 format=3 uid="uid://c8hakvjcb3x6q"]
 
 [ext_resource type="Script" uid="uid://bvf620k3ofjhm" path="res://Source/Scripts/android_gps_wrapper.gd" id="1_ep1f6"]
 [ext_resource type="Texture2D" uid="uid://cebvy4jjded4w" path="res://Assets/icon.svg" id="1_gru2d"]
@@ -11,6 +11,17 @@
 [ext_resource type="Script" uid="uid://s3ub8fflb3xj" path="res://Source/Scripts/websocket.gd" id="8_3brre"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="9_evoug"]
 [ext_resource type="Script" uid="uid://cy540lohgtnqy" path="res://Source/Scripts/pause_menu.gd" id="9_tiy2u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3brre"]
+bg_color = Color(0.22352941, 0.22352941, 0.22352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 7.0
+expand_margin_top = 7.0
+expand_margin_right = 7.0
+expand_margin_bottom = 7.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tiy2u"]
 bg_color = Color(0.23392546, 0.23392549, 0.23392531, 1)
@@ -95,6 +106,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("3_5nn6f")
 metadata/_edit_lock_ = true
 
@@ -159,6 +171,42 @@ offset_left = -88.0
 offset_bottom = 42.0
 grow_horizontal = 0
 text = "Pause"
+
+[node name="POI_Menu" type="PanelContainer" parent="CanvasLayer/PlayerHUD"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_top = -157.0
+offset_right = 135.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3brre")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PlayerHUD/POI_Menu"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="POI_Name" type="Label" parent="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Placeholder name"
+
+[node name="POI_info" type="RichTextLabel" parent="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Placeholder info"
+fit_content = true
+
+[node name="PlaceholderButton" type="Button" parent="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Heal"
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Close"
 
 [node name="PauseMenu" type="Control" parent="CanvasLayer"]
 process_mode = 2
@@ -231,3 +279,6 @@ vertical_alignment = 1
 
 [node name="WebSocket" type="Node" parent="."]
 script = ExtResource("8_3brre")
+
+[connection signal="pressed" from="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer/PlaceholderButton" to="CanvasLayer/PlayerHUD" method="_on_placeholder_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer/CloseButton" to="CanvasLayer/PlayerHUD" method="_on_close_button_pressed"]

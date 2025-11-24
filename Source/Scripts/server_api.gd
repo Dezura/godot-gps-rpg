@@ -75,15 +75,13 @@ func request_tile_data(tile_pos: Vector2i) -> void:
 	print("[ServerAPI] New request added to queue (%s)" % _request_queue.size())
 
 
-func request_poi_data(city: String) -> void:
-	for i in _request_queue.size():
-		if typeof(_request_queue[i].initial_data) != typeof(city):
-			continue
-		if _request_queue[i].initial_data == city:
-			return
+func request_poi_data(city: String, category: String) -> void:
 	var new_request := RequestData.new()
 	
-	new_request.url = "/name?place=%s&limit=%s&categories=%s" % [city, 300, "commercial"]
+	new_request.url = "/name?place=%s&categories=%s" % [city, category]
+	for i in _request_queue.size():
+		if _request_queue[i].url == new_request.url:
+			return
 	new_request.headers = [
 		"Content-Type: application/json",
 		"Connection: keep-alive"
@@ -158,7 +156,7 @@ func _perform_request(request: RequestData, attempt: int) -> void:
 	# ---- wait for response (with timeout) ----
 	var start := Time.get_ticks_msec()
 	while client.get_status() == HTTPClient.STATUS_REQUESTING:
-		if Time.get_ticks_msec() - start > 8000:
+		if Time.get_ticks_msec() - start > 25000:
 			_finish_with_error(request, "timeout while requesting")
 			return
 		client.poll()
@@ -249,16 +247,18 @@ func _parse_city_pois(request: RequestData, body: PackedByteArray) -> void:
 		_finish_with_error(request, "POI json.parse_string() returned null")
 		return
 	
-	# Create new list of POIData from json (I guess we can assume the json isn't missing keys
 	var poi_list: Array[PointOfInterestData] = []
 	for place in json.features:
-		# place.properties is a dictionary, but Godot is dynamically typed so you can just access keys like this instead of dict[key]
+		var props = place.get("properties", {})
+		
 		var new_poi := PointOfInterestData.new(
-			place.properties.place_id,
-			place.properties.name,
-			GeoCoordinate.new(place.properties.lat, place.properties.lon),
-			place.properties.categories)
+			props.get("place_id", "uid_missing"),
+			props.get("name", "Unnamed POI"), 
+			GeoCoordinate.new(props.get("lat", 0.0), props.get("lon", 0.0)),
+			props.get("categories", [])
+		)
 		poi_list.append(new_poi)
+		
 	_finish_with_success(request, poi_list)
 
 
