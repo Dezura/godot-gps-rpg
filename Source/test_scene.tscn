@@ -1,34 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://c8hakvjcb3x6q"]
+[gd_scene load_steps=11 format=3 uid="uid://c8hakvjcb3x6q"]
 
 [ext_resource type="Script" uid="uid://bvf620k3ofjhm" path="res://Source/Scripts/android_gps_wrapper.gd" id="1_ep1f6"]
 [ext_resource type="Texture2D" uid="uid://cebvy4jjded4w" path="res://Assets/icon.svg" id="1_gru2d"]
 [ext_resource type="Script" uid="uid://cqbsgavm1fwag" path="res://Source/Scripts/main.gd" id="1_rxwwu"]
 [ext_resource type="Script" uid="uid://dp3p1ii8i1exo" path="res://Source/Player/player.gd" id="2_hdpnb"]
 [ext_resource type="Script" uid="uid://dvud6br2lrxb1" path="res://Source/Scripts/server_api.gd" id="2_rxwwu"]
-[ext_resource type="Script" uid="uid://bkvd7myuqs3rf" path="res://Source/Player/player_hud.gd" id="3_5nn6f"]
 [ext_resource type="Script" uid="uid://c72t5bk516ojj" path="res://Source/Scripts/map_renderer.gd" id="4_rxwwu"]
 [ext_resource type="SpriteFrames" uid="uid://c7m0g8t6wi8et" path="res://Assets/Sprites/Player.aseprite" id="7_evoug"]
 [ext_resource type="Script" uid="uid://s3ub8fflb3xj" path="res://Source/Scripts/websocket.gd" id="8_3brre"]
-[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="9_evoug"]
-[ext_resource type="Script" uid="uid://cy540lohgtnqy" path="res://Source/Scripts/pause_menu.gd" id="9_tiy2u"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3brre"]
-bg_color = Color(0.22352941, 0.22352941, 0.22352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-expand_margin_left = 7.0
-expand_margin_top = 7.0
-expand_margin_right = 7.0
-expand_margin_bottom = 7.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tiy2u"]
-bg_color = Color(0.23392546, 0.23392549, 0.23392531, 1)
-expand_margin_left = 15.0
-expand_margin_top = 25.0
-expand_margin_right = 15.0
-expand_margin_bottom = 25.0
+[ext_resource type="PackedScene" uid="uid://i6eym788y6iw" path="res://Source/UI/player_hud.tscn" id="9_ywe0e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3brre"]
 font_size = 28
@@ -99,164 +79,16 @@ ignore_rotation = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PlayerHUD" type="Control" parent="CanvasLayer"]
-layout_mode = 3
+[node name="PlayerHUD" parent="CanvasLayer" instance=ExtResource("9_ywe0e")]
+
+[node name="LoadingScreen" type="ColorRect" parent="CanvasLayer"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("3_5nn6f")
-metadata/_edit_lock_ = true
-
-[node name="Virtual Joystick" parent="CanvasLayer/PlayerHUD" instance=ExtResource("9_evoug")]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -150.0
-offset_top = -300.0
-offset_right = 150.0
-offset_bottom = 0.0
-grow_horizontal = 2
-
-[node name="FPS" type="Label" parent="CanvasLayer/PlayerHUD"]
-layout_mode = 1
-offset_left = 24.0
-offset_top = 32.0
-offset_right = 152.0
-offset_bottom = 88.0
-text = "FPS: "
-
-[node name="GPSCoords" type="Label" parent="CanvasLayer/PlayerHUD"]
-layout_mode = 1
-offset_right = 544.0
-offset_bottom = 312.0
-metadata/_edit_use_anchors_ = true
-
-[node name="ZoomIn" type="Button" parent="CanvasLayer/PlayerHUD"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = -88.0
-offset_right = 216.0
-offset_bottom = -24.0
-grow_vertical = 0
-text = "Zoom In"
-
-[node name="ZoomOut" type="Button" parent="CanvasLayer/PlayerHUD"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -216.0
-offset_top = -88.0
-offset_right = -24.0
-offset_bottom = -24.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Zoom Out"
-
-[node name="PauseButton" type="Button" parent="CanvasLayer/PlayerHUD"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -88.0
-offset_bottom = 42.0
-grow_horizontal = 0
-text = "Pause"
-
-[node name="POI_Menu" type="PanelContainer" parent="CanvasLayer/PlayerHUD"]
-visible = false
-layout_mode = 0
-offset_left = -135.0
-offset_top = -157.0
-offset_right = 135.0
-offset_bottom = 157.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_3brre")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PlayerHUD/POI_Menu"]
-layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="POI_Name" type="Label" parent="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 6
-text = "Placeholder name"
-
-[node name="POI_info" type="RichTextLabel" parent="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Placeholder info"
-fit_content = true
-
-[node name="PlaceholderButton" type="Button" parent="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Heal"
-
-[node name="CloseButton" type="Button" parent="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Close"
-
-[node name="PauseMenu" type="Control" parent="CanvasLayer"]
-process_mode = 2
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("9_tiy2u")
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PauseMenu"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0, 0, 0, 1)
-
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/PauseMenu"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/PauseMenu/CenterContainer"]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_tiy2u")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PauseMenu/CenterContainer/PanelContainer"]
-layout_mode = 2
-
-[node name="Placeholder1" type="Button" parent="CanvasLayer/PauseMenu/CenterContainer/PanelContainer/VBoxContainer"]
-layout_mode = 2
-text = "Placeholder1"
-
-[node name="Placeholder2" type="Button" parent="CanvasLayer/PauseMenu/CenterContainer/PanelContainer/VBoxContainer"]
-layout_mode = 2
-text = "Placeholder2"
-
-[node name="ResumeButton" type="Button" parent="CanvasLayer/PauseMenu/CenterContainer/PanelContainer/VBoxContainer"]
-layout_mode = 2
-text = "Resume"
-
-[node name="LoadingScreen" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 color = Color(0.29586652, 0.2958665, 0.2958665, 1)
 
 [node name="Label" type="Label" parent="CanvasLayer/LoadingScreen"]
@@ -279,6 +111,3 @@ vertical_alignment = 1
 
 [node name="WebSocket" type="Node" parent="."]
 script = ExtResource("8_3brre")
-
-[connection signal="pressed" from="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer/PlaceholderButton" to="CanvasLayer/PlayerHUD" method="_on_placeholder_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/PlayerHUD/POI_Menu/VBoxContainer/CloseButton" to="CanvasLayer/PlayerHUD" method="_on_close_button_pressed"]

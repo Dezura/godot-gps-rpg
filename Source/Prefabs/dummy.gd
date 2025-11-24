@@ -8,6 +8,8 @@ class_name Dummy extends Node2D
 var data: PointOfInterestData
 
 
+# Reminder to future self, update this logic from using a button to using input_pickable instead
+# this should be in a poi.gd anyways
 func _on_button_pressed():
 	var game_manager = get_tree().current_scene as GameManager
 	var player = game_manager.player
@@ -30,4 +32,4 @@ func _on_button_pressed():
 		else:
 			print("clicked on poi with no data")
 	else:
-		print("clicked on poi with no data")	
+		print("clicked on poi with no data")

@@ -17,9 +17,6 @@ func _ready() -> void:
 	if loadingScreen:
 		loadingScreen.visible = true
 	
-	var pauseButton = $CanvasLayer/PlayerHUD/PauseButton
-	pauseButton.pressed.connect($CanvasLayer/PauseMenu.open_menu)
-
 	set_process(false)
 	Util.dummies = $Dummies
 	android_gps.cooridnates_fetched.connect(_on_cooridnates_fetched)

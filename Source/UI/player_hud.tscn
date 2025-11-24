@@ -1,12 +1,32 @@
-[gd_scene load_steps=8 format=3 uid="uid://i6eym788y6iw"]
+[gd_scene load_steps=12 format=3 uid="uid://i6eym788y6iw"]
 
 [ext_resource type="Theme" uid="uid://co0uqk7ayhahb" path="res://Assets/UI/UI_Theme.tres" id="1_uyms8"]
-[ext_resource type="Script" uid="uid://bkvd7myuqs3rf" path="res://Source/Player/player_hud.gd" id="2_5y5js"]
+[ext_resource type="Script" uid="uid://bkvd7myuqs3rf" path="res://Source/UI/player_hud.gd" id="2_5y5js"]
 [ext_resource type="Texture2D" uid="uid://djs21ab7jhx0u" path="res://Assets/Sprites/exp_bar.aseprite" id="3_2ocl1"]
 [ext_resource type="Texture2D" uid="uid://c2wxtaasro8uc" path="res://Assets/Sprites/exp_bar_filled.aseprite" id="4_gy2nl"]
 [ext_resource type="Texture2D" uid="uid://db5g740g8tene" path="res://Assets/Sprites/health_bar.png" id="5_kpvy7"]
 [ext_resource type="Texture2D" uid="uid://blrhjv2boieqo" path="res://Assets/Sprites/health_bar_filled.png" id="6_ly01m"]
 [ext_resource type="Texture2D" uid="uid://dxelf6hr0kip" path="res://Assets/Sprites/player_head.png" id="7_72lis"]
+[ext_resource type="Script" uid="uid://cy540lohgtnqy" path="res://Source/Scripts/pause_menu.gd" id="8_72lis"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="9_2bgv2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gi274"]
+bg_color = Color(0.22352941, 0.22352941, 0.22352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 7.0
+expand_margin_top = 7.0
+expand_margin_right = 7.0
+expand_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6sh0"]
+bg_color = Color(0.23392546, 0.23392549, 0.23392531, 1)
+expand_margin_left = 15.0
+expand_margin_top = 25.0
+expand_margin_right = 15.0
+expand_margin_bottom = 25.0
 
 [node name="PlayerHUD" type="Control"]
 layout_mode = 3
@@ -16,6 +36,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_behavior_recursive = 1
+mouse_filter = 1
 theme = ExtResource("1_uyms8")
 script = ExtResource("2_5y5js")
 metadata/_edit_lock_ = true
@@ -87,3 +108,115 @@ offset_bottom = 56.0
 grow_horizontal = 2
 text = "Level: 1"
 horizontal_alignment = 1
+
+[node name="POI_Menu" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -157.0
+offset_right = 135.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gi274")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="POI_Menu"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="POI_Name" type="Label" parent="POI_Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Placeholder name"
+
+[node name="POI_info" type="RichTextLabel" parent="POI_Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Placeholder info"
+fit_content = true
+
+[node name="PlaceholderButton" type="Button" parent="POI_Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Heal"
+
+[node name="CloseButton" type="Button" parent="POI_Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Close"
+
+[node name="PauseButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -98.0
+offset_top = -91.0
+offset_right = -21.0
+offset_bottom = -21.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "P"
+
+[node name="PauseMenu" type="Control" parent="." node_paths=PackedStringArray("pause_button")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_72lis")
+pause_button = NodePath("../PauseButton")
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PauseMenu/CenterContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6sh0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/CenterContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Placeholder1" type="Button" parent="PauseMenu/CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Placeholder1"
+
+[node name="Placeholder2" type="Button" parent="PauseMenu/CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Placeholder2"
+
+[node name="ResumeButton" type="Button" parent="PauseMenu/CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="Virtual Joystick" parent="." instance=ExtResource("9_2bgv2")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = -406.0
+offset_right = 150.0
+offset_bottom = -106.0
+grow_horizontal = 2
