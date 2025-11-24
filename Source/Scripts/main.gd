@@ -51,13 +51,10 @@ func _ready() -> void:
 	
 	_tasks_loading += 1
 	map_renderer.queue_render_tile(player_coords.get_tile_position())
-	_tasks_loading += 1
+	_tasks_loading += 3
 	map_renderer.queue_render_pois("Hamilton,Ontario")
 	_tasks_loading += 1
 	server_api.request_enemy_data("Hamilton, Ontario")
-	
-	set_process(true)
-	
 
 func _process(_delta: float) -> void:
 	if Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") != Vector2.ZERO:
@@ -87,6 +84,5 @@ func _on_loading_task_finished() -> void:
 		set_process(true) 
 		
 		server_api.tile_received.disconnect(_on_loading_task_finished.unbind(2))
-		server_api.tile_failed.disconnect(_on_loading_task_finished.unbind(2))
 		server_api.city_poi_received.disconnect(_on_loading_task_finished.unbind(2))
-		server_api.city_poi_failed.disconnect(_on_loading_task_finished.unbind(2))
+		server_api.city_enemies_received.disconnect(_on_loading_task_finished.unbind(2))
