@@ -16,6 +16,7 @@ func fetch_enemy_data(city_name: String):
 
 func _on_city_enemies_received(city_name: String, enemy_data: Dictionary[Vector2i, EnemyTileData]) -> void:
 	print("Mna grihguoierhgiuoreh uoieawrtjgioerwn,hb oiuermjhgboirewhbiowerjbnh ioer")
+	# Very informative print statement, I like it
 
 
 func _on_city_enemies_failed(city_name: String, msg: String) -> void:
