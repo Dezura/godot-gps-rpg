@@ -64,6 +64,8 @@ func _ready() -> void:
 	
 	$WebSocket.message_received.connect($CanvasLayer/PlayerHUD.add_chat_message)
 	$CanvasLayer/PlayerHUD.chat_message_sent.connect($WebSocket.send_message)
+	
+	player.update_level.connect($WebSocket.send_level_up_message)
 
 func _process(_delta: float) -> void:
 	if $CanvasLayer/PlayerHUD/PauseMenu.visible:

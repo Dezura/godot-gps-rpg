@@ -30,10 +30,10 @@ func gain_xp(amount: int) -> void:
 		max_xp += 10
 		max_hp += 1
 		hp += 1
+		update_level.emit(level)
 		
 	update_xp.emit(xp, max_xp)
 	update_hp.emit(hp, max_hp)
-	update_level.emit(level)
 
 func modify_health(amount: int) -> void:
 	hp += amount

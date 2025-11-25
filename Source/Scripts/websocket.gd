@@ -50,3 +50,9 @@ func send_message(text: String) -> void:
 	if _opened:
 		var full_message = "[color=#%s]%s[/color]: %s" % [_user_color, _userID, text]
 		_client.send_text(full_message)
+		
+func send_level_up_message(new_level: int) -> void:
+	if _opened:
+		var full_message = "[color=#%s]%s levelled up to %s![/color]" % [_user_color, _userID, new_level]
+		_client.send_text(full_message)
+	
