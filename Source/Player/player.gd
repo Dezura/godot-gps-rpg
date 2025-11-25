@@ -4,7 +4,7 @@ signal update_level(new_level: int)
 signal update_xp(new_xp: int, max_xp: int)
 signal update_hp(new_hp: int, max_hp: int)
 
-var level: int = 1
+var level: int = 10
 var xp: int = 0
 var max_xp: int = 100
 var hp: int = 8

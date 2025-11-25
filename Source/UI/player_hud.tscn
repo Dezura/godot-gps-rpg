@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="9_2bgv2"]
 [ext_resource type="Texture2D" uid="uid://clxc8bci7y84g" path="res://Assets/UI/UI.png" id="10_gi274"]
 [ext_resource type="Texture2D" uid="uid://cbn07b34tbqdx" path="res://Assets/Sprites/wandering_eye.aseprite" id="11_gi274"]
-[ext_resource type="Script" uid="uid://8xpbdnmrh213" path="res://Source/UI/enemy_encounter_menu.gd" id="11_w6sh0"]
+[ext_resource type="Script" path="res://Source/UI/enemy_encounter_menu.gd" id="11_w6sh0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6sh0"]
 bg_color = Color(0.23392546, 0.23392549, 0.23392531, 1)

@@ -86,6 +86,7 @@ func _on_city_enemies_received(city_name: String, enemy_data: Dictionary[Vector2
 	print("Mna grihguoierhgiuoreh uoieawrtjgioerwn,hb oiuermjhgboirewhbiowerjbnh ioer")
 	# Very informative print statement, I like it
 	# RE: Im keeping this print in the final build cry about it
+	# RE: RE: I'm telling Dr. Moore
 	
 	for key in enemy_data:
 		self._enemy_tile_data[key] = enemy_data[key]

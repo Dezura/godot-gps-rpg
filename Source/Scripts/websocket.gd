@@ -47,6 +47,9 @@ func _process(_delta: float) -> void:
 			if msg == "DezuraCaptainNoob":
 				print("function goes here - websocket.gd")
 				# Do Something
+			elif msg == "TuxModeActivate":
+				print("Tux Mode Activated")
+				# Do Something
 			else:
 				message_received.emit(msg)
 			
@@ -60,6 +63,8 @@ func _process(_delta: float) -> void:
 func send_message(text: String) -> void:
 	if _opened:
 		if text == "/reset":
+			_client.send_text(text)
+		elif text == "/tux":
 			_client.send_text(text)
 		else:
 			var full_message = "[color=#%s]%s[/color]: %s" % [_user_color, _userID, text]
