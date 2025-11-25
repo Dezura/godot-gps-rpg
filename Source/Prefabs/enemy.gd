@@ -24,12 +24,13 @@ func init_enemy_data(p_type: int, p_id: String) -> void:
 	match type:
 		EnemyType.SLIME:
 			enemy_name = "Slime"
-			level = 3
+			level = randi_range(2, 4)
 		EnemyType.SKELETON:
 			enemy_name = "Skeleton"
-			level = 6
+			level = randi_range(5, 7)
 		EnemyType.WANDERING_EYE:
 			enemy_name = "Wandering Eye"
-			level = 12
+			level = randi_range(10, 15)
 	$Sprite.texture = Util.enemy_textures[self.type]
 	$Sprite.flip_h = bool(randi_range(0, 1))
+	$Level.text = "LVL: %s" % level
