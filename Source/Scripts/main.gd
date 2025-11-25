@@ -29,7 +29,7 @@ func _ready() -> void:
 	$CanvasLayer/PlayerHUD._on_hp_changed(player.hp, player.max_hp)
 
 	set_process(false)
-	Util.dummies = $Dummies
+	Util.dummies = $YSorter/Dummies
 	android_gps.cooridnates_fetched.connect(_on_cooridnates_fetched)
 	
 	server_api.tile_received.connect(_on_loading_task_finished.unbind(2))

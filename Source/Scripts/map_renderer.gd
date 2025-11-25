@@ -108,7 +108,7 @@ func _render_pois(poi_list: Array[PointOfInterestData]) -> void:
 			continue
 		
 		var new_dummy: Dummy = Util.dummy_prefab.instantiate()
-		add_child(new_dummy)
+		Util.dummies.add_child(new_dummy)
 		new_dummy.global_position = poi.coords.game_position
 		new_dummy.name = poi.name
 		new_dummy.name_label.text = poi.name

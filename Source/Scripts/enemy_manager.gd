@@ -36,6 +36,7 @@ func load_enemy_tile(tile_pos: Vector2i) -> void:
 		return
 	var new_chunk := Node2D.new()
 	add_child(new_chunk)
+	new_chunk.y_sort_enabled = true
 	new_chunk.global_position = Util.get_tile_center_position(tile_pos.x, tile_pos.y).game_position
 	
 	for enemy_data: EnemyTileData.EnemyData in _enemy_tile_data[tile_pos].enemies:
