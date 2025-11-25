@@ -48,7 +48,7 @@ func on_chat_input_submitted(text: String) -> void:
 	
 	
 func _process(_delta: float) -> void:
-	$FPS.set_text("FPS " + str(Engine.get_frames_per_second()))
+	$FPS.set_text("FPS " + "100" + str(Engine.get_frames_per_second()))
 	if poi_menu.visible and current_poi_data:
 		_update_button_state()
 		
