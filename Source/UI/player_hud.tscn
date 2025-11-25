@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://i6eym788y6iw"]
+[gd_scene load_steps=15 format=3 uid="uid://i6eym788y6iw"]
 
 [ext_resource type="Theme" uid="uid://co0uqk7ayhahb" path="res://Assets/UI/UI_Theme.tres" id="1_uyms8"]
 [ext_resource type="Script" uid="uid://bkvd7myuqs3rf" path="res://Source/UI/player_hud.gd" id="2_5y5js"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://dxelf6hr0kip" path="res://Assets/Sprites/player_head.png" id="7_72lis"]
 [ext_resource type="Script" uid="uid://cy540lohgtnqy" path="res://Source/Scripts/pause_menu.gd" id="8_72lis"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="9_2bgv2"]
+[ext_resource type="Texture2D" uid="uid://clxc8bci7y84g" path="res://Assets/UI/UI.png" id="10_gi274"]
+[ext_resource type="Texture2D" uid="uid://cbn07b34tbqdx" path="res://Assets/Sprites/wandering_eye.aseprite" id="11_gi274"]
+[ext_resource type="Script" uid="uid://8xpbdnmrh213" path="res://Source/UI/enemy_encounter_menu.gd" id="11_w6sh0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6sh0"]
 bg_color = Color(0.23392546, 0.23392549, 0.23392531, 1)
@@ -182,6 +185,28 @@ offset_bottom = -113.0
 grow_horizontal = 2
 scale = Vector2(0.5, 0.5)
 
+[node name="ChatPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -202.0
+offset_right = 424.0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ChatPanel"]
+layout_mode = 2
+
+[node name="ChatHistory" type="RichTextLabel" parent="ChatPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+scroll_following = true
+
+[node name="ChatInput" type="LineEdit" parent="ChatPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
 [node name="POI_Menu" type="PanelContainer" parent="."]
 visible = false
 layout_mode = 1
@@ -217,27 +242,151 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Close"
 
-[node name="ChatPanel" type="PanelContainer" parent="."]
+[node name="EnemyEncounter" type="NinePatchRect" parent="."]
+visible = false
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -269.0
+offset_right = 143.0
+offset_bottom = 269.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_behavior_recursive = 1
+texture = ExtResource("10_gi274")
+region_rect = Rect2(168, 96, 87, 75)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+script = ExtResource("11_w6sh0")
+
+[node name="ColorRect" type="ColorRect" parent="EnemyEncounter"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -202.0
-offset_right = 424.0
+offset_left = -196.0
+offset_top = -388.0
+offset_right = 184.0
+offset_bottom = 372.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5254902)
+
+[node name="TopLabel" type="Label" parent="EnemyEncounter"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -110.0
+offset_top = 12.0
+offset_right = 110.0
+offset_bottom = 68.0
+grow_horizontal = 2
+size_flags_vertical = 6
+text = "ENEMY ENCOUNTER!!"
+horizontal_alignment = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="EnemyEncounter"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -109.99939
+offset_top = 50.0
+offset_right = 110.0
+offset_bottom = 243.0
+grow_horizontal = 2
+texture = ExtResource("10_gi274")
+region_rect = Rect2(270, 96, 87, 75)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="EnemySprite" type="TextureRect" parent="EnemyEncounter"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 122.0
+offset_right = 20.0
+offset_bottom = 162.0
+grow_horizontal = 2
+scale = Vector2(4, 4)
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("11_gi274")
+
+[node name="EnemyName" type="Label" parent="EnemyEncounter"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_top = 243.0
+offset_right = 112.0
+offset_bottom = 278.0
+grow_horizontal = 2
+size_flags_vertical = 6
+text = "Wandering Eye"
+horizontal_alignment = 1
+
+[node name="EnemyLevel" type="Label" parent="EnemyEncounter"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_top = 277.0
+offset_right = 112.0
+offset_bottom = 333.0
+grow_horizontal = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.24578309, 0.5303088, 0.2432698, 1)
+theme_override_font_sizes/font_size = 23
+text = "Level: 12"
+horizontal_alignment = 1
+
+[node name="AttackButton" type="Button" parent="EnemyEncounter"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -114.0
+offset_top = -219.0
+offset_right = 120.0
+offset_bottom = -111.0
+grow_horizontal = 2
 grow_vertical = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ChatPanel"]
-layout_mode = 2
-
-[node name="ChatHistory" type="RichTextLabel" parent="ChatPanel/VBoxContainer"]
-layout_mode = 2
 size_flags_vertical = 3
-bbcode_enabled = true
-scroll_following = true
+theme_override_font_sizes/font_size = 41
+text = "Attack!"
 
-[node name="ChatInput" type="LineEdit" parent="ChatPanel/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 4
+[node name="CloseButton" type="Button" parent="EnemyEncounter"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -87.0
+offset_right = 96.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+text = "Nevermind."
 
 [connection signal="pressed" from="POI_Menu/VBoxContainer/PlaceholderButton" to="." method="_on_placeholder_button_pressed"]
 [connection signal="pressed" from="POI_Menu/VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="EnemyEncounter/CloseButton" to="EnemyEncounter" method="_on_close_button_pressed"]

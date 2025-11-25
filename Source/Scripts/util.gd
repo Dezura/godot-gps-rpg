@@ -9,10 +9,13 @@ var server_conf = ConfigFile.new()
 var dummy_prefab = preload("res://Source/Prefabs/dummy.tscn")
 var dummies: Node2D
 
-var textures = {
-	"slime": preload("res://Assets/Sprites/slime.aseprite"),
-	"skeleton": preload("res://Assets/Sprites/skeleton.aseprite"),
-	"wandering_eye": preload("res://Assets/Sprites/wandering_eye.aseprite"),
+var game: GameManager
+var hud: PlayerHUD
+
+var enemy_textures = {
+	Enemy.EnemyType.SLIME: preload("res://Assets/Sprites/slime.aseprite"),
+	Enemy.EnemyType.SKELETON: preload("res://Assets/Sprites/skeleton.aseprite"),
+	Enemy.EnemyType.WANDERING_EYE: preload("res://Assets/Sprites/wandering_eye.aseprite"),
 }
 
 var world_lat_offset: float

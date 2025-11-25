@@ -1,6 +1,4 @@
-## GEMINI 3.0 PRO ADDED THE 5 MINUTE TIMER FOR POI
-
-extends Control
+class_name PlayerHUD extends Control
 
 var poi_menu
 var poi_name_label
@@ -15,7 +13,11 @@ var chat_history: RichTextLabel
 var chat_input: LineEdit
 var chat_panel: PanelContainer
 
+@onready var enemy_encounter_menu: EnemyEncounterMenu = $EnemyEncounter
+
+
 signal chat_message_sent(text: String)
+
 
 func _ready() -> void:
 	poi_menu = $POI_Menu

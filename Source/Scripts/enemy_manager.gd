@@ -1,5 +1,7 @@
 class_name EnemyManager extends Node2D
 
+signal enemies_unloaded
+
 @export var game: GameManager
 @export var server_api: ServerAPI
 
@@ -61,6 +63,7 @@ func _unload_all_tiles() -> void:
 	for key in _current_loaded_enemy_tile_data:
 		_current_loaded_enemy_tile_data[key].queue_free()
 	_current_loaded_enemy_tile_data.clear()
+	enemies_unloaded.emit()
 
 
 # NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE NIGHTMARE 
