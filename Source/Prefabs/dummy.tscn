@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyqmvljle5phd"]
+[gd_scene load_steps=5 format=3 uid="uid://dyqmvljle5phd"]
 
 [ext_resource type="Script" uid="uid://cvm6itwwmsbki" path="res://Source/Prefabs/dummy.gd" id="1_l0on1"]
+[ext_resource type="Texture2D" uid="uid://bqaa8x45f8rm3" path="res://Assets/Sprites/shadow.png" id="2_k3plw"]
 [ext_resource type="Texture2D" uid="uid://dpo8kqum5r7a8" path="res://Assets/Sprites/gem.aseprite" id="3_k3plw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l0on1"]
-size = Vector2(37.5, 38.5)
+size = Vector2(46.5, 46.5)
 
 [node name="Dummy" type="Node2D" node_paths=PackedStringArray("top_label", "bottom_label", "name_label")]
 z_index = 1
@@ -12,6 +13,12 @@ script = ExtResource("1_l0on1")
 top_label = NodePath("TopLabel")
 bottom_label = NodePath("BottomLabel")
 name_label = NodePath("NameLabel")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.39215687)
+position = Vector2(0, 22)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("2_k3plw")
 
 [node name="TestDummy" type="Sprite2D" parent="."]
 modulate = Color(1, 0.74509805, 0.08235294, 1)

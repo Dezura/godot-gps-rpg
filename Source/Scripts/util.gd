@@ -9,6 +9,12 @@ var server_conf = ConfigFile.new()
 var dummy_prefab = preload("res://Source/Prefabs/dummy.tscn")
 var dummies: Node2D
 
+var textures = {
+	"slime": preload("res://Assets/Sprites/slime.aseprite"),
+	"skeleton": preload("res://Assets/Sprites/skeleton.aseprite"),
+	"wandering_eye": preload("res://Assets/Sprites/wandering_eye.aseprite"),
+}
+
 var world_lat_offset: float
 var world_lon_offset: float
 

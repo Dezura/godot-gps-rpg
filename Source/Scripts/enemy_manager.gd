@@ -41,8 +41,7 @@ func load_enemy_tile(tile_pos: Vector2i) -> void:
 	for enemy_data: EnemyTileData.EnemyData in _enemy_tile_data[tile_pos].enemies:
 		var new_enemy: Enemy = _enemy_prefab.instantiate()
 		new_chunk.add_child(new_enemy)
-		new_enemy.id = enemy_data.id
-		new_enemy.type = enemy_data.type
+		new_enemy.init_enemy_data(enemy_data.type, enemy_data.id)
 		
 		var extent = _enemy_tile_data[tile_pos].extent
 		var converted_pos: Vector2 = enemy_data.local_pos

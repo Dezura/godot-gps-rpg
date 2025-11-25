@@ -1,7 +1,5 @@
 class_name EnemyTileData
 
-enum EnemyType {SLIME, SKELETON, ORC}
-
 var expiry_time_ms: int
 var tile_pos: Vector2i
 var extent: int
@@ -9,7 +7,7 @@ var enemies: Array[EnemyData]
 
 class EnemyData:
 	var id: String
-	var type: EnemyType
+	var type: Enemy.EnemyType
 	var local_pos: Vector2i
 
 
