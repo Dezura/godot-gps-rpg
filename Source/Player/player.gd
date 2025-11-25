@@ -75,7 +75,7 @@ func _on_player_coords_updated(new_coords: GeoCoordinate, old_coords: GeoCoordin
 	elif new_coords.game_position.x > old_coords.game_position.x:
 		_anim_sprite.flip_h = false
 
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed:
 		# Press 'T' to test XP gain and potential Level Up
 		if event.keycode == KEY_T:

@@ -11,11 +11,16 @@ var hp_label: Label
 var hp_bar: TextureProgressBar
 var xp_bar: TextureProgressBar
 var current_poi_data: PointOfInterestData 
+var chat_history: RichTextLabel
+var chat_input: LineEdit
+var chat_panel: PanelContainer
+
+signal chat_message_sent(text: String)
 
 func _ready() -> void:
 	poi_menu = $POI_Menu
 	poi_name_label = $POI_Menu/VBoxContainer/POI_Name 
-	poi_details_label = $POI_Menu/VBoxContainer/POI_info 
+	#poi_details_label = $POI_Menu/VBoxContainer/POI_info 
 	button = $POI_Menu/VBoxContainer/PlaceholderButton
 
 	level_label = $Level
@@ -24,7 +29,22 @@ func _ready() -> void:
 	xp_bar = $"Exp Bar"
 	
 	$PauseMenu.visibility_changed.connect(on_pause_menu_visibility_changed)
+	chat_history = $ChatPanel/VBoxContainer/ChatHistory
+	chat_input = $ChatPanel/VBoxContainer/ChatInput
+	chat_panel = $ChatPanel
+	chat_input.text_submitted.connect(on_chat_input_submitted)
+	
+func add_chat_message(message: String) -> void:
+	chat_history.append_text(message + "\n")
 
+func on_chat_input_submitted(text: String) -> void:
+	if text.strip_edges() == "":
+		return
+	chat_message_sent.emit(text)
+	chat_input.clear()
+	chat_input.release_focus()
+	
+	
 func _process(_delta: float) -> void:
 	$FPS.set_text("FPS " + str(Engine.get_frames_per_second()))
 	if poi_menu.visible and current_poi_data:
@@ -32,6 +52,9 @@ func _process(_delta: float) -> void:
 		
 
 func _input(event: InputEvent) -> void:
+	if chat_input.has_focus():
+		return
+	
 	if event is InputEventKey and event.keycode == KEY_P and event.pressed:
 		$PauseMenu.visible = not $PauseMenu.visible
 

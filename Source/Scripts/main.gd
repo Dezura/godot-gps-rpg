@@ -54,13 +54,16 @@ func _ready() -> void:
 	
 	if server_api.client.get_status() != HTTPClient.STATUS_CONNECTED: 
 		await server_api.server_connected
-	
+		
 	_tasks_loading += 9
 	map_renderer.update_3x3_tile_render(player_coords.get_tile_position())
 	_tasks_loading += 3
 	map_renderer.queue_render_pois("Hamilton,Ontario")
 	_tasks_loading += 1
 	enemy_manager.fetch_enemy_data("Hamilton, Ontario")
+	
+	$WebSocket.message_received.connect($CanvasLayer/PlayerHUD.add_chat_message)
+	$CanvasLayer/PlayerHUD.chat_message_sent.connect($WebSocket.send_message)
 
 func _process(_delta: float) -> void:
 	if $CanvasLayer/PlayerHUD/PauseMenu.visible:
