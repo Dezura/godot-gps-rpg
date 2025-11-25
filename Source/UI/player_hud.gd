@@ -35,7 +35,9 @@ func _ready() -> void:
 	chat_input.text_submitted.connect(on_chat_input_submitted)
 	
 func add_chat_message(message: String) -> void:
-	chat_history.append_text(message + "\n")
+	var time = Time.get_time_dict_from_system()
+	var timestamp = "%02d:%02d" % [time.hour, time.minute]
+	chat_history.append_text("[color=#FF0000]" + timestamp + "[/color] - " + message + "\n")
 
 func on_chat_input_submitted(text: String) -> void:
 	if text.strip_edges() == "":
