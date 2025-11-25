@@ -12,7 +12,7 @@ var max_hp: int = 16
 
 @export var game: GameManager
 @onready var _anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@export var interaction_radius: float = 75.0
+@export var interaction_radius: float = 150.0
 
 
 func _ready() -> void:

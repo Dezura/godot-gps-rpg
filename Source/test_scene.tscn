@@ -15,12 +15,13 @@
 font_size = 28
 
 [node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "enemy_manager", "android_gps", "server_api", "player", "loadingScreen")]
+y_sort_enabled = true
 script = ExtResource("1_rxwwu")
 map_renderer = NodePath("MapRenderer")
-enemy_manager = NodePath("EnemyManager")
+enemy_manager = NodePath("YSorter/EnemyManager")
 android_gps = NodePath("AndroidGPS")
 server_api = NodePath("ServerAPI")
-player = NodePath("Player")
+player = NodePath("YSorter/Player")
 loadingScreen = NodePath("CanvasLayer/LoadingScreen")
 
 [node name="ServerAPI" type="Node" parent="."]
@@ -32,32 +33,25 @@ metadata/_custom_type_script = "uid://dvud6br2lrxb1"
 script = ExtResource("1_ep1f6")
 metadata/_custom_type_script = "uid://bvf620k3ofjhm"
 
-[node name="EnemyManager" type="Node2D" parent="." node_paths=PackedStringArray("game", "server_api")]
-script = ExtResource("4_evoug")
-game = NodePath("..")
-server_api = NodePath("../ServerAPI")
-metadata/_custom_type_script = "uid://6jhl5kdckno2"
+[node name="YSorter" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="MapRenderer" type="Node2D" parent="." node_paths=PackedStringArray("game", "server_api")]
-script = ExtResource("4_rxwwu")
-game = NodePath("..")
-server_api = NodePath("../ServerAPI")
-texture_test = ExtResource("1_gru2d")
-metadata/_custom_type_script = "uid://c72t5bk516ojj"
-
-[node name="Player" type="Node2D" parent="." node_paths=PackedStringArray("game")]
-z_index = 1
+[node name="Player" type="Node2D" parent="YSorter" node_paths=PackedStringArray("game")]
+z_index = 3
 position = Vector2(272, 600)
 script = ExtResource("2_hdpnb")
-game = NodePath("..")
+game = NodePath("../..")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-z_index = 1
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="YSorter/Player"]
+z_index = 4
+z_as_relative = false
+y_sort_enabled = true
 scale = Vector2(2.25, 2.25)
 sprite_frames = ExtResource("7_evoug")
 animation = &"Idle"
 
-[node name="DebugGPSCoords" type="Label" parent="Player"]
+[node name="DebugGPSCoords" type="Label" parent="YSorter/Player"]
+z_index = 10
 offset_left = -232.0
 offset_top = -144.0
 offset_right = 232.0
@@ -68,7 +62,8 @@ Longitude: "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DebugTileCoords" type="Label" parent="Player"]
+[node name="DebugTileCoords" type="Label" parent="YSorter/Player"]
+z_index = 10
 offset_left = -208.0
 offset_top = 32.0
 offset_right = 208.0
@@ -80,11 +75,27 @@ Zoom Level: "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="YSorter/Player"]
 ignore_rotation = false
 zoom = Vector2(1.15, 1.15)
 
-[node name="Dummies" type="Node2D" parent="."]
+[node name="EnemyManager" type="Node2D" parent="YSorter" node_paths=PackedStringArray("game", "server_api")]
+y_sort_enabled = true
+script = ExtResource("4_evoug")
+game = NodePath("../..")
+server_api = NodePath("../../ServerAPI")
+metadata/_custom_type_script = "uid://6jhl5kdckno2"
+
+[node name="Dummies" type="Node2D" parent="YSorter"]
+y_sort_enabled = true
+
+[node name="MapRenderer" type="Node2D" parent="." node_paths=PackedStringArray("game", "server_api")]
+z_index = -2
+script = ExtResource("4_rxwwu")
+game = NodePath("..")
+server_api = NodePath("../ServerAPI")
+texture_test = ExtResource("1_gru2d")
+metadata/_custom_type_script = "uid://c72t5bk516ojj"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
