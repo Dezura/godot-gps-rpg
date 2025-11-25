@@ -21,4 +21,5 @@ func _init(p_tile_pos: Vector2i, p_extent: int, p_expiry: int, p_enemies: Array[
 
 
 func is_expired() -> bool:
-	return false
+	var current_time_ms = Time.get_unix_time_from_system() * 1000
+	return expiry_time_ms < current_time_ms
