@@ -47,12 +47,12 @@ func full_heal() -> void:
 
 func _process(_delta: float) -> void:
 	if global_position != game.player_coords.game_position:
-		global_position = global_position.lerp(game.player_coords.game_position, 0.05)
+		global_position = global_position.lerp(game.player_coords.game_position, min(1, 5 * _delta))
 	
 	# Stop lerping if we are close enough
-	if abs(global_position.x - game.player_coords.game_position.x) < 0.1:
+	if abs(global_position.x - game.player_coords.game_position.x) < 0.2:
 		global_position.x = game.player_coords.game_position.x
-	if abs(global_position.y - game.player_coords.game_position.y) < 0.1:
+	if abs(global_position.y - game.player_coords.game_position.y) < 0.2:
 		global_position.y = game.player_coords.game_position.y
 	
 	if global_position == game.player_coords.game_position:

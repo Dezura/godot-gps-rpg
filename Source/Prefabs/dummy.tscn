@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dyqmvljle5phd"]
 
 [ext_resource type="Script" uid="uid://cvm6itwwmsbki" path="res://Source/Prefabs/dummy.gd" id="1_l0on1"]
-[ext_resource type="Texture2D" uid="uid://cebvy4jjded4w" path="res://Assets/icon.svg" id="2_k3plw"]
+[ext_resource type="Texture2D" uid="uid://dpo8kqum5r7a8" path="res://Assets/Sprites/gem.aseprite" id="3_k3plw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l0on1"]
 size = Vector2(37.5, 38.5)
@@ -15,8 +15,8 @@ name_label = NodePath("NameLabel")
 
 [node name="TestDummy" type="Sprite2D" parent="."]
 modulate = Color(1, 0.74509805, 0.08235294, 1)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_k3plw")
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("3_k3plw")
 
 [node name="TopLabel" type="Label" parent="."]
 offset_left = -232.0
@@ -36,13 +36,11 @@ theme_override_font_sizes/font_size = 12
 horizontal_alignment = 1
 
 [node name="NameLabel" type="Label" parent="."]
-offset_left = 32.0
-offset_top = -40.0
-offset_right = 448.0
-offset_bottom = 43.0
+offset_left = 24.0
+offset_top = -42.0
+offset_right = 440.0
+offset_bottom = 41.0
 theme_override_font_sizes/font_size = 12
-text = "
- "
 vertical_alignment = 1
 
 [node name="Area2D" type="Area2D" parent="."]

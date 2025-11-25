@@ -12,7 +12,7 @@ signal player_tile_changed(tile_pos: Vector2i, old_tile_pos: Vector2i)
 
 const MVT = preload("res://addons/geo-tile-loader/vector_tile_loader.gd")
 
-var current_city := "Hamilton, Ontario"
+var current_city := "Hamilton,Ontario"
 var player_coords := GeoCoordinate.new()
 var _tasks_loading: int = 0
 
@@ -59,8 +59,8 @@ func _ready() -> void:
 		
 	_tasks_loading += 9
 	map_renderer.update_3x3_tile_render(player_coords.get_tile_position())
-	#_tasks_loading += 3
-	#map_renderer.queue_render_pois(current_city)
+	_tasks_loading += 3
+	map_renderer.queue_render_pois(current_city)
 	_tasks_loading += 1
 	enemy_manager.fetch_enemy_data(current_city)
 	

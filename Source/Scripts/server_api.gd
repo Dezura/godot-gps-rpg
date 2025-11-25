@@ -51,15 +51,12 @@ func _connect() -> void:
 
 
 func request_tile_data(tile_pos: Vector2i) -> void:
-	# Check if an existing request already exists before proceeding
-	for i in _request_queue.size():
-		if typeof(_request_queue[i].initial_data) != typeof(tile_pos):
-			continue
-		if _request_queue[i].initial_data == tile_pos:
-			return
 	var new_request := RequestData.new()
 	
 	new_request.url = "/tile-data?x=%d&y=%d" % [tile_pos.x, tile_pos.y]
+	for i in _request_queue.size():
+		if _request_queue[i].url == new_request.url:
+			return
 	new_request.headers = [
 		"Content-Type: application/x-protobuf",
 		"Connection: keep-alive"
@@ -91,15 +88,12 @@ func request_poi_data(city: String, category: String) -> void:
 	print("[ServerAPI] New request added to queue (%s)" % _request_queue.size())
 
 func request_enemy_data(city: String) -> void:
-	for i in _request_queue.size():
-		if typeof(_request_queue[i].initial_data) != typeof(city):
-			continue
-		if _request_queue[i].initial_data == city:
-			return
-
 	var new_request := RequestData.new()
 	
 	new_request.url = "/enemy-tile?place=%s" % [city.uri_encode()]
+	for i in _request_queue.size():
+		if _request_queue[i].url == new_request.url:
+			return
 	new_request.headers = [
 		"Content-Type: application/json",
 		"Connection: keep-alive"

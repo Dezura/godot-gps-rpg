@@ -87,10 +87,10 @@ func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
 			
 			
 			"landcover":
-				_render_layer_polygons(layer, new_chunk, Color(0.639, 0.88, 0.158, 0.361), "park")
+				_render_layer_polygons(layer, new_chunk, Color("3d562fff"), "park")
 			
 			"water":
-				_render_layer_polygons(layer, new_chunk, Color(0.495, 0.471, 1.892, 0.69))
+				_render_layer_polygons(layer, new_chunk, Color("5c59b7ff"))
 			"building":
 				_render_layer_polygons(layer, new_chunk, Color(0.154, 0.163, 0.23, 1.0))
 			_:
@@ -103,6 +103,10 @@ func _render_tile(tile_pos: Vector2i, tile: MvtTile) -> void:
 func _render_pois(poi_list: Array[PointOfInterestData]) -> void:
 	# Only spawning test dummies for now 
 	for poi in poi_list:
+		# Don't render unnamed pois
+		if poi.name == "Unnamed POI":
+			continue
+		
 		var new_dummy: Dummy = Util.dummy_prefab.instantiate()
 		add_child(new_dummy)
 		new_dummy.global_position = poi.coords.game_position
@@ -114,9 +118,9 @@ func _render_pois(poi_list: Array[PointOfInterestData]) -> void:
 		
 		if sprite:
 			if poi.categories.has("catering"):
-				sprite.modulate = Color.RED
+				sprite.modulate = Color("db4f4bff")
 			elif poi.categories.has("commercial"):
-				sprite.modulate = Color.BLUE
+				sprite.modulate = Color("87ffffff")
 			elif poi.categories.has("leisure"):
 				sprite.modulate = Color.GREEN
 
