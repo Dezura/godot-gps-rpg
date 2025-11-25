@@ -1,6 +1,7 @@
 class_name GameManager extends Node2D
 
 signal player_coords_updated(new_coords: GeoCoordinate, old_coords: GeoCoordinate)
+signal player_tile_changed(tile_pos: Vector2i, old_tile_pos: Vector2i)
 
 @export var map_renderer: MapRenderer
 @export var enemy_manager: EnemyManager
@@ -88,7 +89,7 @@ func _on_cooridnates_fetched(location_dictionary: Dictionary) -> void:
 	player_coords_updated.emit(player_coords, old_coords)
 	
 	if old_coords.get_tile_position() != player_coords.get_tile_position():
-		map_renderer.update_3x3_tile_render(player_coords.get_tile_position())
+		player_tile_changed.emit(player_coords.get_tile_position(), old_coords.get_tile_position())
 
 
 func _on_loading_task_finished() -> void:

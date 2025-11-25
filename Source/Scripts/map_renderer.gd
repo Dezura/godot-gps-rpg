@@ -9,6 +9,7 @@ const MVT = preload("res://addons/geo-tile-loader/vector_tile_loader.gd")
 @export var texture_test: Texture
 
 func _ready() -> void:
+	game.player_tile_changed.connect(_on_player_tile_changed)
 	server_api.tile_received.connect(_on_tile_received)
 	server_api.tile_failed.connect(_on_tile_failed)
 	server_api.city_poi_received.connect(_on_city_poi_received)
@@ -39,6 +40,10 @@ func queue_render_pois(city: String) -> void:
 
 func is_tile_rendered(tile_pos: Vector2i) -> bool:
 	return _rendered_map_tiles.has(tile_pos)
+
+
+func _on_player_tile_changed(tile_pos: Vector2i, old_tile_pos: Vector2i) -> void:
+	update_3x3_tile_render(game.player_coords.get_tile_position())
 
 
 func _on_tile_received(tile_pos: Vector2i, tile: MvtTile) -> void:
