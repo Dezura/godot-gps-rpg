@@ -3,7 +3,9 @@ extends Node
 var WEBSOCKET_URL: String
 var _client = WebSocketPeer.new()
 var _opened = false
-var _userID = "Player" + OS.get_unique_id()
+const ADJECTIVES = ["Ancient", "Cobalt", "Cosmic", "Crimson", "Digital", "Electric", "Frost", "Gilded", "Hollow", "Infinite", "Iron", "Lunar", "Neon", "Noble", "Prime", "Rapid", "Silent", "Solar", "Velvet", "Wild"]
+const NOUNS = ["Anchor", "Badge", "Canyon", "Echo", "Falcon", "Grove", "Haven", "Hunter", "Nomad", "Orbit", "Pixel", "Rider", "Shadow", "Signal", "Spark", "Storm", "Tiger", "Vector", "Viper", "Zenith"]
+var _userID: String
 var _user_color: String
 
 signal message_received(message: String)
@@ -21,6 +23,11 @@ func _ready():
 	var b = rng.randf_range(0.5, 1.0)
 	_user_color = Color(r, g, b).to_html(false)
 	
+	var random_adj = ADJECTIVES[rng.randi_range(0, ADJECTIVES.size() - 1)]
+	var random_noun = NOUNS[rng.randi_range(0, NOUNS.size() - 1)]
+	_userID = random_adj + " " + random_noun
+
+
 func _process(_delta: float) -> void:
 	_client.poll()
 	
