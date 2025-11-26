@@ -76,11 +76,13 @@ func _on_pvp_lobby_updated(data) -> void:
 		timer.start()
 		await timer.timeout
 		hide()
-		if data.winner_id == websocket._user_id:
-			var calculated_xp = randi_range(40 + (lobby_data[enemy_i].level -1) * 15 - 5, 40 + (lobby_data[enemy_i].level -1) * 15 + 5)
-			player_victory.emit(calculated_xp)
-		else:
-			player_died.emit()
+		for i in range(lobby_data.size()):
+			if lobby_data[i].hp <= 0:
+				if lobby_data[i].id == websocket._user_id:
+					player_died.emit()
+				else:
+					var calculated_xp = randi_range(40 + (lobby_data[enemy_i].level -1) * 15 - 5, 40 + (lobby_data[enemy_i].level -1) * 15 + 5)
+					player_victory.emit(calculated_xp)
 
 
 func sync_local_stats_to_data() -> void:
@@ -102,19 +104,11 @@ func sync_local_stats_to_data() -> void:
 
 func _end_turn() -> void:
 	var payload
-	if lobby_data[player_i].hp <= 0:
+	if lobby_data[player_i].hp <= 0 or lobby_data[enemy_i].hp <= 0:
 		payload = {
 			"type": "pvp_lobby_request",
 			"update": "end_fight",
 			"lobby": lobby_data,
-			"winner": lobby_data[enemy_i].id
-		}
-	elif lobby_data[enemy_i].hp <= 0:
-		payload = {
-			"type": "pvp_lobby_request",
-			"update": "end_fight",
-			"lobby": lobby_data,
-			"winner": lobby_data[player_i].id
 		}
 	else:
 		payload = {
@@ -127,9 +121,13 @@ func _end_turn() -> void:
 
 func _allow_turn() -> void:
 	if lobby_data[player_i].stunned:
+		timer.start()
+		await timer.timeout
+		
 		if randf() < 0.6:
 			lobby_data[player_i].stunned = false
 		_end_turn()
+		return
 	
 	if _player_block:
 		$CommandUI/AttackButton.text = "Strong Attack"

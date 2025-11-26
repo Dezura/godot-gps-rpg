@@ -6,24 +6,25 @@ func _on_pvp_lobby_updated(data) -> void:
 			hide()
 			return
 	
-	for player in data.lobby:
-		if player.id == Util.game.websocket._user_id:
-			show()
-			
-			if data.size() == 1:
-				$TopLabel.text = "Waiting for player..."
-				$AttackButton.disabled = true
-				$EnemySprite.hide()
-				$EnemyName.hide()
-				$EnemyLevel.hide()
-		else:
-			$TopLabel.text = "FOUND PLAYER!"
-			$EnemyName.text = player.name
-			$EnemyLevel.text = "Level: %s" % int(player.level)
-			$AttackButton.disabled = false
-			$EnemySprite.show()
-			$EnemyName.show()
-			$EnemyLevel.show()
+	if data.update_type == "join" or data.update_type == "leave" or data.update_type == "start_fight":
+		for player in data.lobby:
+			if player.id == Util.game.websocket._user_id:
+				show()
+				
+				if data.size() == 1:
+					$TopLabel.text = "Waiting for player..."
+					$AttackButton.disabled = true
+					$EnemySprite.hide()
+					$EnemyName.hide()
+					$EnemyLevel.hide()
+			else:
+				$TopLabel.text = "FOUND PLAYER!"
+				$EnemyName.text = player.name
+				$EnemyLevel.text = "Level: %s" % int(player.level)
+				$AttackButton.disabled = false
+				$EnemySprite.show()
+				$EnemyName.show()
+				$EnemyLevel.show()
 
 func is_in_lobby(p_id, p_data) -> bool:
 	for player in p_data.lobby:
