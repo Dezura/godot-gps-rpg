@@ -5,13 +5,15 @@ var _client = WebSocketPeer.new()
 var _opened = false
 const ADJECTIVES = ["Ancient", "Cobalt", "Cosmic", "Crimson", "Digital", "Electric", "Frost", "Gilded", "Hollow", "Infinite", "Iron", "Lunar", "Neon", "Noble", "Prime", "Rapid", "Silent", "Solar", "Velvet", "Wild"]
 const NOUNS = ["Anchor", "Badge", "Canyon", "Echo", "Falcon", "Grove", "Haven", "Hunter", "Nomad", "Orbit", "Pixel", "Rider", "Shadow", "Signal", "Spark", "Storm", "Tiger", "Vector", "Viper", "Zenith"]
-var _userID: String
+var _user_id := OS.get_unique_id()
+var _username: String
 var _user_color: String
 
 signal message_received(message: String)
+signal pvp_requested(data)
 
 func _ready():
-	WEBSOCKET_URL = Util.server_conf.get_value("NETWORK", "WEBSOCKET_PORT")
+	WEBSOCKET_URL = Util.server_conf.get_value("NETWORK", "WEBSOCKET_PORT") + "/?user=%s" % _user_id
 	print("attempting to connect to ", WEBSOCKET_URL)
 	var res = _client.connect_to_url(WEBSOCKET_URL)
 	assert(res == OK, "connect_to_host() failed")
@@ -25,7 +27,7 @@ func _ready():
 	
 	var random_adj = ADJECTIVES[rng.randi_range(0, ADJECTIVES.size() - 1)]
 	var random_noun = NOUNS[rng.randi_range(0, NOUNS.size() - 1)]
-	_userID = random_adj + " " + random_noun
+	_username = random_adj + " " + random_noun
 
 
 func _process(_delta: float) -> void:
@@ -44,18 +46,33 @@ func _process(_delta: float) -> void:
 			# so while it's greater than 0, print packet converted to a string
 			var msg = _client.get_packet().get_string_from_utf8()
 			print(msg)
-			if msg == "DezuraCaptainNoob":
-				print("function goes here - websocket.gd")
-				# Do Something
-				Util.game.enemy_manager._reset_all_enemies()
-				Util.game.enemy_manager.fetch_enemy_data(Util.game.current_city)
-			elif msg == "TuxModeActivate":
-				print("Tux Mode Activated")
-				# Do Something
-				Util.game.enemy_manager._reset_all_enemies()
-				Util.game.enemy_manager.fetch_enemy_data(Util.game.current_city, true)
+			
+			var parsed = {}
+			var is_json = false
+			# Try parsing JSON
+			if msg.begins_with("{") and msg.ends_with("}"):
+				parsed = JSON.parse_string(msg)
+				if typeof(parsed) != null:
+					is_json = true
+			
+			if is_json:
+				print(parsed.type)
+				print(parsed.from_id)
+				if parsed.type == "pvp_request":
+					pvp_requested.emit(parsed)
 			else:
-				message_received.emit(msg)
+				if msg == "DezuraCaptainNoob":
+					print("function goes here - websocket.gd")
+					# Do Something
+					Util.game.enemy_manager._reset_all_enemies()
+					Util.game.enemy_manager.fetch_enemy_data(Util.game.current_city)
+				elif msg == "TuxModeActivate":
+					print("Tux Mode Activated")
+					# Do Something
+					Util.game.enemy_manager._reset_all_enemies()
+					Util.game.enemy_manager.fetch_enemy_data(Util.game.current_city, true)
+				else:
+					message_received.emit(msg)
 			
 	elif _client.get_ready_state() == WebSocketPeer.STATE_CLOSING:
 		pass
@@ -66,19 +83,26 @@ func _process(_delta: float) -> void:
 			
 func send_message(text: String) -> void:
 	if _opened:
-		if text == "/reset":
+		if text.begins_with("/reset"):
 			Util.game.server_api.request_enemy_reset(Util.game.current_city)
 			_client.send_text(text)
-		elif text == "/tux":
+		elif text.begins_with("/tux"):
 			Util.game.server_api.request_enemy_reset(Util.game.current_city)
 			_client.send_text(text)
+		elif text.begins_with("/pvp"):
+			var payload = {
+				"type": "pvp_request",
+				"level": Util.game.player.level,
+				"name": _username
+			}
+			_client.send_text(JSON.stringify(payload))
 		else:
-			var full_message = "[color=#%s]%s[/color]: %s" % [_user_color, _userID, text]
+			var full_message = "[color=#%s]%s[/color]: %s" % [_user_color, _username, text]
 			_client.send_text(full_message)
 			
 		
 func send_level_up_message(new_level: int) -> void:
 	if _opened:
-		var full_message = "[color=#%s]%s leveled up to %s![/color]" % [_user_color, _userID, new_level]
+		var full_message = "[color=#%s]%s leveled up to %s![/color]" % [_user_color, _username, new_level]
 		_client.send_text(full_message)
 	

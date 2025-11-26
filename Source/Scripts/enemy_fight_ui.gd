@@ -40,7 +40,7 @@ func start_ui(from_enemy: Enemy) -> void:
 	$EnemyBox/EnemyLevel.text = "LVL: %s" % _enemy_lvl
 	
 	$PlayerContainer/Level.text = "LVL: %s" % player.level
-	$PlayerContainer/PlayerName.text = game.websocket._userID
+	$PlayerContainer/PlayerName.text = game.websocket._username
 	_update_hp_bars()
 	
 	

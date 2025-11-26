@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://i6eym788y6iw"]
+[gd_scene load_steps=20 format=4 uid="uid://i6eym788y6iw"]
 
 [ext_resource type="Theme" uid="uid://co0uqk7ayhahb" path="res://Assets/UI/UI_Theme.tres" id="1_uyms8"]
 [ext_resource type="Script" uid="uid://bkvd7myuqs3rf" path="res://Source/UI/player_hud.gd" id="2_5y5js"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dpo8kqum5r7a8" path="res://Assets/Sprites/gem.aseprite" id="11_xu8c0"]
 [ext_resource type="PackedScene" uid="uid://cgrp3y0yu6ii6" path="res://Source/UI/enemy_fight_ui.tscn" id="13_okuch"]
 [ext_resource type="Script" uid="uid://byqt0sber45tr" path="res://Source/UI/death_screen.gd" id="13_s5su3"]
+[ext_resource type="Script" uid="uid://bh71dsgywbbq5" path="res://Source/UI/pvp_encounter.gd" id="14_5d4r2"]
 [ext_resource type="Script" uid="uid://bxrdx04ygg055" path="res://Source/UI/simple_screen.gd" id="14_a5q11"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6sh0"]
@@ -23,6 +24,10 @@ expand_margin_left = 15.0
 expand_margin_top = 25.0
 expand_margin_right = 15.0
 expand_margin_bottom = 25.0
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_xu8c0"]
+_data = PackedByteArray("AAADAAUAAAABAAAAHgAAAB4AAABuAQAAUklGRmYBAABXRUJQVlA4TFkBAAAvHUAHEB/BKJIkRd29vIdO2L+k+zHaUBPJVvPeI1ZUKIn+JeCFKs6wjSTJyarXHkUGhEP0hCJ9AUGR/6NFkbalABBJAJEkGUGUAFhUopAgBcgJRYJkztP329EpyVwU7+K/6+Ve1vU7reMu3nwDsM8teWnH/jxPXTkAlm3baRvfl4JeIWR6cquX6Frzn6Qh/B/R/wkozzDNXiulk7v7OV0nnd1zztnPaSIiss7zvP+HEIoAvazznN1zVlXtwhtG9LImndxVSXIcVY/giF6WSkl/yuVRQY5YVYIaabO8klWLP9fhrUhWVUXqNXZqNxB5VzO7VmgAoJ7X30tCqyQJzurXzLcsKS1Go1pNqxU2xRobYoy2UGtdA79rOMQ4UOu6rhVAXUOkrDAbBpoaadjIJwApKw5qZqZb2HYLKTJdUcIeALZbAJPLRUSwxbtcqZQiAEQ+cLVpEZErvVwA")
+size_override = Vector2(30, 30)
 
 [node name="PlayerHUD" type="Control"]
 layout_mode = 3
@@ -490,6 +495,179 @@ grow_vertical = 0
 size_flags_vertical = 3
 text = "Nevermind."
 
+[node name="PVPEncounter" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -269.0
+offset_right = 143.0
+offset_bottom = 269.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_behavior_recursive = 1
+texture = ExtResource("10_gi274")
+region_rect = Rect2(168, 96, 87, 75)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+script = ExtResource("14_5d4r2")
+
+[node name="ColorRect" type="ColorRect" parent="PVPEncounter"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2309.0
+offset_top = -1077.0
+offset_right = 2297.0
+offset_bottom = 1061.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5254902)
+
+[node name="TopLabel" type="Label" parent="PVPEncounter"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -110.0
+offset_top = 12.0
+offset_right = 110.0
+offset_bottom = 68.0
+grow_horizontal = 2
+size_flags_vertical = 6
+text = "Waiting for player..."
+horizontal_alignment = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PVPEncounter"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -109.99939
+offset_top = 50.0
+offset_right = 110.0
+offset_bottom = 243.0
+grow_horizontal = 2
+texture = ExtResource("10_gi274")
+region_rect = Rect2(270, 96, 87, 75)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="EnemySprite" type="TextureRect" parent="PVPEncounter"]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 122.0
+offset_right = 20.0
+offset_bottom = 162.0
+grow_horizontal = 2
+scale = Vector2(4, 4)
+pivot_offset = Vector2(20, 20)
+texture = SubResource("PortableCompressedTexture2D_xu8c0")
+flip_h = true
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://Assets/Sprites/Player.aseprite",
+"source_uid": 7045187300494635615
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f5f079754fe3da3fffd1b2bff0f78f85"
+
+[node name="EnemyName" type="Label" parent="PVPEncounter"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_top = 243.0
+offset_right = 112.0
+offset_bottom = 278.0
+grow_horizontal = 2
+size_flags_vertical = 6
+text = "Gilded Shadow"
+horizontal_alignment = 1
+
+[node name="EnemyLevel" type="Label" parent="PVPEncounter"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_top = 277.0
+offset_right = 112.0
+offset_bottom = 333.0
+grow_horizontal = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.24578309, 0.5303088, 0.2432698, 1)
+theme_override_font_sizes/font_size = 23
+text = "Level: 12"
+horizontal_alignment = 1
+
+[node name="AttackButton" type="Button" parent="PVPEncounter"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -114.0
+offset_top = -219.0
+offset_right = 120.0
+offset_bottom = -111.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 41
+disabled = true
+text = "BRAWL"
+
+[node name="CloseButton" type="Button" parent="PVPEncounter"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -87.0
+offset_right = 96.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+text = "Nevermind."
+
 [node name="DeathScreen" type="NinePatchRect" parent="."]
 visible = false
 layout_mode = 1
@@ -733,5 +911,6 @@ layout_mode = 1
 [connection signal="pressed" from="PoiMenu/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="EnemyEncounter/AttackButton" to="EnemyEncounter" method="_on_attack_button_pressed"]
 [connection signal="pressed" from="EnemyEncounter/CloseButton" to="EnemyEncounter" method="_on_close_button_pressed"]
+[connection signal="pressed" from="PVPEncounter/CloseButton" to="PVPEncounter" method="_on_close_button_pressed"]
 [connection signal="pressed" from="DeathScreen/CloseButton" to="DeathScreen" method="_on_close_button"]
 [connection signal="pressed" from="VictoryScreen/CloseButton" to="VictoryScreen" method="_on_close_button"]
