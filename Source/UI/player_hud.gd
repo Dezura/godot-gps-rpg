@@ -58,6 +58,8 @@ func _process(_delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if chat_input.has_focus():
 		return
+	if $EnemyEncounter.visible:
+		return
 	
 	if event is InputEventKey and event.keycode == KEY_P and event.pressed:
 		$PauseMenu.visible = not $PauseMenu.visible

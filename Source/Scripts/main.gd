@@ -76,6 +76,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if $CanvasLayer/PlayerHUD/PauseMenu.visible:
 		return
+	if $CanvasLayer/PlayerHUD/EnemyEncounter.visible:
+		return
 	
 	if Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") != Vector2.ZERO:
 		var movement: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") * 0.003 * _delta
