@@ -10,7 +10,7 @@ var _username: String
 var _user_color: String
 
 signal message_received(message: String)
-signal pvp_requested(data)
+signal pvp_lobby_updated(data)
 
 func _ready():
 	WEBSOCKET_URL = Util.server_conf.get_value("NETWORK", "WEBSOCKET_PORT") + "/?user=%s" % _user_id
@@ -56,10 +56,9 @@ func _process(_delta: float) -> void:
 					is_json = true
 			
 			if is_json:
-				print(parsed.type)
-				print(parsed.from_id)
-				if parsed.type == "pvp_request":
-					pvp_requested.emit(parsed)
+				if parsed.has("type") and parsed.type == "pvp_lobby_update":
+					print(parsed.lobby)
+					pvp_lobby_updated.emit(parsed.lobby)
 			else:
 				if msg == "DezuraCaptainNoob":
 					print("function goes here - websocket.gd")
@@ -91,7 +90,8 @@ func send_message(text: String) -> void:
 			_client.send_text(text)
 		elif text.begins_with("/pvp"):
 			var payload = {
-				"type": "pvp_request",
+				"type": "pvp_lobby_request",
+				"update": "join",
 				"level": Util.game.player.level,
 				"name": _username
 			}

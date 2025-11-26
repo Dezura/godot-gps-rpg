@@ -74,7 +74,7 @@ func _ready() -> void:
 	
 	$WebSocket.message_received.connect($CanvasLayer/PlayerHUD.add_chat_message)
 	$CanvasLayer/PlayerHUD.chat_message_sent.connect($WebSocket.send_message)
-	websocket.pvp_requested.connect(Util.hud.pvp_encounter_menu._on_pvp_requested)
+	websocket.pvp_lobby_updated.connect(Util.hud.pvp_encounter_menu._on_pvp_lobby_updated)
 	
 	player.update_level.connect($WebSocket.send_level_up_message)
 
