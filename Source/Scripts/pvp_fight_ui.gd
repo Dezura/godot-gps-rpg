@@ -6,6 +6,7 @@ signal player_died
 
 var game: GameManager
 var player: Player
+var websocket: WebSocketThingy
 var _current_enemy: Enemy
 
 var _enemy_hp: int
@@ -22,24 +23,39 @@ var fight_active := false
 
 
 var current_turn: int
+var our_turn_num: int
+var enemy_i: int
 
 func _ready() -> void:
 	timer = $Timer
 
 
 func _on_pvp_lobby_updated(data) -> void:
-	if data.updateType == "start_fight":
-		if is_in_lobby(Util.game.websocket._user_id, data):
-			show()
-			current_turn = data.current_turn
-			print("wwwww")
-			print(current_turn)
+	if data.update_type == "start_fight":
+		for i in range(data.lobby.size()):
+			if data.lobby[i].id == Util.game.websocket._user_id:
+				show()
+				current_turn = data.current_turn
+				our_turn_num = i
+				fight_active = true
+			else:
+				enemy_i = i
+			
+		if fight_active:
+			$PlayerContainer/PlayerName.text = websocket._username
+			$PlayerContainer/TextHP.text = "%s/%s HP" % [player.hp, player.max_hp]
+			$PlayerContainer/Level.text = "LVL: %s" % player.level
+			
+			$EnemyBox/EnemyName .text = data.lobby[enemy_i].name
+			$EnemyBox/TextHP .text = "%s/%s HP" % [data.lobby[enemy_i].hp, data.lobby[enemy_i].max_hp]
+			$EnemyBox/EnemyLevel .text = "LVL: %s" % data.lobby[enemy_i].level
+			
+			if data.current_turn != our_turn_num:
+				$TurnBlockedUI.show()
 
-func is_in_lobby(p_id, p_data) -> bool:
-	for lobby_player in p_data:
-		if lobby_player.id == p_id:
-			return true
-	return false
+
+func update_stats(data) -> void:
+	pass
 
 # God help me this is some of the worst damn code ive written in ages, but its rushed enough to work
 func start_ui(from_enemy: Enemy) -> void:
@@ -60,13 +76,6 @@ func start_ui(from_enemy: Enemy) -> void:
 	$PlayerContainer/Level.text = "LVL: %s" % player.level
 	$PlayerContainer/PlayerName.text = game.websocket._username
 	_update_hp_bars()
-	
-	
-	show()
-	timer.start()
-	await timer.timeout
-	_allow_turn()
-
 
 func _on_enemy_turn() -> void:
 	timer.start()

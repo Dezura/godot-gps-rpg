@@ -93,7 +93,11 @@ func send_message(text: String) -> void:
 				"type": "pvp_lobby_request",
 				"update": "join",
 				"level": Util.game.player.level,
-				"name": _username
+				"name": _username,
+				"hp": Util.game.player.hp,
+				"max_hp": Util.game.player.max_hp,
+				"damage_min": Util.game.player.damage_range.x,
+				"damage_max": Util.game.player.damage_range.y
 			}
 			_client.send_text(JSON.stringify(payload))
 		else:

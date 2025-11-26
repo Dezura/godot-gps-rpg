@@ -35,7 +35,10 @@ func _ready() -> void:
 	Util.hud = $CanvasLayer/PlayerHUD
 	enemy_manager.enemies_unloaded.connect(Util.hud.enemy_encounter_menu.force_close)
 	Util.hud.enemy_fight_ui.game = self
+	Util.hud.pvp_fight_ui.game = self
+	Util.hud.pvp_fight_ui.websocket = websocket
 	Util.hud.enemy_fight_ui.player = player
+	Util.hud.pvp_fight_ui.player = player
 	
 	android_gps.cooridnates_fetched.connect(_on_cooridnates_fetched)
 	
@@ -75,6 +78,7 @@ func _ready() -> void:
 	$WebSocket.message_received.connect($CanvasLayer/PlayerHUD.add_chat_message)
 	$CanvasLayer/PlayerHUD.chat_message_sent.connect($WebSocket.send_message)
 	websocket.pvp_lobby_updated.connect(Util.hud.pvp_encounter_menu._on_pvp_lobby_updated)
+	websocket.pvp_lobby_updated.connect(Util.hud.pvp_fight_ui._on_pvp_lobby_updated)
 	
 	player.update_level.connect($WebSocket.send_level_up_message)
 

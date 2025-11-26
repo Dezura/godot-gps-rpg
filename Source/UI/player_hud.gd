@@ -15,6 +15,7 @@ var chat_panel: PanelContainer
 
 @onready var enemy_encounter_menu: EnemyEncounterMenu = $EnemyEncounter
 @onready var pvp_encounter_menu: PVPEncounter = $PVPEncounter
+@onready var pvp_fight_ui: PVPFightUI = $PVPFightUI
 @onready var enemy_fight_ui: EnemyFightUI = $EnemyFightUI
 
 

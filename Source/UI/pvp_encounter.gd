@@ -1,9 +1,10 @@
 class_name PVPEncounter extends NinePatchRect
 
 func _on_pvp_lobby_updated(data) -> void:
-	if data.updateType == "start_fight":
+	if data.update_type == "start_fight":
 		if is_in_lobby(Util.game.websocket._user_id, data):
 			hide()
+			return
 	
 	for player in data.lobby:
 		if player.id == Util.game.websocket._user_id:
@@ -25,7 +26,7 @@ func _on_pvp_lobby_updated(data) -> void:
 			$EnemyLevel.show()
 
 func is_in_lobby(p_id, p_data) -> bool:
-	for player in p_data:
+	for player in p_data.lobby:
 		if player.id == p_id:
 			return true
 	return false
