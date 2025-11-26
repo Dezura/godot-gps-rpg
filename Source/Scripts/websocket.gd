@@ -70,6 +70,9 @@ func _process(_delta: float) -> void:
 					# Do Something
 					Util.game.enemy_manager._reset_all_enemies()
 					Util.game.enemy_manager.fetch_enemy_data(Util.game.current_city, true)
+				elif msg == "ClearedPVPLobby":
+					print("Cleared PVP Lobby")
+					Util.hud.pvp_encounter_menu.hide()
 				else:
 					message_received.emit(msg)
 			
@@ -87,6 +90,8 @@ func send_message(text: String) -> void:
 			_client.send_text(text)
 		elif text.begins_with("/tux"):
 			Util.game.server_api.request_enemy_reset(Util.game.current_city)
+			_client.send_text(text)
+		elif text.begins_with("/debug-clear-lobby"):
 			_client.send_text(text)
 		elif text.begins_with("/pvp"):
 			var payload = {

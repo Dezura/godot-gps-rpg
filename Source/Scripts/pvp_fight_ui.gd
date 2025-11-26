@@ -52,10 +52,10 @@ func _on_pvp_lobby_updated(data) -> void:
 			
 			$EnemyBox/StunStatus.hide()
 			$EnemyBox/EnemyName.text = lobby_data[enemy_i].name
-			$EnemyBox/TextHP.text = "%s/%s HP" % [lobby_data[enemy_i].hp, lobby_data[enemy_i].max_hp]
-			$EnemyBox/HealthBar.max_value = lobby_data[enemy_i].max_hp
-			$EnemyBox/HealthBar.value = lobby_data[enemy_i].hp
-			$EnemyBox/EnemyLevel.text = "LVL: %s" % lobby_data[enemy_i].level
+			$EnemyBox/TextHP.text = "%s/%s HP" % [int(lobby_data[enemy_i].hp), int(lobby_data[enemy_i].max_hp)]
+			$EnemyBox/HealthBar.max_value = int(lobby_data[enemy_i].max_hp)
+			$EnemyBox/HealthBar.value = int(lobby_data[enemy_i].hp)
+			$EnemyBox/EnemyLevel.text = "LVL: %s" % int(lobby_data[enemy_i].level)
 			
 			if data.current_turn == player_i:
 				_allow_turn()
@@ -90,8 +90,8 @@ func sync_local_stats_to_data() -> void:
 	$PlayerContainer/HealthBar.value = player.hp
 	$PlayerContainer/TextHP.text = "%s/%s HP" % [player.hp, player.max_hp]
 	
-	$EnemyBox/HealthBar.value = lobby_data[enemy_i].hp
-	$EnemyBox/TextHP.text = "%s/%s HP" % [lobby_data[enemy_i].hp, lobby_data[enemy_i].max_hp]
+	$EnemyBox/HealthBar.value = int(lobby_data[enemy_i].hp)
+	$EnemyBox/TextHP.text = "%s/%s HP" % [int(lobby_data[enemy_i].hp), int(lobby_data[enemy_i].max_hp)]
 	
 	if lobby_data[player_i].stunned:
 		$PlayerContainer/StunStatus.show()

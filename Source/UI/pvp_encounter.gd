@@ -11,7 +11,7 @@ func _on_pvp_lobby_updated(data) -> void:
 			if player.id == Util.game.websocket._user_id:
 				show()
 				
-				if data.size() == 1:
+				if data.lobby.size() == 1:
 					$TopLabel.text = "Waiting for player..."
 					$AttackButton.disabled = true
 					$EnemySprite.hide()
