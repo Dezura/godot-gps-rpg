@@ -169,6 +169,22 @@ offset_bottom = 101.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="StunStatus" type="Label" parent="PlayerContainer"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 118.0
+offset_top = -84.0
+offset_right = 194.0
+offset_bottom = -52.0
+grow_vertical = 0
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.79, 0.6056667, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "STUN"
+horizontal_alignment = 1
+
 [node name="CommandUI" type="NinePatchRect" parent="."]
 layout_mode = 1
 anchors_preset = 12
@@ -247,7 +263,6 @@ disabled = true
 text = "no escape."
 
 [node name="TurnBlockedUI" type="NinePatchRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0

@@ -43,6 +43,11 @@ func modify_health(amount: int) -> void:
 	hp = clamp(hp, 0, max_hp)
 	update_hp.emit(hp, max_hp)
 
+func set_health(value: int) -> void:
+	hp = value
+	hp = clamp(hp, 0, max_hp)
+	update_hp.emit(hp, max_hp)
+
 func full_heal() -> void:
 	hp = max_hp
 	update_hp.emit(hp, max_hp)

@@ -23,8 +23,9 @@ var fight_active := false
 
 
 var current_turn: int
-var our_turn_num: int
+var player_i: int
 var enemy_i: int
+var lobby_data
 
 func _ready() -> void:
 	timer = $Timer
@@ -34,48 +35,65 @@ func _on_pvp_lobby_updated(data) -> void:
 	if data.update_type == "start_fight":
 		for i in range(data.lobby.size()):
 			if data.lobby[i].id == Util.game.websocket._user_id:
+				lobby_data = data.lobby[i]
 				show()
 				current_turn = data.current_turn
-				our_turn_num = i
+				player_i = i
 				fight_active = true
 			else:
 				enemy_i = i
 			
 		if fight_active:
+			$PlayerContainer/StunStatus.hide()
 			$PlayerContainer/PlayerName.text = websocket._username
+			$PlayerContainer/HealthBar.max_value = player.max_hp
+			$PlayerContainer/HealthBar.value = player.hp
 			$PlayerContainer/TextHP.text = "%s/%s HP" % [player.hp, player.max_hp]
 			$PlayerContainer/Level.text = "LVL: %s" % player.level
 			
-			$EnemyBox/EnemyName .text = data.lobby[enemy_i].name
-			$EnemyBox/TextHP .text = "%s/%s HP" % [data.lobby[enemy_i].hp, data.lobby[enemy_i].max_hp]
-			$EnemyBox/EnemyLevel .text = "LVL: %s" % data.lobby[enemy_i].level
+			$EnemyBox/StunStatus.hide()
+			$EnemyBox/EnemyName.text = lobby_data[enemy_i].name
+			$EnemyBox/TextHP.text = "%s/%s HP" % [lobby_data[enemy_i].hp, lobby_data[enemy_i].max_hp]
+			$EnemyBox/HealthBar.max_value = lobby_data[enemy_i].max_hp
+			$EnemyBox/HealthBar.value = lobby_data[enemy_i].hp
+			$EnemyBox/EnemyLevel.text = "LVL: %s" % lobby_data[enemy_i].level
 			
-			if data.current_turn != our_turn_num:
+			if data.current_turn == player_i:
+				_allow_turn()
+			else:
 				$TurnBlockedUI.show()
+	if data.update_type == "next_turn" and fight_active:
+		sync_local_stats_to_data()
+		if data.current_turn == player_i:
+			_allow_turn()
+		else:
+			$TurnBlockedUI.show()
 
 
-func update_stats(data) -> void:
-	pass
+func sync_local_stats_to_data() -> void:
+	player.set_health(lobby_data[player_i].hp)
+	$PlayerContainer/HealthBar.value = player.hp
+	$PlayerContainer/TextHP.text = "%s/%s HP" % [player.hp, player.max_hp]
+	
+	$EnemyBox/HealthBar.value = lobby_data[enemy_i].hp
+	$EnemyBox/TextHP.text = "%s/%s HP" % [lobby_data[enemy_i].hp, lobby_data[enemy_i].max_hp]
+	
+	if lobby_data[player_i].stunned:
+		$PlayerContainer/StunStatus.show()
+	else:
+		$PlayerContainer/StunStatus.hide()
+	if lobby_data[enemy_i].stunned:
+		$EnemyBox/StunStatus.show()
+	else:
+		$EnemyBox/StunStatus.hide()
 
-# God help me this is some of the worst damn code ive written in ages, but its rushed enough to work
-func start_ui(from_enemy: Enemy) -> void:
-	fight_active = true
-	
-	_current_enemy = from_enemy
-	_enemy_hp =_current_enemy.max_hp
-	_enemy_lvl =_current_enemy.level
-	_enemy_max_hp = _current_enemy.max_hp
-	_enemy_damage_range = _current_enemy.damage_range
-	_enemy_stun = false
-	_player_block = false
-	
-	$EnemySprite.texture = Util.enemy_textures[_current_enemy.type]
-	$EnemyBox/EnemyName.text = _current_enemy.enemy_name
-	$EnemyBox/EnemyLevel.text = "LVL: %s" % _enemy_lvl
-	
-	$PlayerContainer/Level.text = "LVL: %s" % player.level
-	$PlayerContainer/PlayerName.text = game.websocket._username
-	_update_hp_bars()
+func _end_turn() -> void:
+	var payload = {
+		"type": "pvp_lobby_request",
+		"update": "next_turn",
+		"lobby": lobby_data
+	}
+	Util.game.websocket._client.send_text(JSON.stringify(payload))
 
 func _on_enemy_turn() -> void:
 	timer.start()
@@ -94,9 +112,6 @@ func _on_enemy_turn() -> void:
 	_allow_turn()
 
 func _allow_turn() -> void:
-	if not fight_active:
-		return
-	
 	if _player_block:
 		$CommandUI/AttackButton.text = "Strong Attack"
 		_player_block = false
@@ -104,13 +119,6 @@ func _allow_turn() -> void:
 		$CommandUI/AttackButton.text = "Attack"
 	$TurnBlockedUI.hide()
 
-func _end_turn() -> void:
-	_update_hp_bars()
-	if not fight_active:
-		return
-	
-	$TurnBlockedUI.show()
-	_on_enemy_turn()
 
 func _update_hp_bars() -> void:
 	if not fight_active:
@@ -124,11 +132,6 @@ func _update_hp_bars() -> void:
 	$PlayerContainer/TextHP.text = "%s/%s HP" % [player.hp, player.max_hp]
 	$PlayerContainer/HealthBar.max_value = player.max_hp
 	$PlayerContainer/HealthBar.value = player.hp
-	
-	if _enemy_stun:
-		$EnemyBox/StunStatus.show()
-	else:
-		$EnemyBox/StunStatus.hide()
 	
 	if player.hp == 0:
 		$TurnBlockedUI.show()
@@ -153,27 +156,34 @@ func _update_hp_bars() -> void:
 		return
 
 
-func _on_flee_button_pressed() -> void:
-	fight_active = false
-	player_fled.emit()
-	hide()
-
-
 func _on_attack_button_pressed() -> void:
+	if lobby_data[player_i].stunned:
+		_end_turn()
+		return
+	var damage: int
 	if $CommandUI/AttackButton.text == "Strong Attack":
-		_enemy_hp -= int(randi_range(player.damage_range.x, player.damage_range.y)*1.75)
+		damage = int(randi_range(player.damage_range.x, player.damage_range.y)*1.75)
 	else:
-		_enemy_hp -= randi_range(player.damage_range.x, player.damage_range.y)
+		damage = randi_range(player.damage_range.x, player.damage_range.y)
+	if lobby_data[enemy_i].blocking:
+		damage /= 3
+	lobby_data[enemy_i].hp = max(0, lobby_data[enemy_i].hp - int(damage))
 	_end_turn()
 
 
 func _on_bash_button_pressed() -> void:
-	_enemy_hp -= int(randi_range(player.damage_range.x, player.damage_range.y)/2.0)
+	if lobby_data[player_i].stunned:
+		_end_turn()
+		return
+	var damage = int(randi_range(player.damage_range.x, player.damage_range.y)/2.0)
+	if lobby_data[enemy_i].blocking:
+		damage /= 3
+	lobby_data[enemy_i].hp = max(0, lobby_data[enemy_i].hp - int(damage))
 	if randf() < 0.6:
-		_enemy_stun = true
+		lobby_data[enemy_i].stunned = true
 	_end_turn()
 
 
 func _on_block_button_pressed() -> void:
-	_player_block = true
+	lobby_data[player_i].blocked = true
 	_end_turn()

@@ -36,8 +36,6 @@ func _on_close_button_pressed() -> void:
 	var payload = {
 		"type": "pvp_lobby_request",
 		"update": "leave",
-		"level": Util.game.player.level,
-		"name": Util.game.websocket._username
 	}
 	Util.game.websocket._client.send_text(JSON.stringify(payload))
 
