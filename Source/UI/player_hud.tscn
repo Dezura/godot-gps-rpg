@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dxmfftr32spu0" path="res://Assets/UI/UI.png" id="10_gi274"]
 [ext_resource type="Texture2D" uid="uid://cbn07b34tbqdx" path="res://Assets/Sprites/wandering_eye.aseprite" id="11_gi274"]
 [ext_resource type="Script" uid="uid://8xpbdnmrh213" path="res://Source/UI/enemy_encounter_menu.gd" id="11_w6sh0"]
+[ext_resource type="Texture2D" uid="uid://dpo8kqum5r7a8" path="res://Assets/Sprites/gem.aseprite" id="11_xu8c0"]
 [ext_resource type="PackedScene" uid="uid://cgrp3y0yu6ii6" path="res://Source/UI/enemy_fight_ui.tscn" id="13_okuch"]
 [ext_resource type="Script" uid="uid://byqt0sber45tr" path="res://Source/UI/death_screen.gd" id="13_s5su3"]
 [ext_resource type="Script" uid="uid://bxrdx04ygg055" path="res://Source/UI/simple_screen.gd" id="14_a5q11"]
@@ -22,17 +23,6 @@ expand_margin_left = 15.0
 expand_margin_top = 25.0
 expand_margin_right = 15.0
 expand_margin_bottom = 25.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gi274"]
-bg_color = Color(0.22352941, 0.22352941, 0.22352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-expand_margin_left = 7.0
-expand_margin_top = 7.0
-expand_margin_right = 7.0
-expand_margin_bottom = 7.0
 
 [node name="PlayerHUD" type="Control"]
 layout_mode = 3
@@ -52,7 +42,8 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -128.0
-offset_bottom = 56.0
+offset_top = 89.0
+offset_bottom = 145.0
 grow_horizontal = 0
 text = "FPS: "
 horizontal_alignment = 2
@@ -112,6 +103,18 @@ offset_bottom = 56.0
 grow_horizontal = 2
 text = "Level: 1"
 horizontal_alignment = 1
+
+[node name="XP_Text" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 69.0
+offset_right = 253.0
+offset_bottom = 44.0
+grow_horizontal = 2
+text = "XP: 0/100"
+horizontal_alignment = 2
 
 [node name="PauseButton" type="Button" parent="."]
 layout_mode = 1
@@ -210,7 +213,7 @@ scroll_following = true
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="POI_Menu" type="PanelContainer" parent="."]
+[node name="PoiMenu" type="NinePatchRect" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -218,32 +221,129 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -135.0
-offset_top = -270.0
-offset_right = 135.0
-offset_bottom = 270.0
+offset_left = -227.0
+offset_top = -293.0
+offset_right = 227.0
+offset_bottom = 317.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_gi274")
+focus_behavior_recursive = 1
+texture = ExtResource("10_gi274")
+region_rect = Rect2(168, 96, 87, 75)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="POI_Menu"]
-layout_mode = 2
-theme_override_constants/separation = 10
+[node name="ColorRect" type="ColorRect" parent="PoiMenu"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2728.0
+offset_top = -1036.0
+offset_right = 2716.0
+offset_bottom = 1020.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5254902)
 
-[node name="POI_Name" type="Label" parent="POI_Menu/VBoxContainer"]
-layout_mode = 2
+[node name="POI_Name" type="Label" parent="PoiMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -211.0
+offset_top = 7.0
+offset_right = 211.0
+offset_bottom = 73.0
+grow_horizontal = 2
 size_flags_vertical = 6
-text = "Placeholder name"
+text = "Mcdonalds"
+horizontal_alignment = 1
+autowrap_mode = 3
 
-[node name="PlaceholderButton" type="Button" parent="POI_Menu/VBoxContainer"]
-layout_mode = 2
+[node name="NinePatchRect" type="NinePatchRect" parent="PoiMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -109.99939
+offset_top = 76.0
+offset_right = 110.0
+offset_bottom = 269.0
+grow_horizontal = 2
+texture = ExtResource("10_gi274")
+region_rect = Rect2(270, 96, 87, 75)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="POI_Sprite" type="TextureRect" parent="PoiMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -14.875
+offset_top = 151.0
+offset_right = 14.875
+offset_bottom = 188.68333
+grow_horizontal = 2
+scale = Vector2(4, 4)
+pivot_offset = Vector2(14.875, 18.842)
+texture = ExtResource("11_xu8c0")
+
+[node name="POI_Text" type="Label" parent="PoiMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -155.0
+offset_top = 289.0
+offset_right = 155.0
+offset_bottom = 364.0
+grow_horizontal = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.2777751, 0.6122622, 0.4674539, 1)
+theme_override_font_sizes/font_size = 28
+text = "You should totally touch this"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PlaceholderButton" type="Button" parent="PoiMenu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -229.0
+offset_right = 183.0
+offset_bottom = -109.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 41
 text = "Heal"
 
-[node name="CloseButton" type="Button" parent="POI_Menu/VBoxContainer"]
-layout_mode = 2
+[node name="CloseButton" type="Button" parent="PoiMenu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -90.0
+offset_right = 102.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_vertical = 3
-text = "Close"
+text = "nah."
 
 [node name="EnemyEncounter" type="NinePatchRect" parent="."]
 visible = false
@@ -274,10 +374,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -196.0
-offset_top = -388.0
-offset_right = 184.0
-offset_bottom = 372.0
+offset_left = -2309.0
+offset_top = -1077.0
+offset_right = 2297.0
+offset_bottom = 1061.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.5254902)
@@ -419,10 +519,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -196.0
-offset_top = -388.0
-offset_right = 184.0
-offset_bottom = 372.0
+offset_left = -2559.0
+offset_top = -1083.0
+offset_right = 2547.0
+offset_bottom = 1067.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.5254902)
@@ -538,10 +638,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -196.0
-offset_top = -388.0
-offset_right = 184.0
-offset_bottom = 372.0
+offset_left = -2392.0
+offset_top = -1044.0
+offset_right = 2380.0
+offset_bottom = 1028.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.5254902)
@@ -629,8 +729,8 @@ text = "Awesome!"
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="POI_Menu/VBoxContainer/PlaceholderButton" to="." method="_on_placeholder_button_pressed"]
-[connection signal="pressed" from="POI_Menu/VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="PoiMenu/PlaceholderButton" to="." method="_on_placeholder_button_pressed"]
+[connection signal="pressed" from="PoiMenu/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="EnemyEncounter/AttackButton" to="EnemyEncounter" method="_on_attack_button_pressed"]
 [connection signal="pressed" from="EnemyEncounter/CloseButton" to="EnemyEncounter" method="_on_close_button_pressed"]
 [connection signal="pressed" from="DeathScreen/CloseButton" to="DeathScreen" method="_on_close_button"]

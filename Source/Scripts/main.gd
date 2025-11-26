@@ -70,6 +70,7 @@ func _ready() -> void:
 	map_renderer.queue_render_pois(current_city)
 	_tasks_loading += 1
 	enemy_manager.fetch_enemy_data(current_city)
+	$CanvasLayer/LoadingScreen/ProgressBar.max_value = _tasks_loading
 	
 	$WebSocket.message_received.connect($CanvasLayer/PlayerHUD.add_chat_message)
 	$CanvasLayer/PlayerHUD.chat_message_sent.connect($WebSocket.send_message)
@@ -104,6 +105,7 @@ func _on_cooridnates_fetched(location_dictionary: Dictionary) -> void:
 
 func _on_loading_task_finished() -> void:
 	_tasks_loading -= 1
+	$CanvasLayer/LoadingScreen/ProgressBar.value += 1
 	if _tasks_loading <= 0:
 		if loadingScreen:
 			loadingScreen.visible = false

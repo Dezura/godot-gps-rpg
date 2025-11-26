@@ -27,7 +27,7 @@ func init_enemy_data(p_type: int, p_id: String) -> void:
 		EnemyType.SLIME:
 			enemy_name = "Slime"
 			level = randi_range(2, 4)
-			damage_range = Vector2i(1, 3)
+			damage_range = Vector2i(2, 4)
 		EnemyType.SKELETON:
 			enemy_name = "Skeleton"
 			level = randi_range(5, 7)

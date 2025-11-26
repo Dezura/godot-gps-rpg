@@ -21,10 +21,10 @@ signal chat_message_sent(text: String)
 
 
 func _ready() -> void:
-	poi_menu = $POI_Menu
-	poi_name_label = $POI_Menu/VBoxContainer/POI_Name 
+	poi_menu = $PoiMenu
+	poi_name_label = $PoiMenu/POI_Name 
 	#poi_details_label = $POI_Menu/VBoxContainer/POI_info 
-	button = $POI_Menu/VBoxContainer/PlaceholderButton
+	button = $PoiMenu/PlaceholderButton
 
 	level_label = $Level
 	hp_label = $"Health Text"
@@ -97,6 +97,7 @@ func _on_level_changed(new_level: int) -> void:
 func _on_xp_changed(new_xp: int, max_xp: int) -> void:
 	xp_bar.max_value = max_xp
 	xp_bar.value = new_xp
+	$XP_Text.text = "XP: %s/%s" % [new_xp, max_xp]
 
 func _on_hp_changed(new_hp: int, max_hp: int) -> void:
 	hp_label.text = "%d/%d" % [new_hp, max_hp]
@@ -110,6 +111,12 @@ func show_poi_info(data: PointOfInterestData) -> void:
 	
 	poi_menu.visible = true
 	poi_name_label.text = data.name
+	if data.categories.has("catering"):
+		$PoiMenu/POI_Sprite.modulate = Color("db4f4bff")
+	elif data.categories.has("commercial"):
+		$PoiMenu/POI_Sprite.modulate = Color("87ffffff")
+	elif data.categories.has("leisure"):
+		$PoiMenu/POI_Sprite.modulate = Color.GREEN
 	
 	var current_time = int(Time.get_unix_time_from_system())
 	var time_diff = current_time - data.last_visited_at

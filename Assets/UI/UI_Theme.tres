@@ -27,3 +27,5 @@ Label/constants/outline_size = 8
 Label/font_sizes/font_size = 28
 Label/fonts/font = SubResource("FontVariation_xavxv")
 Panel/styles/panel = SubResource("StyleBoxEmpty_xavxv")
+ProgressBar/font_sizes/font_size = 23
+ProgressBar/fonts/font = SubResource("FontVariation_xavxv")

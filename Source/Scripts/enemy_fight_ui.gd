@@ -118,7 +118,7 @@ func _update_hp_bars() -> void:
 		$TurnBlockedUI.show()
 		timer.start()
 		await timer.timeout
-		var calculated_xp = randi_range(40 + (_enemy_lvl -1) * 5 - 2, 40 + (_enemy_lvl -1) * 5 + 2)
+		var calculated_xp = randi_range(20 + (_enemy_lvl -1) * 15 - 5, 20 + (_enemy_lvl -1) * 15 + 5)
 		if _current_enemy != null:
 			_current_enemy.queue_free()
 		player_victory.emit(calculated_xp)

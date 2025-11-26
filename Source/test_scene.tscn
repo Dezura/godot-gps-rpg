@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8hakvjcb3x6q"]
+[gd_scene load_steps=16 format=3 uid="uid://c8hakvjcb3x6q"]
 
 [ext_resource type="Script" uid="uid://bvf620k3ofjhm" path="res://Source/Scripts/android_gps_wrapper.gd" id="1_ep1f6"]
 [ext_resource type="Texture2D" uid="uid://cebvy4jjded4w" path="res://Assets/icon.svg" id="1_gru2d"]
@@ -10,6 +10,58 @@
 [ext_resource type="SpriteFrames" uid="uid://c7m0g8t6wi8et" path="res://Assets/Sprites/Player.aseprite" id="7_evoug"]
 [ext_resource type="Script" uid="uid://s3ub8fflb3xj" path="res://Source/Scripts/websocket.gd" id="8_3brre"]
 [ext_resource type="PackedScene" uid="uid://i6eym788y6iw" path="res://Source/UI/player_hud.tscn" id="9_ywe0e"]
+[ext_resource type="Theme" uid="uid://co0uqk7ayhahb" path="res://Assets/UI/UI_Theme.tres" id="10_u62km"]
+[ext_resource type="Texture2D" uid="uid://dxmfftr32spu0" path="res://Assets/UI/UI.png" id="11_lhd7b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u62km"]
+font_size = 48
+
+[sub_resource type="FontFile" id="FontFile_rkath"]
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/53/0/ascent = 0.0
+cache/0/53/0/descent = 0.0
+cache/0/53/0/underline_position = 0.0
+cache/0/53/0/underline_thickness = 0.0
+cache/0/53/0/scale = 1.0
+cache/0/58/0/ascent = 0.0
+cache/0/58/0/descent = 0.0
+cache/0/58/0/underline_position = 0.0
+cache/0/58/0/underline_thickness = 0.0
+cache/0/58/0/scale = 1.0
+cache/0/63/0/ascent = 0.0
+cache/0/63/0/descent = 0.0
+cache/0/63/0/underline_position = 0.0
+cache/0/63/0/underline_thickness = 0.0
+cache/0/63/0/scale = 1.0
+cache/0/68/0/ascent = 0.0
+cache/0/68/0/descent = 0.0
+cache/0/68/0/underline_position = 0.0
+cache/0/68/0/underline_thickness = 0.0
+cache/0/68/0/scale = 1.0
+cache/0/48/0/ascent = 0.0
+cache/0/48/0/descent = 0.0
+cache/0/48/0/underline_position = 0.0
+cache/0/48/0/underline_thickness = 0.0
+cache/0/48/0/scale = 1.0
+cache/0/43/0/ascent = 0.0
+cache/0/43/0/descent = 0.0
+cache/0/43/0/underline_position = 0.0
+cache/0/43/0/underline_thickness = 0.0
+cache/0/43/0/scale = 1.0
+cache/0/38/0/ascent = 0.0
+cache/0/38/0/descent = 0.0
+cache/0/38/0/underline_position = 0.0
+cache/0/38/0/underline_thickness = 0.0
+cache/0/38/0/scale = 1.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_3brre"]
 font_size = 28
@@ -105,14 +157,54 @@ metadata/_custom_type_script = "uid://c72t5bk516ojj"
 [node name="PlayerHUD" parent="CanvasLayer" instance=ExtResource("9_ywe0e")]
 
 [node name="LoadingScreen" type="ColorRect" parent="CanvasLayer"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.29586652, 0.2958665, 0.2958665, 1)
+theme = ExtResource("10_u62km")
+color = Color(0.07450981, 0.078431375, 0.101960786, 1)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/LoadingScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.0
+offset_top = -271.0
+offset_right = 254.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_lhd7b")
+region_rect = Rect2(168, 96, 87, 75)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer/LoadingScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -217.0
+offset_top = -245.0
+offset_right = 217.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_lhd7b")
+region_rect = Rect2(270, 96, 87, 75)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="Label" type="Label" parent="CanvasLayer/LoadingScreen"]
 layout_mode = 1
@@ -121,16 +213,50 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.67392
-offset_top = -23.25
-offset_right = 62.67392
-offset_bottom = 23.25
+offset_left = -74.5
+offset_top = -224.75
+offset_right = 74.5
+offset_bottom = -166.75
 grow_horizontal = 2
 grow_vertical = 2
 text = "Loading"
+label_settings = SubResource("LabelSettings_u62km")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/LoadingScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = -33.0
+offset_right = 221.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontFile_rkath")
+text = "be patient, you're loading into the world's greatest gps-mmo-rpg"
 label_settings = SubResource("LabelSettings_3brre")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/LoadingScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.33334
+offset_top = -150.0
+offset_right = 186.33334
+offset_bottom = -113.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="WebSocket" type="Node" parent="."]
 script = ExtResource("8_3brre")
