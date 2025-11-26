@@ -496,7 +496,6 @@ size_flags_vertical = 3
 text = "Nevermind."
 
 [node name="PVPEncounter" type="NinePatchRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -911,6 +910,7 @@ layout_mode = 1
 [connection signal="pressed" from="PoiMenu/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="EnemyEncounter/AttackButton" to="EnemyEncounter" method="_on_attack_button_pressed"]
 [connection signal="pressed" from="EnemyEncounter/CloseButton" to="EnemyEncounter" method="_on_close_button_pressed"]
+[connection signal="pressed" from="PVPEncounter/AttackButton" to="PVPEncounter" method="_on_attack_button_pressed"]
 [connection signal="pressed" from="PVPEncounter/CloseButton" to="PVPEncounter" method="_on_close_button_pressed"]
 [connection signal="pressed" from="DeathScreen/CloseButton" to="DeathScreen" method="_on_close_button"]
 [connection signal="pressed" from="VictoryScreen/CloseButton" to="VictoryScreen" method="_on_close_button"]

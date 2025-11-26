@@ -58,7 +58,7 @@ func _process(_delta: float) -> void:
 			if is_json:
 				if parsed.has("type") and parsed.type == "pvp_lobby_update":
 					print(parsed.lobby)
-					pvp_lobby_updated.emit(parsed.lobby)
+					pvp_lobby_updated.emit(parsed)
 			else:
 				if msg == "DezuraCaptainNoob":
 					print("function goes here - websocket.gd")

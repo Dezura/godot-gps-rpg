@@ -1,0 +1,309 @@
+[gd_scene load_steps=8 format=4 uid="uid://j48j8aqjgedm"]
+
+[ext_resource type="Theme" uid="uid://co0uqk7ayhahb" path="res://Assets/UI/UI_Theme.tres" id="1_xn3yw"]
+[ext_resource type="Script" uid="uid://dg30i5xe7v6ie" path="res://Source/Scripts/pvp_fight_ui.gd" id="2_ywbtx"]
+[ext_resource type="Texture2D" uid="uid://dxmfftr32spu0" path="res://Assets/UI/UI.png" id="3_r22oh"]
+[ext_resource type="Texture2D" uid="uid://c0gr5qwg340nt" path="res://Assets/Sprites/small_hp_bar.aseprite" id="4_wbr7a"]
+[ext_resource type="Texture2D" uid="uid://8cdfkdymulcy" path="res://Assets/Sprites/small_hp_bar_filled.aseprite" id="5_ys7ye"]
+[ext_resource type="PackedScene" uid="uid://beya1cn0hkqsy" path="res://Source/UI/player_container.tscn" id="7_vgvl1"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ywbtx"]
+_data = PackedByteArray("AAADAAUAAAABAAAAHgAAAB4AAABuAQAAUklGRmYBAABXRUJQVlA4TFkBAAAvHUAHEB/BKJIkRd29vIdO2L+k+zHaUBPJVvPeI1ZUKIn+JeCFKs6wjSTJyarXHkUGhEP0hCJ9AUGR/6NFkbalABBJAJEkGUGUAFhUopAgBcgJRYJkztP329EpyVwU7+K/6+Ve1vU7reMu3nwDsM8teWnH/jxPXTkAlm3baRvfl4JeIWR6cquX6Frzn6Qh/B/R/wkozzDNXiulk7v7OV0nnd1zztnPaSIiss7zvP+HEIoAvazznN1zVlXtwhtG9LImndxVSXIcVY/giF6WSkl/yuVRQY5YVYIaabO8klWLP9fhrUhWVUXqNXZqNxB5VzO7VmgAoJ7X30tCqyQJzurXzLcsKS1Go1pNqxU2xRobYoy2UGtdA79rOMQ4UOu6rhVAXUOkrDAbBpoaadjIJwApKw5qZqZb2HYLKTJdUcIeALZbAJPLRUSwxbtcqZQiAEQ+cLVpEZErvVwA")
+size_override = Vector2(30, 30)
+
+[node name="PVPFightUI" type="ColorRect"]
+process_priority = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_behavior_recursive = 1
+theme = ExtResource("1_xn3yw")
+color = Color(0.07450981, 0.078431375, 0.101960786, 1)
+script = ExtResource("2_ywbtx")
+
+[node name="EnemyBox" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = 31.0
+offset_right = 250.0
+offset_bottom = 150.0
+grow_horizontal = 2
+texture = ExtResource("3_r22oh")
+region_rect = Rect2(168, 96, 87, 75)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="EnemyName" type="Label" parent="EnemyBox"]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 12.0
+offset_right = 239.0
+offset_bottom = 47.0
+size_flags_vertical = 6
+text = "Gilded Shadow"
+
+[node name="EnemyLevel" type="Label" parent="EnemyBox"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 15.0
+offset_right = -14.0
+offset_bottom = 47.0
+grow_horizontal = 0
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.24578309, 0.5303088, 0.2432698, 1)
+theme_override_font_sizes/font_size = 25
+text = "LVL: 12"
+horizontal_alignment = 1
+
+[node name="StunStatus" type="Label" parent="EnemyBox"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -32.0
+offset_right = 76.0
+grow_vertical = 0
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.79, 0.6056667, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "STUN"
+horizontal_alignment = 1
+
+[node name="HealthBar" type="TextureProgressBar" parent="EnemyBox"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -55.0
+offset_right = 20.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(7.045, 4.675)
+pivot_offset = Vector2(20, 3)
+max_value = 20.0
+value = 12.0
+texture_under = ExtResource("4_wbr7a")
+texture_progress = ExtResource("5_ys7ye")
+
+[node name="TextHP" type="Label" parent="EnemyBox"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -93.0
+offset_top = -40.0
+offset_right = 93.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 25
+text = "24/24 HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemySprite" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 77.0
+offset_top = 218.0
+offset_right = 117.0
+offset_bottom = 258.0
+grow_horizontal = 2
+scale = Vector2(4, 4)
+pivot_offset = Vector2(20, 20)
+texture = SubResource("PortableCompressedTexture2D_ywbtx")
+flip_h = true
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://Assets/Sprites/Player.aseprite",
+"source_uid": 7045187300494635615
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f5f079754fe3da3fffd1b2bff0f78f85"
+
+[node name="PlayerContainer" parent="." instance=ExtResource("7_vgvl1")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -137.0
+offset_right = -27.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CommandUI" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -396.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_r22oh")
+region_rect = Rect2(168, 96, 87, 75)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="AttackButton" type="Button" parent="CommandUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -242.0
+offset_top = 35.0
+offset_right = -8.0
+offset_bottom = 155.0
+grow_horizontal = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 41
+text = "Attack"
+autowrap_mode = 2
+
+[node name="BashButton" type="Button" parent="CommandUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 8.0
+offset_top = 35.0
+offset_right = 242.0
+offset_bottom = 155.0
+grow_horizontal = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 41
+text = "Shield Bash"
+
+[node name="BlockButton" type="Button" parent="CommandUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -115.0
+offset_top = 178.0
+offset_right = 119.0
+offset_bottom = 298.0
+grow_horizontal = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 41
+text = "Empowering Block"
+autowrap_mode = 2
+
+[node name="FleeButton" type="Button" parent="CommandUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 51.0
+offset_top = -74.0
+offset_right = 241.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+disabled = true
+text = "no escape."
+
+[node name="TurnBlockedUI" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -396.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 0
+texture = ExtResource("3_r22oh")
+region_rect = Rect2(168, 96, 87, 75)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="Block" type="NinePatchRect" parent="TurnBlockedUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 53.0
+offset_top = -245.0
+offset_right = -53.0
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_r22oh")
+region_rect = Rect2(270, 96, 87, 75)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="Label" type="Label" parent="TurnBlockedUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = -64.0
+offset_right = 195.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 46
+text = "Waiting for turn..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="pressed" from="CommandUI/AttackButton" to="." method="_on_attack_button_pressed"]
+[connection signal="pressed" from="CommandUI/BashButton" to="." method="_on_bash_button_pressed"]
+[connection signal="pressed" from="CommandUI/BlockButton" to="." method="_on_block_button_pressed"]
