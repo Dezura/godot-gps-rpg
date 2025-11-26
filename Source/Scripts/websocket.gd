@@ -47,9 +47,13 @@ func _process(_delta: float) -> void:
 			if msg == "DezuraCaptainNoob":
 				print("function goes here - websocket.gd")
 				# Do Something
+				Util.game.enemy_manager._reset_all_enemies()
+				Util.game.enemy_manager.fetch_enemy_data(Util.game.current_city, true)
 			elif msg == "TuxModeActivate":
 				print("Tux Mode Activated")
 				# Do Something
+				Util.game.enemy_manager._reset_all_enemies()
+				Util.game.enemy_manager.fetch_enemy_data(Util.game.current_city, true, true)
 			else:
 				message_received.emit(msg)
 			

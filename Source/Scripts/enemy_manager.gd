@@ -25,8 +25,8 @@ func _process(delta: float) -> void:
 			fetch_enemy_data(game.current_city)
 
 
-func fetch_enemy_data(city_name: String) -> void:
-	server_api.request_enemy_data(city_name)
+func fetch_enemy_data(city_name: String, force_refresh := false, tux_mode := false) -> void:
+	server_api.request_enemy_data(city_name, force_refresh, tux_mode)
 
 
 func load_enemy_tile(tile_pos: Vector2i) -> void:

@@ -87,10 +87,10 @@ func request_poi_data(city: String, category: String) -> void:
 	_request_queue.append(new_request)
 	print("[ServerAPI] New request added to queue (%s)" % _request_queue.size())
 
-func request_enemy_data(city: String) -> void:
+func request_enemy_data(city: String, force_refresh := false, tux_mode := false) -> void:
 	var new_request := RequestData.new()
 	
-	new_request.url = "/enemy-tile?place=%s" % [city.uri_encode()]
+	new_request.url = "/enemy-tile?place=%s&forceRefresh=%s&tuxMode=%s" % [city.uri_encode(), force_refresh, tux_mode]
 	for i in _request_queue.size():
 		if _request_queue[i].url == new_request.url:
 			return

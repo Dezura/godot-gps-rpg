@@ -1,6 +1,6 @@
 class_name Enemy extends Node2D
 
-enum EnemyType {SLIME, SKELETON, WANDERING_EYE}
+enum EnemyType {SLIME, SKELETON, WANDERING_EYE, TUX}
 
 var type: int
 var id: String
@@ -36,6 +36,10 @@ func init_enemy_data(p_type: int, p_id: String) -> void:
 			enemy_name = "Wandering Eye"
 			level = randi_range(10, 15)
 			damage_range = Vector2i(6, 10)
+		EnemyType.TUX:
+			enemy_name = "ALMIGHTY TUX"
+			level = 999
+			damage_range = Vector2i(0, 1)
 	var base_hp = 4
 	var growth = 2
 	var variance = 2
