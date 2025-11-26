@@ -9,6 +9,8 @@ signal city_tiles_received(city_name: String, tiles: Dictionary[Vector2i, MvtTil
 signal city_tiles_failed(city_name: String, message: String)
 signal city_enemies_received(city_name: String, enemy_data: Dictionary[Vector2i, EnemyTileData])
 signal city_enemies_failed(city_name: String, message: String)
+signal city_enemies_reset_success(city_name: String, message: String)
+signal city_enemies_reset_failed(city_name: String, message: String)
 
 
 class RequestData:
@@ -87,10 +89,10 @@ func request_poi_data(city: String, category: String) -> void:
 	_request_queue.append(new_request)
 	print("[ServerAPI] New request added to queue (%s)" % _request_queue.size())
 
-func request_enemy_data(city: String, force_refresh := false, tux_mode := false) -> void:
+func request_enemy_data(city: String, tux_mode := false) -> void:
 	var new_request := RequestData.new()
 	
-	new_request.url = "/enemy-tile?place=%s&forceRefresh=%s&tuxMode=%s" % [city.uri_encode(), force_refresh, tux_mode]
+	new_request.url = "/enemy-tile?place=%s&tuxMode=%s" % [city.uri_encode(), tux_mode]
 	for i in _request_queue.size():
 		if _request_queue[i].url == new_request.url:
 			return
@@ -106,6 +108,23 @@ func request_enemy_data(city: String, force_refresh := false, tux_mode := false)
 	_request_queue.append(new_request)
 	print("[ServerAPI] enemy request added to queue (%s)" % _request_queue.size())
 
+func request_enemy_reset(city: String) -> void:
+	var new_request := RequestData.new()
+	
+	new_request.url = "/reset-enemies?place=%s" % city
+	for i in _request_queue.size():
+		if _request_queue[i].url == new_request.url:
+			return
+	new_request.headers = [
+		"Content-Type: text/plain",
+		"Connection: keep-alive"
+	]
+	new_request.initial_data = city
+	new_request.parse_method = _parse_basic_operation
+	new_request.received_signal = city_enemies_reset_success
+	new_request.failed_signal = city_enemies_reset_failed
+	_request_queue.append(new_request)
+	print("[ServerAPI] New request added to queue (%s)" % _request_queue.size())
 
 func _process(_delta: float) -> void:
 	if busy or _request_queue.is_empty():
@@ -184,6 +203,14 @@ func _reconnect() -> void:
 	print("[ServerAPI] Reconnecting...")
 	client.close()
 	await _connect()
+
+
+func _parse_basic_operation(request: RequestData, body: PackedByteArray) -> void:
+	var text = body.get_string_from_utf8()
+	if text != "Success!":
+		_finish_with_error(request, "simple request didn't succeed")
+	
+	_finish_with_success(request, text)
 
 
 func _parse_tile_data(request: RequestData, body: PackedByteArray) -> void:

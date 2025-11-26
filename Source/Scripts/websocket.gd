@@ -48,12 +48,12 @@ func _process(_delta: float) -> void:
 				print("function goes here - websocket.gd")
 				# Do Something
 				Util.game.enemy_manager._reset_all_enemies()
-				Util.game.enemy_manager.fetch_enemy_data(Util.game.current_city, true)
+				Util.game.enemy_manager.fetch_enemy_data(Util.game.current_city)
 			elif msg == "TuxModeActivate":
 				print("Tux Mode Activated")
 				# Do Something
 				Util.game.enemy_manager._reset_all_enemies()
-				Util.game.enemy_manager.fetch_enemy_data(Util.game.current_city, true, true)
+				Util.game.enemy_manager.fetch_enemy_data(Util.game.current_city, true)
 			else:
 				message_received.emit(msg)
 			
@@ -67,8 +67,10 @@ func _process(_delta: float) -> void:
 func send_message(text: String) -> void:
 	if _opened:
 		if text == "/reset":
+			Util.game.server_api.request_enemy_reset(Util.game.current_city)
 			_client.send_text(text)
 		elif text == "/tux":
+			Util.game.server_api.request_enemy_reset(Util.game.current_city)
 			_client.send_text(text)
 		else:
 			var full_message = "[color=#%s]%s[/color]: %s" % [_user_color, _userID, text]
