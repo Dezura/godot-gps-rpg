@@ -9,7 +9,7 @@ var xp: int = 0
 var max_xp: int = 100
 var hp: int = 16
 var max_hp: int = 16
-var damage_range: Vector2i = Vector2i(4, 5)
+var damage_range: Vector2i = Vector2i(3, 5)
 
 @export var game: GameManager
 @onready var _anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -25,14 +25,16 @@ func _ready() -> void:
 func gain_xp(amount: int) -> void:
 	xp += amount
 	
-	if xp >= max_xp:
+	while xp >= max_xp:
 		xp = xp - max_xp
 		level += 1
 		max_xp += 10
 		max_hp += 1
 		hp = max_hp
-		update_level.emit(level)
+		damage_range.x = int(3 + (level - 1) * 1.5)
+		damage_range.y = int(3 + (level - 1) * 1.5)
 		
+		update_level.emit(level)
 	update_xp.emit(xp, max_xp)
 	update_hp.emit(hp, max_hp)
 
@@ -80,8 +82,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed:
 		# Press 'T' to test XP gain and potential Level Up
 		if event.keycode == KEY_T:
-			print("Debug: Adding 20 XP")
-			gain_xp(20)
+			print("Debug: Adding 15-35 XP")
+			gain_xp(randi_range(15,35))
 			
 		# Press 'H' to test Health damage
 		elif event.keycode == KEY_H:

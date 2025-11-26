@@ -55,7 +55,7 @@ func _on_enemy_turn() -> void:
 	await timer.timeout
 	if not _enemy_stun:
 		if _player_block:
-			player.modify_health(-int(randi_range(_enemy_damage_range.x, _enemy_damage_range.y)/2.0))
+			player.modify_health(-int(randi_range(_enemy_damage_range.x, _enemy_damage_range.y)/3.0))
 		else:
 			player.modify_health(-randi_range(_enemy_damage_range.x, _enemy_damage_range.y))
 	else:
@@ -134,7 +134,7 @@ func _on_flee_button_pressed() -> void:
 
 func _on_attack_button_pressed() -> void:
 	if $CommandUI/AttackButton.text == "Strong Attack":
-		_enemy_hp -= int(randi_range(player.damage_range.x, player.damage_range.y)*1.5)
+		_enemy_hp -= int(randi_range(player.damage_range.x, player.damage_range.y)*1.75)
 	else:
 		_enemy_hp -= randi_range(player.damage_range.x, player.damage_range.y)
 	_end_turn()
