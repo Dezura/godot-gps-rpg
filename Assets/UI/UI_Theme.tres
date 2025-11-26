@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://co0uqk7ayhahb"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://co0uqk7ayhahb"]
 
 [ext_resource type="StyleBox" uid="uid://d34dlcuosxh8g" path="res://Assets/UI/Tres/button_pressed.tres" id="2_xavxv"]
 [ext_resource type="StyleBox" uid="uid://craqfd288hb7p" path="res://Assets/UI/Tres/button_hover.tres" id="3_8a1ek"]
@@ -8,6 +8,8 @@
 [sub_resource type="FontVariation" id="FontVariation_xavxv"]
 base_font = ExtResource("5_8a1ek")
 baseline_offset = -0.2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xavxv"]
 
 [resource]
 Button/colors/font_hover_pressed_color = Color(1, 1, 1, 0.69803923)
@@ -24,3 +26,4 @@ Button/styles/pressed = ExtResource("2_xavxv")
 Label/constants/outline_size = 8
 Label/font_sizes/font_size = 28
 Label/fonts/font = SubResource("FontVariation_xavxv")
+Panel/styles/panel = SubResource("StyleBoxEmpty_xavxv")

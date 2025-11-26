@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://i6eym788y6iw"]
+[gd_scene load_steps=16 format=3 uid="uid://i6eym788y6iw"]
 
 [ext_resource type="Theme" uid="uid://co0uqk7ayhahb" path="res://Assets/UI/UI_Theme.tres" id="1_uyms8"]
 [ext_resource type="Script" uid="uid://bkvd7myuqs3rf" path="res://Source/UI/player_hud.gd" id="2_5y5js"]
@@ -9,9 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://dxelf6hr0kip" path="res://Assets/Sprites/player_head.png" id="7_72lis"]
 [ext_resource type="Script" uid="uid://cy540lohgtnqy" path="res://Source/Scripts/pause_menu.gd" id="8_72lis"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="9_2bgv2"]
-[ext_resource type="Texture2D" uid="uid://clxc8bci7y84g" path="res://Assets/UI/UI.png" id="10_gi274"]
+[ext_resource type="Texture2D" uid="uid://dxmfftr32spu0" path="res://Assets/UI/UI.png" id="10_gi274"]
 [ext_resource type="Texture2D" uid="uid://cbn07b34tbqdx" path="res://Assets/Sprites/wandering_eye.aseprite" id="11_gi274"]
-[ext_resource type="Script" path="res://Source/UI/enemy_encounter_menu.gd" id="11_w6sh0"]
+[ext_resource type="Script" uid="uid://8xpbdnmrh213" path="res://Source/UI/enemy_encounter_menu.gd" id="11_w6sh0"]
+[ext_resource type="PackedScene" uid="uid://cgrp3y0yu6ii6" path="res://Source/UI/enemy_fight_ui.tscn" id="13_okuch"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6sh0"]
 bg_color = Color(0.23392546, 0.23392549, 0.23392531, 1)
@@ -386,6 +387,10 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 3
 text = "Nevermind."
+
+[node name="EnemyFightUI" parent="." instance=ExtResource("13_okuch")]
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="POI_Menu/VBoxContainer/PlaceholderButton" to="." method="_on_placeholder_button_pressed"]
 [connection signal="pressed" from="POI_Menu/VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
