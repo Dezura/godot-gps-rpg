@@ -14,6 +14,7 @@ var chat_input: LineEdit
 var chat_panel: PanelContainer
 
 @onready var enemy_encounter_menu: EnemyEncounterMenu = $EnemyEncounter
+@onready var enemy_fight_ui: EnemyFightUI = $EnemyFightUI
 
 
 signal chat_message_sent(text: String)
@@ -35,6 +36,10 @@ func _ready() -> void:
 	chat_input = $ChatPanel/VBoxContainer/ChatInput
 	chat_panel = $ChatPanel
 	chat_input.text_submitted.connect(on_chat_input_submitted)
+	
+	enemy_encounter_menu.attack_pressed.connect(enemy_fight_ui.start_ui)
+	enemy_fight_ui.player_died.connect(_on_player_death)
+	enemy_fight_ui.player_victory.connect(_on_player_victory)
 	
 func add_chat_message(message: String) -> void:
 	var time = Time.get_time_dict_from_system()
@@ -74,6 +79,17 @@ func on_pause_menu_visibility_changed() -> void:
 	
 	if is_in_menu:
 		poi_menu.visible = false
+
+func _on_player_death() -> void:
+	$DeathScreen.show()
+
+func _on_player_victory(gained_xp: int) -> void:
+	var old_player_level = Util.game.player.level
+	$VictoryScreen/Text.text = "+%s XP Gained!" % gained_xp
+	Util.game.player.gain_xp(gained_xp)
+	if old_player_level != Util.game.player.level:
+		$VictoryScreen/Text.text += "\nReached Level %s!" % Util.game.player.level
+	$VictoryScreen.show()
 
 func _on_level_changed(new_level: int) -> void:
 	level_label.text = "Level: %d" % new_level

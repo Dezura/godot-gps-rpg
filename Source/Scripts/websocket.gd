@@ -1,4 +1,4 @@
-extends Node
+class_name WebSocketThingy extends Node
 
 var WEBSOCKET_URL: String
 var _client = WebSocketPeer.new()

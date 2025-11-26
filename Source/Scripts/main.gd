@@ -9,6 +9,7 @@ signal player_tile_changed(tile_pos: Vector2i, old_tile_pos: Vector2i)
 @export var server_api: ServerAPI
 @export var player: Player
 @export var loadingScreen: Control 
+@export var websocket: WebSocketThingy 
 
 const MVT = preload("res://addons/geo-tile-loader/vector_tile_loader.gd")
 
@@ -33,6 +34,8 @@ func _ready() -> void:
 	Util.dummies = $YSorter/Dummies
 	Util.hud = $CanvasLayer/PlayerHUD
 	enemy_manager.enemies_unloaded.connect(Util.hud.enemy_encounter_menu.force_close)
+	Util.hud.enemy_fight_ui.game = self
+	Util.hud.enemy_fight_ui.player = player
 	
 	android_gps.cooridnates_fetched.connect(_on_cooridnates_fetched)
 	

@@ -4,11 +4,12 @@ signal update_level(new_level: int)
 signal update_xp(new_xp: int, max_xp: int)
 signal update_hp(new_hp: int, max_hp: int)
 
-var level: int = 10
+var level: int = 1
 var xp: int = 0
 var max_xp: int = 100
-var hp: int = 8
+var hp: int = 16
 var max_hp: int = 16
+var damage_range: Vector2i = Vector2i(4, 5)
 
 @export var game: GameManager
 @onready var _anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -29,7 +30,7 @@ func gain_xp(amount: int) -> void:
 		level += 1
 		max_xp += 10
 		max_hp += 1
-		hp += 1
+		hp = max_hp
 		update_level.emit(level)
 		
 	update_xp.emit(xp, max_xp)

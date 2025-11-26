@@ -14,7 +14,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_3brre"]
 font_size = 28
 
-[node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "enemy_manager", "android_gps", "server_api", "player", "loadingScreen")]
+[node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "enemy_manager", "android_gps", "server_api", "player", "loadingScreen", "websocket")]
 y_sort_enabled = true
 script = ExtResource("1_rxwwu")
 map_renderer = NodePath("MapRenderer")
@@ -23,6 +23,7 @@ android_gps = NodePath("AndroidGPS")
 server_api = NodePath("ServerAPI")
 player = NodePath("YSorter/Player")
 loadingScreen = NodePath("CanvasLayer/LoadingScreen")
+websocket = NodePath("WebSocket")
 
 [node name="ServerAPI" type="Node" parent="."]
 process_mode = 3
@@ -51,6 +52,7 @@ sprite_frames = ExtResource("7_evoug")
 animation = &"Idle"
 
 [node name="DebugGPSCoords" type="Label" parent="YSorter/Player"]
+visible = false
 z_index = 10
 offset_left = -232.0
 offset_top = -144.0
@@ -63,6 +65,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DebugTileCoords" type="Label" parent="YSorter/Player"]
+visible = false
 z_index = 10
 offset_left = -208.0
 offset_top = 32.0
