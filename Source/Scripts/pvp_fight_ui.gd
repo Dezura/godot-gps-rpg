@@ -1,6 +1,5 @@
 class_name PVPFightUI extends ColorRect
 
-signal player_fled
 signal player_victory(gained_xp: int)
 signal player_died
 
@@ -35,7 +34,7 @@ func _on_pvp_lobby_updated(data) -> void:
 	if data.update_type == "start_fight":
 		for i in range(data.lobby.size()):
 			if data.lobby[i].id == Util.game.websocket._user_id:
-				lobby_data = data.lobby[i]
+				lobby_data = data.lobby
 				show()
 				current_turn = data.current_turn
 				player_i = i
@@ -63,11 +62,25 @@ func _on_pvp_lobby_updated(data) -> void:
 			else:
 				$TurnBlockedUI.show()
 	if data.update_type == "next_turn" and fight_active:
+		lobby_data = data.lobby
 		sync_local_stats_to_data()
 		if data.current_turn == player_i:
 			_allow_turn()
 		else:
 			$TurnBlockedUI.show()
+	if data.update_type == "end_fight" and fight_active:
+		fight_active = false
+		lobby_data = data.lobby
+		sync_local_stats_to_data()
+		$TurnBlockedUI.show()
+		timer.start()
+		await timer.timeout
+		hide()
+		if data.winner_id == websocket._user_id:
+			var calculated_xp = randi_range(40 + (lobby_data[enemy_i].level -1) * 15 - 5, 40 + (lobby_data[enemy_i].level -1) * 15 + 5)
+			player_victory.emit(calculated_xp)
+		else:
+			player_died.emit()
 
 
 func sync_local_stats_to_data() -> void:
@@ -88,30 +101,36 @@ func sync_local_stats_to_data() -> void:
 		$EnemyBox/StunStatus.hide()
 
 func _end_turn() -> void:
-	var payload = {
-		"type": "pvp_lobby_request",
-		"update": "next_turn",
-		"lobby": lobby_data
-	}
+	var payload
+	if lobby_data[player_i].hp <= 0:
+		payload = {
+			"type": "pvp_lobby_request",
+			"update": "end_fight",
+			"lobby": lobby_data,
+			"winner": lobby_data[enemy_i].id
+		}
+	elif lobby_data[enemy_i].hp <= 0:
+		payload = {
+			"type": "pvp_lobby_request",
+			"update": "end_fight",
+			"lobby": lobby_data,
+			"winner": lobby_data[player_i].id
+		}
+	else:
+		payload = {
+			"type": "pvp_lobby_request",
+			"update": "next_turn",
+			"lobby": lobby_data
+		}
 	Util.game.websocket._client.send_text(JSON.stringify(payload))
 
-func _on_enemy_turn() -> void:
-	timer.start()
-	await timer.timeout
-	if not _enemy_stun:
-		if _player_block:
-			player.modify_health(-int(randi_range(_enemy_damage_range.x, _enemy_damage_range.y)/3.0))
-		else:
-			player.modify_health(-randi_range(_enemy_damage_range.x, _enemy_damage_range.y))
-	else:
-		if randf() < 0.6:
-			_enemy_stun = false
-	_update_hp_bars()
-	timer.start()
-	await timer.timeout
-	_allow_turn()
 
 func _allow_turn() -> void:
+	if lobby_data[player_i].stunned:
+		if randf() < 0.6:
+			lobby_data[player_i].stunned = false
+		_end_turn()
+	
 	if _player_block:
 		$CommandUI/AttackButton.text = "Strong Attack"
 		_player_block = false
@@ -120,46 +139,8 @@ func _allow_turn() -> void:
 	$TurnBlockedUI.hide()
 
 
-func _update_hp_bars() -> void:
-	if not fight_active:
-		return
-	
-	_enemy_hp = max(0, _enemy_hp)
-	$EnemyBox/TextHP.text = "%s/%s HP" % [_enemy_hp, _enemy_max_hp]
-	$EnemyBox/HealthBar.max_value = _enemy_max_hp
-	$EnemyBox/HealthBar.value = _enemy_hp
-	
-	$PlayerContainer/TextHP.text = "%s/%s HP" % [player.hp, player.max_hp]
-	$PlayerContainer/HealthBar.max_value = player.max_hp
-	$PlayerContainer/HealthBar.value = player.hp
-	
-	if player.hp == 0:
-		$TurnBlockedUI.show()
-		fight_active = false
-		timer.start()
-		await timer.timeout
-		if _current_enemy != null:
-			_current_enemy.queue_free()
-		player_died.emit()
-		hide()
-		return
-	if _enemy_hp == 0:
-		fight_active = false
-		$TurnBlockedUI.show()
-		timer.start()
-		await timer.timeout
-		var calculated_xp = randi_range(20 + (_enemy_lvl -1) * 15 - 5, 20 + (_enemy_lvl -1) * 15 + 5)
-		if _current_enemy != null:
-			_current_enemy.queue_free()
-		player_victory.emit(calculated_xp)
-		hide()
-		return
-
 
 func _on_attack_button_pressed() -> void:
-	if lobby_data[player_i].stunned:
-		_end_turn()
-		return
 	var damage: int
 	if $CommandUI/AttackButton.text == "Strong Attack":
 		damage = int(randi_range(player.damage_range.x, player.damage_range.y)*1.75)
@@ -172,9 +153,6 @@ func _on_attack_button_pressed() -> void:
 
 
 func _on_bash_button_pressed() -> void:
-	if lobby_data[player_i].stunned:
-		_end_turn()
-		return
 	var damage = int(randi_range(player.damage_range.x, player.damage_range.y)/2.0)
 	if lobby_data[enemy_i].blocking:
 		damage /= 3

@@ -41,7 +41,8 @@ func _ready() -> void:
 	
 	enemy_encounter_menu.attack_pressed.connect(enemy_fight_ui.start_ui)
 	enemy_fight_ui.player_died.connect(_on_player_death)
-	enemy_fight_ui.player_victory.connect(_on_player_victory)
+	pvp_fight_ui.player_died.connect(_on_player_death)
+	pvp_fight_ui.player_victory.connect(_on_player_victory)
 	
 func add_chat_message(message: String) -> void:
 	var time = Time.get_time_dict_from_system()
