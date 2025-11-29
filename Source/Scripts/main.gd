@@ -17,6 +17,10 @@ var current_city := "Hamilton,Ontario"
 var player_coords := GeoCoordinate.new()
 var _tasks_loading: int = 0
 
+@export var position_track_timer: Timer
+var is_tracking_pos := false
+var tracked_players: Dictionary[String, NetplayerInstance]
+
 func _ready() -> void:
 	if loadingScreen:
 		loadingScreen.visible = true
@@ -45,6 +49,7 @@ func _ready() -> void:
 	server_api.tile_received.connect(_on_loading_task_finished.unbind(2))
 	server_api.city_poi_received.connect(_on_loading_task_finished.unbind(2))
 	server_api.city_enemies_received.connect(_on_loading_task_finished.unbind(2))
+	position_track_timer.timeout.connect(_send_position_payload)
 	
 	if android_gps.is_listening_for_geolocation_updates():
 		await android_gps.cooridnates_updated
@@ -93,6 +98,38 @@ func _process(_delta: float) -> void:
 		_on_cooridnates_fetched({"latitude": player_coords.latitude - movement.y, "longitude": player_coords.longitude + movement.x})
 	
 
+
+func _send_position_payload() -> void:
+	if not is_tracking_pos:
+		return
+	
+	# client ID is sent by the server in a different payload for all clients
+	var payload = {
+		"type": "position_lobby_update",
+		"update": "update",
+		"name": websocket._username,
+		"color": websocket._user_color,
+		"lon": player_coords.longitude,
+		"lat": player_coords.latitude,
+		"level": player.level,
+	}
+	websocket._client.send_text(JSON.stringify(payload))
+
+func _on_receive_pos_payload(payload) -> void:
+	if not is_tracking_pos or payload.id == websocket._user_id:
+		return
+	match payload.update_type:
+		"update":
+			if not tracked_players.has(payload.id):
+				var new_netplayer: NetplayerInstance = Util.netplayer_prefab.instantiate()
+				$YSorter.add_child(new_netplayer)
+				new_netplayer.init_netplayer(payload.lat, payload.lon, payload.name, payload.color, payload.level)
+				tracked_players.set(payload.id, new_netplayer)
+			else:
+				tracked_players[payload.id].update_stats(payload.lat, payload.lon, payload.level)
+		"disconnect":
+			if tracked_players.has(payload.id):
+				tracked_players[payload.id].queue_free()
 
 func _on_cooridnates_fetched(location_dictionary: Dictionary) -> void:
 	var old_coords := GeoCoordinate.new(player_coords.latitude, player_coords.longitude)

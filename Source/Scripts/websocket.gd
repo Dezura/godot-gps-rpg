@@ -11,6 +11,7 @@ var _user_color: String
 
 signal message_received(message: String)
 signal pvp_lobby_updated(data)
+signal pos_payload_updated(data)
 
 func _ready():
 	WEBSOCKET_URL = Util.server_conf.get_value("NETWORK", "WEBSOCKET_PORT") + "/?user=%s" % _user_id
@@ -41,11 +42,9 @@ func _process(_delta: float) -> void:
 			_client.send_text("hello testing from godot")
 			
 		while (_client.get_available_packet_count() > 0):
-			print("new packet")
 			# get_available_packet_count() returns the number of packets available to be processed,
 			# so while it's greater than 0, print packet converted to a string
 			var msg = _client.get_packet().get_string_from_utf8()
-			print(msg)
 			
 			var parsed = {}
 			var is_json = false
@@ -57,9 +56,15 @@ func _process(_delta: float) -> void:
 			
 			if is_json:
 				if parsed.has("type") and parsed.type == "pvp_lobby_update":
+					print("new packet")
 					print(parsed.lobby)
 					pvp_lobby_updated.emit(parsed)
+					print(msg)
+				elif parsed.has("type") and parsed.type == "position_lobby_update":
+					pos_payload_updated.emit(parsed)
 			else:
+				print("new packet")
+				print(msg)
 				if msg == "DezuraCaptainNoob":
 					print("function goes here - websocket.gd")
 					# Do Something
@@ -91,6 +96,23 @@ func send_message(text: String) -> void:
 		elif text.begins_with("/tux"):
 			Util.game.server_api.request_enemy_reset(Util.game.current_city)
 			_client.send_text(text)
+		elif text.begins_with("/start-tracking"):
+			Util.game.is_tracking_pos = true
+			Util.game.position_track_timer.start()
+			if not pos_payload_updated.is_connected(Util.game._on_receive_pos_payload):
+				pos_payload_updated.connect(Util.game._on_receive_pos_payload)
+		elif text.begins_with("/stop-tracking"):
+			Util.game.is_tracking_pos = false
+			Util.game.position_track_timer.stop()
+			for netplayer_id in Util.game.tracked_players:
+				Util.game.tracked_players[netplayer_id].queue_free()
+			if pos_payload_updated.is_connected(Util.game._on_receive_pos_payload):
+				pos_payload_updated.disconnect(Util.game._on_receive_pos_payload)
+			var payload = {
+				"type": "position_lobby_update",
+				"update": "disconnect",
+			}
+			_client.send_text(JSON.stringify(payload))
 		elif text.begins_with("/debug-clear-lobby"):
 			_client.send_text(text)
 		elif text.begins_with("/pvp"):
