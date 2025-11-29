@@ -88,7 +88,7 @@ script = ExtResource("1_ep1f6")
 metadata/_custom_type_script = "uid://bvf620k3ofjhm"
 
 [node name="PositionTrackerUpdate" type="Timer" parent="."]
-wait_time = 0.75
+wait_time = 0.1
 
 [node name="YSorter" type="Node2D" parent="."]
 y_sort_enabled = true

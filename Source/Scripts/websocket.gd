@@ -42,11 +42,9 @@ func _process(_delta: float) -> void:
 			_client.send_text("hello testing from godot")
 			
 		while (_client.get_available_packet_count() > 0):
-			print("new packet")
 			# get_available_packet_count() returns the number of packets available to be processed,
 			# so while it's greater than 0, print packet converted to a string
 			var msg = _client.get_packet().get_string_from_utf8()
-			print(msg)
 			
 			var parsed = {}
 			var is_json = false
@@ -58,11 +56,15 @@ func _process(_delta: float) -> void:
 			
 			if is_json:
 				if parsed.has("type") and parsed.type == "pvp_lobby_update":
+					print("new packet")
 					print(parsed.lobby)
 					pvp_lobby_updated.emit(parsed)
+					print(msg)
 				elif parsed.has("type") and parsed.type == "position_lobby_update":
 					pos_payload_updated.emit(parsed)
 			else:
+				print("new packet")
+				print(msg)
 				if msg == "DezuraCaptainNoob":
 					print("function goes here - websocket.gd")
 					# Do Something

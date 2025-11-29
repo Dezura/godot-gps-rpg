@@ -121,8 +121,9 @@ func _on_receive_pos_payload(payload) -> void:
 	match payload.update_type:
 		"update":
 			if not tracked_players.has(payload.id):
-				var new_netplayer := NetplayerInstance.new(payload.lat, payload.lon, payload.name, payload.color, payload.level)
+				var new_netplayer: NetplayerInstance = Util.netplayer_prefab.instantiate()
 				$YSorter.add_child(new_netplayer)
+				new_netplayer.init_netplayer(payload.lat, payload.lon, payload.name, payload.color, payload.level)
 				tracked_players.set(payload.id, new_netplayer)
 			else:
 				tracked_players[payload.id].update_stats(payload.lat, payload.lon, payload.level)

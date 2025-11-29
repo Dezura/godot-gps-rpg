@@ -6,6 +6,7 @@ const TILE_LEVEL: int = 14
 
 var server_conf = ConfigFile.new()
 
+var netplayer_prefab = preload("res://Source/Prefabs/netplayer_instance.tscn")
 var dummy_prefab = preload("res://Source/Prefabs/dummy.tscn")
 var dummies: Node2D
 
