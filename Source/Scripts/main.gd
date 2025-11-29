@@ -130,6 +130,7 @@ func _on_receive_pos_payload(payload) -> void:
 		"disconnect":
 			if tracked_players.has(payload.id):
 				tracked_players[payload.id].queue_free()
+				tracked_players.erase(payload.id)
 
 func _on_cooridnates_fetched(location_dictionary: Dictionary) -> void:
 	var old_coords := GeoCoordinate.new(player_coords.latitude, player_coords.longitude)

@@ -111,6 +111,7 @@ func send_message(text: String) -> void:
 			Util.game.position_track_timer.stop()
 			for netplayer_id in Util.game.tracked_players:
 				Util.game.tracked_players[netplayer_id].queue_free()
+			Util.game.tracked_players.clear()
 			if pos_payload_updated.is_connected(Util.game._on_receive_pos_payload):
 				pos_payload_updated.disconnect(Util.game._on_receive_pos_payload)
 			var payload = {
