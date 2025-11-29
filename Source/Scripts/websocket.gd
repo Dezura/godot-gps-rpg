@@ -93,6 +93,11 @@ func send_message(text: String) -> void:
 		if text.begins_with("/reset"):
 			Util.game.server_api.request_enemy_reset(Util.game.current_city)
 			_client.send_text(text)
+		elif text.begins_with("/debug"):
+			var label1: Label = Util.game.player.find_child("DebugGPSCoords")
+			var label2: Label = Util.game.player.find_child("DebugTileCoords")
+			label1.visible = (not label1.visible)
+			label2.visible = (not label2.visible)
 		elif text.begins_with("/tux"):
 			Util.game.server_api.request_enemy_reset(Util.game.current_city)
 			_client.send_text(text)
