@@ -66,7 +66,7 @@ cache/0/38/0/scale = 1.0
 [sub_resource type="LabelSettings" id="LabelSettings_3brre"]
 font_size = 28
 
-[node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "enemy_manager", "android_gps", "server_api", "player", "loadingScreen", "websocket")]
+[node name="World" type="Node2D" node_paths=PackedStringArray("map_renderer", "enemy_manager", "android_gps", "server_api", "player", "loadingScreen", "websocket", "position_track_timer")]
 y_sort_enabled = true
 script = ExtResource("1_rxwwu")
 map_renderer = NodePath("MapRenderer")
@@ -76,6 +76,7 @@ server_api = NodePath("ServerAPI")
 player = NodePath("YSorter/Player")
 loadingScreen = NodePath("CanvasLayer/LoadingScreen")
 websocket = NodePath("WebSocket")
+position_track_timer = NodePath("PositionTrackerUpdate")
 
 [node name="ServerAPI" type="Node" parent="."]
 process_mode = 3
@@ -85,6 +86,9 @@ metadata/_custom_type_script = "uid://dvud6br2lrxb1"
 [node name="AndroidGPS" type="Node" parent="."]
 script = ExtResource("1_ep1f6")
 metadata/_custom_type_script = "uid://bvf620k3ofjhm"
+
+[node name="PositionTrackerUpdate" type="Timer" parent="."]
+wait_time = 0.75
 
 [node name="YSorter" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -157,6 +161,7 @@ metadata/_custom_type_script = "uid://c72t5bk516ojj"
 [node name="PlayerHUD" parent="CanvasLayer" instance=ExtResource("9_ywe0e")]
 
 [node name="LoadingScreen" type="ColorRect" parent="CanvasLayer"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
